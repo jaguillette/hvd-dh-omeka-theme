@@ -605,8 +605,8 @@ header:after {
   width: 100%;
   height: auto;
   vertical-align: bottom;
-  border: solid #ccc;
-  border-width: 1px 1px 0 1px;
+  /* border: solid #ccc; */
+  /* border-width: 1px 1px 0 1px; */
 }
 
 #site-title {
@@ -1023,7 +1023,7 @@ header:after {
 /* @group ----- Global selectors ----- */
 #content {
   overflow: hidden;
-  border: 1px solid #ccc;
+  /* border: 1px solid #ccc; */
   background: #fff;
   position: relative;
   margin: 0 auto;
