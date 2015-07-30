@@ -429,7 +429,7 @@ h1, h2, h3, h4, h5, h6 {
 h1, h2, h3 {
   font-weight: normal;
   font-family: 'Gill Sans MT', 'Gill Sans', sans-serif;
-  color: #015581;
+  color: #83292d;
 }
 
 h1 {
@@ -448,7 +448,7 @@ h2 {
 h3 {
   font-size: 18px;
   line-height: 18px;
-  color: #015581;
+  color: #83292d;
 }
 
 h4, h5 {
@@ -526,7 +526,7 @@ th {
 
 /* -- Links -- */
 a:link, a:visited {
-  color: #369;
+  color: #83292d;
 }
 
 a:hover, a:active {
@@ -539,6 +539,9 @@ img a {
 
 /* @end */
 /* @group ----- Header ----- */
+#header-container {
+  background-color: #a23338;
+}
 header {
   position: relative;
   margin: 0 auto;
@@ -611,7 +614,7 @@ header:after {
   width: 50%;
   font-weight: normal;
   font-family: 'Gill Sans MT', 'Gill Sans', sans-serif;
-  color: #015581;
+  color: #83292d;
   font-size: 36px;
   line-height: 36px;
   text-transform: uppercase;
@@ -654,7 +657,7 @@ header:after {
   box-sizing: border-box;
 }
 #search-container button {
-  background: #369;
+  background: #83292d;
   color: white;
   position: absolute;
   border: 0;
@@ -698,7 +701,7 @@ header:after {
   position: absolute;
   width: 100%;
   color: #fff;
-  background: #369;
+  background: #83292d;
   top: 0;
   bottom: 0;
   font-size: 14px;
@@ -767,6 +770,9 @@ header:after {
 
 /* @end */
 /* @group ----- Navigation ----- */
+#nav-container {
+  background-color: #83292d;
+}
 .navigation {
   list-style: none;
   margin: 0;
@@ -852,13 +858,14 @@ header:after {
   overflow: visible;
 }
 #primary-nav .nav-item:first-child > a {
-  border-left: 1px solid #ccc;
+  /* border-left: 1px solid #ccc; */
 }
 #primary-nav .nav-item > a {
   position: relative;
   display: inline-block;
   margin: 0 0 -1px 0;
-  border: 1px solid #ccc;
+  /* border: 1px solid #ccc; */
+  color: white;
 }
 #primary-nav .nav-item:not(:first-child) > a {
   margin-left: -1px;
@@ -930,7 +937,7 @@ header:after {
   text-decoration: none;
   display: block;
   padding: 0.75em 18px;
-  background: #fafafa;
+  /* background: #fafafa; */
 }
 #primary-nav a:hover,
 #primary-nav a:focus,
