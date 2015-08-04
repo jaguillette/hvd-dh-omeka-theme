@@ -679,6 +679,9 @@ header:after {
   width: 30px;
 }
 
+#search-container button:hover, .show-advanced.button:hover:after {
+  background-color: #902d31;
+}
 .show-advanced.button {
   width: 30px;
   right: 0;
@@ -863,7 +866,7 @@ header:after {
 #primary-nav .nav-item > a {
   position: relative;
   display: inline-block;
-  margin: 0 0 -1px 0;
+  /* margin: 0 0 -1px 0; */
   /* border: 1px solid #ccc; */
   color: white;
 }
@@ -945,7 +948,7 @@ header:after {
   background-color: #902d31;
   position: relative;
   z-index: 1;
-  margin: 0;
+  /* margin: 0; */
 }
 #primary-nav [aria-haspopup="true"]:after {
   font-family: "FontAwesome";
@@ -2070,6 +2073,9 @@ footer nav + p {
   /* @group ----- Header ----- */
   #site-title {
     width: 100%;
+  }
+  #site-title a {
+    color: white;
   }
 
   /* @end */
