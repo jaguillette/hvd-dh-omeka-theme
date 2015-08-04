@@ -30,6 +30,7 @@
     <?php queue_js_file('vendor/jquery-accessibleMegaMenu'); ?>
     <?php queue_js_file('berlin'); ?>
     <?php queue_js_file('globals'); ?>
+    <?php queue_js_file('masonry.pkgd'); ?>
     <?php echo head_js(); ?>
 </head>
  <?php echo body_tag(array('id' => @$bodyid, 'class' => @$bodyclass)); ?>

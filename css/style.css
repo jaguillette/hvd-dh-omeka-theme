@@ -1080,6 +1080,8 @@ header:after {
 .record {
   clear: both;
   overflow: auto;
+  width: 296.666666667px;
+  padding: 5px;
 }
 
 #sort-links + .item,
@@ -1097,12 +1099,12 @@ nav + .exhibit {
 /* @end */
 /* @group ----- Home Page ----- */
 #home #primary {
-  float: left;
-  float: left;
-  display: inline;
+  /* float: left; */
+  /* float: left; */
+  /* display: inline; */
   margin-left: 10px;
   margin-right: 10px;
-  width: 460px;
+  /* width: 460px; */
   margin-left: 0;
   margin-right: 0;
   padding-right: 10px;
@@ -1111,20 +1113,32 @@ nav + .exhibit {
   #home #primary {
     margin: 0;
   }
+  .record {
+    width: inherit;
+  }
 }
 @media only screen and (min-width: 768px) and (max-width: 959px) {
   #home #primary {
-    width: 364px;
+    /* width: 364px; */
+  }
+  .record {
+    width: 232.666666667px;
   }
 }
 @media only screen and (max-width: 767px) {
   #home #primary {
-    width: 300px;
+    /* width: 300px; */
+  }
+  .record {
+    width: inherit;
   }
 }
 @media only screen and (min-width: 480px) and (max-width: 767px) {
   #home #primary {
-    width: 420px;
+    /* width: 420px; */
+  }
+  .record {
+    width: inherit;
   }
 }
 #home #secondary {

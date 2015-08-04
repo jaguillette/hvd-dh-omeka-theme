@@ -62,9 +62,9 @@ function dh_get_random_featured_exhibits($num = 5, $hasImage = null)
  */
 function dh_display_random_featured_exhibits($num = 5, $hasImage = null)
 {
-	$html = '<div id="featured-exhibit">';
+    $html = '<h2>' . __('Featured Exhibits') . '</h2>';
+	$html .= '<div id="featured-exhibit" class="grid js-masonry" data-masonry-options=\'{ "itemSelector": ".record", "columWidth": 296.666666667, "transitionDuration": "0.2s" }\'>';
 	$exhibits = dh_get_random_featured_exhibits($num, $hasImage);
-	$html .= '<h2>' . __('Featured Exhibits') . '</h2>';
 	if ($exhibits) {
 		foreach ($exhibits as $exhibit) {
 			$html .= get_view()->partial('exhibits/single.php', array('exhibit' => $exhibit));
