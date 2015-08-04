@@ -530,7 +530,7 @@ a:link, a:visited {
 }
 
 a:hover, a:active {
-  color: #ff8000;
+  color: #0ea4de;
 }
 
 img a {
@@ -765,7 +765,7 @@ header:after {
   width: auto;
   padding: .5em;
   border: 1px blue dashed;
-  color: #ff8000;
+  color: #0ea4de;
 }
 
 /* @end */
@@ -1973,7 +1973,7 @@ footer nav + p {
 .exhibit-page-nav a:hover,
 .exhibit-page-nav a:active,
 .exhibit-page-nav .current a {
-  background: #ff8000;
+  background: #0ea4de;
 }
 
 .exhibit-pagination .next a {
@@ -2141,7 +2141,7 @@ footer nav + p {
   }
   #mobile-nav li.current a {
     background: #fff;
-    color: #ff8000;
+    color: #0ea4de;
   }
   #mobile-nav li ul {
     position: relative;
