@@ -628,6 +628,7 @@ header:after {
 
 #site-title a {
   text-decoration: none;
+  color: white;
 }
 
 #search-container {
@@ -2073,9 +2074,6 @@ footer nav + p {
   /* @group ----- Header ----- */
   #site-title {
     width: 100%;
-  }
-  #site-title a {
-    color: white;
   }
 
   /* @end */
