@@ -872,7 +872,7 @@ header:after {
 }
 #primary-nav .nav-item > a:focus,
 #primary-nav .nav-item > a.open {
-  border: 1px solid #dedede;
+  /* border: 1px solid #dedede; */
 }
 #primary-nav .nav-item > a.open {
   background-color: #fafafa;
@@ -942,9 +942,10 @@ header:after {
 #primary-nav a:hover,
 #primary-nav a:focus,
 #primary-nav li.active a {
-  color: #ff8000;
+  background-color: #902d31;
   position: relative;
   z-index: 1;
+  margin: 0;
 }
 #primary-nav [aria-haspopup="true"]:after {
   font-family: "FontAwesome";
