@@ -29,8 +29,6 @@
     });
 </script>
 
-<?php include('piwik_tracker.php'); ?>
-
 </body>
 
 </html>
