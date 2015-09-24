@@ -4,7 +4,7 @@
 
     <!-- Items metadata -->
     <div id="item-metadata">
-        <?php echo all_element_texts('item'); ?>
+        <?php echo all_element_texts('item',array('show_element_set_headings' => false)); ?>
     </div>
 
     <h3><?php echo __('Files'); ?></h3>
