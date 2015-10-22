@@ -1636,7 +1636,6 @@ ul.title-list {
 
 .browse .collection h2,
 .browse .exhibit h2 {
-  float: left;
   display: inline;
   margin-left: 10px;
   margin-right: 10px;
@@ -1673,9 +1672,10 @@ ul.title-list {
 .browse .collection .image,
 .browse .exhibit .image {
   margin-right: 0;
-  float: right;
+  float: left;
   text-align: right;
   height: 10.5em;
+  margin-top: 1em;
 }
 .browse .collection .image img,
 .browse .exhibit .image img {
@@ -2001,7 +2001,7 @@ footer nav + p {
   display: inline;
   margin-left: 10px;
   margin-right: 10px;
-  width: 520px;
+  width: 785px;
 }
 @media only screen and (max-width: 767px) {
   .exhibit .description,
@@ -2034,9 +2034,8 @@ footer nav + p {
 
 .exhibit .description ~ * {
   display: block;
-  margin: 1.5em auto;
-  padding: 0 40px 0 80px;
-  float: none;
+  margin: 10px 10px 0 10px;
+  float: left;
   -moz-box-sizing: content-box;
   -webkit-box-sizing: content-box;
   box-sizing: content-box;
