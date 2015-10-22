@@ -5,6 +5,7 @@ echo head(array('title' => $title, 'bodyclass' => 'exhibits browse'));
 <h1><?php echo $title; ?> <?php echo __('(%s total)', $total_results); ?></h1>
 <?php if (count($exhibits) > 0): ?>
 
+<?php if ($browseOptions = get_theme_option('Browse Exhibit Show Browse Options')): ?>
 <nav class="navigation secondary-nav">
     <?php echo nav(array(
         array(
@@ -17,6 +18,7 @@ echo head(array('title' => $title, 'bodyclass' => 'exhibits browse'));
         )
     )); ?>
 </nav>
+<?php endif; ?>
 
 <?php echo pagination_links(); ?>
 <?php if ($browseDescription = get_theme_option('Browse Exhibit Description')): ?>
