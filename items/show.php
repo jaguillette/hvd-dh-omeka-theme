@@ -1,3 +1,6 @@
+<?php 
+queue_css_file('lightbox');
+?>
 <?php echo head(array('title' => metadata('item', array('Dublin Core', 'Title')),'bodyclass' => 'items show')); ?>
 <div id="primary">
     <h1><?php echo metadata('item', array('Dublin Core','Title')); ?></h1>
@@ -9,7 +12,7 @@
 
     <h3><?php echo __('Files'); ?></h3>
     <div id="item-images">
-         <?php echo files_for_item(); ?>
+         <?php echo files_for_item(array('linkAttributes'=>array('data-lightbox'=>'file-gallery'))); ?>
     </div>
 
    <?php if(metadata('item','Collection Name')): ?>
@@ -41,5 +44,7 @@
     </ul>
 
 </div> <!-- End of Primary. -->
+
+<script src="/dh-omeka-site/themes/dh-theme/javascripts/vendor/lightbox.js"></script>
 
  <?php echo foot(); ?>
