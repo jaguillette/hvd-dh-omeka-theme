@@ -2,7 +2,11 @@
 $title = __('Browse Exhibits');
 echo head(array('title' => $title, 'bodyclass' => 'exhibits browse'));
 ?>
-<h1><?php echo $title; ?> <?php echo __('(%s total)', $total_results); ?></h1>
+<h1><?php echo $title; ?>
+<?php if ($browseCount = get_theme_option('Browse Exhibit Show Count')): ?>
+    <?php echo __('(%s total)', $total_results); ?>
+<?php endif; ?></h1>
+
 <?php if (count($exhibits) > 0): ?>
 
 <?php if ($browseOptions = get_theme_option('Browse Exhibit Show Browse Options')): ?>
