@@ -1861,6 +1861,10 @@ footer nav + p {
 
 /* @end */
 /* @group ----- Exhibit Builder ----- */
+.browse-exhibit-description {
+  float: left;
+}
+
 .pagination + .exhibit {
   border-top: 1px solid #eee;
 }

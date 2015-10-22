@@ -19,6 +19,9 @@ echo head(array('title' => $title, 'bodyclass' => 'exhibits browse'));
 </nav>
 
 <?php echo pagination_links(); ?>
+<?php if ($browseDescription = get_theme_option('Browse Exhibit Description')): ?>
+    <div class="browse-exhibit-description"><p><?php echo $browseDescription; ?></p></div>
+<?php endif; ?>
 
 <?php $exhibitCount = 0; ?>
 <?php foreach (loop('exhibit') as $exhibit): ?>
