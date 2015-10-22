@@ -964,7 +964,7 @@ header:after {
 #secondary-nav, .secondary-nav {
   margin-bottom: 1.5em;
   overflow: auto;
-  border-bottom: 1px solid #ccc;
+  /* border-bottom: 1px solid #ccc; */
   clear: both;
 }
 #secondary-nav li, .secondary-nav li {
