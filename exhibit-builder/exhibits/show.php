@@ -34,13 +34,21 @@ echo head(array(
 <script src="/dh-omeka-site/themes/dh-theme/javascripts/vendor/fancybox/jquery.fancybox.js"></script>
 <script type="text/javascript">
 var thumbnails = jQuery.map(jQuery('img'), function(element) { return jQuery(element).attr('src'); });
-var fullsize_images = jQuery.map(thumbnails, function(item) { return item.replace("square_thumbnails","fullsize"); });
-jQuery(".exhibit-item-link").click(function(e) {
+var fancybox_gallery = jQuery.map(jQuery('img'), function(element) {
+    jElement = jQuery(element);
+    var href = jElement.attr('src');
+    href = href.replace("square_thumbnails","fullsize");
+    var title = jElement.attr('title');
+    var linkOut = jElement.parent().attr('href');
+    title = '<a href="'+linkOut+'">'+title+'</a>';
+    fancybox_item = {"href":href,"title":title};
+    return fancybox_item;
+});
+jQuery("img").parent().click(function(e) {
     e.preventDefault();
     var startIndex = thumbnails.indexOf(e.currentTarget.firstElementChild.getAttribute('src'));
     var imageTitle = e.currentTarget.firstElementChild.getAttribute('title');
-    console.log(startIndex);
-    jQuery.fancybox(fullsize_images,{
+    jQuery.fancybox(fancybox_gallery,{
         index:startIndex
     });
 })
