@@ -1923,7 +1923,7 @@ footer nav + p {
   font-weight: normal;
 }
 #exhibit-pages > ul > li:not(.parent) ul {
-  display: none;
+  /* display: none; */
 }
 #exhibit-pages > ul > li.current ul {
   display: block;
