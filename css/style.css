@@ -1636,7 +1636,7 @@ ul.title-list {
 
 .browse .collection h2,
 .browse .exhibit h2 {
-  display: inline;
+  /* display: inline; */
   margin-left: 10px;
   margin-right: 10px;
   width: 220px;
