@@ -31,7 +31,7 @@ echo head(array(
     <h4><?php echo exhibit_builder_link_to_exhibit($exhibit); ?></h4>
     <?php echo exhibit_builder_page_tree($exhibit, $exhibit_page); ?>
 </nav>
-<script src="<?php echo(substr(BASE_DIR,13)); ?>/themes/dh-theme/javascripts/vendor/jquery.fancybox.js"></script>
+<script src="<?php echo(PUBLIC_THEME_DIR); ?>/dh-theme/javascripts/vendor/jquery.fancybox.js"></script>
 <script type="text/javascript">
 var thumbnails = jQuery.map(jQuery('img'), function(element) { return jQuery(element).attr('src'); });
 var fancybox_gallery = jQuery.map(jQuery('img'), function(element) {

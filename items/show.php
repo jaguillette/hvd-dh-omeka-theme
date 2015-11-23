@@ -1,4 +1,4 @@
-<?php 
+<?php
 queue_css_file('lightbox');
 ?>
 <?php echo head(array('title' => metadata('item', array('Dublin Core', 'Title')),'bodyclass' => 'items show')); ?>
@@ -45,6 +45,6 @@ queue_css_file('lightbox');
 
 </div> <!-- End of Primary. -->
 
-<script src="/dh-omeka-site/themes/dh-theme/javascripts/vendor/lightbox.js"></script>
+<script src="<?php echo(PUBLIC_THEME_DIR);?>/dh-theme/javascripts/vendor/lightbox.js"></script>
 
  <?php echo foot(); ?>
