@@ -1,5 +1,5 @@
 <?php
-queue_css_file('lightbox');
+queue_css_file('jquery.fancybox');
 ?>
 <?php echo head(array('title' => metadata('item', array('Dublin Core', 'Title')),'bodyclass' => 'items show')); ?>
 <div id="primary">
@@ -44,5 +44,28 @@ queue_css_file('lightbox');
     </ul>
 
 </div> <!-- End of Primary. -->
+
+<script src="<?php echo(substr(PUBLIC_THEME_DIR,13)); ?>/dh-theme/javascripts/vendor/jquery.fancybox.js"></script>
+<script type="text/javascript">
+var thumbnails = jQuery.map(jQuery('img'), function(element) { return jQuery(element).attr('src'); });
+var fancybox_gallery = jQuery.map(jQuery('img'), function(element) {
+    jElement = jQuery(element);
+    var href = jElement.attr('src');
+    href = href.replace("square_thumbnails","fullsize");
+    var title = jElement.attr('title');
+    var linkOut = jElement.parent().attr('href');
+    title = '<a href="'+linkOut+'">'+title+'</a>';
+    fancybox_item = {"href":href,"title":title};
+    return fancybox_item;
+});
+jQuery("img").parent().click(function(e) {
+    e.preventDefault();
+    var startIndex = thumbnails.indexOf(e.currentTarget.firstElementChild.getAttribute('src'));
+    var imageTitle = e.currentTarget.firstElementChild.getAttribute('title');
+    jQuery.fancybox(fancybox_gallery,{
+        index:startIndex
+    });
+})
+</script>
 
  <?php echo foot(); ?>
