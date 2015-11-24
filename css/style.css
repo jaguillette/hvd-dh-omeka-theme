@@ -803,9 +803,9 @@ header:after {
   /* mega menu list */
   /* a top level navigation item in the mega menu */
   /* first descendant link within a top level navigation item */
-  /* focus/open states of first descendant link within a top level 
+  /* focus/open states of first descendant link within a top level
      navigation item */
-  /* open state of first descendant link within a top level 
+  /* open state of first descendant link within a top level
      navigation item */
   /* sub-navigation panel */
   /* sub-navigation panel open state */
@@ -879,7 +879,7 @@ header:after {
   /* border: 1px solid #dedede; */
 }
 #primary-nav .nav-item > a.open {
-  background-color: #fafafa;
+  background-color: #A41034;
   z-index: 1;
 }
 #primary-nav .sub-nav {
@@ -946,7 +946,8 @@ header:after {
 #primary-nav a:hover,
 #primary-nav a:focus,
 #primary-nav li.active a {
-  background-color: #902d31;
+  background-color: #A41034;
+  color: white;
   position: relative;
   z-index: 1;
   /* margin: 0; */
