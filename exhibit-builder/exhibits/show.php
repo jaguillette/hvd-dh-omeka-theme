@@ -33,8 +33,8 @@ echo head(array(
 </nav>
 <script src="<?php echo(substr(PUBLIC_THEME_DIR,13)); ?>/dh-theme/javascripts/vendor/jquery.fancybox.js"></script>
 <script type="text/javascript">
-var thumbnails = jQuery.map(jQuery('img'), function(element) { return jQuery(element).attr('src'); });
-var fancybox_gallery = jQuery.map(jQuery('img'), function(element) {
+var thumbnails = jQuery.map(jQuery('.download-file img'), function(element) { return jQuery(element).attr('src'); });
+var fancybox_gallery = jQuery.map(jQuery('.download-file img'), function(element) {
     jElement = jQuery(element);
     var href = jElement.attr('src');
     href = href.replace("square_thumbnails","fullsize");
@@ -44,7 +44,7 @@ var fancybox_gallery = jQuery.map(jQuery('img'), function(element) {
     fancybox_item = {"href":href,"title":title};
     return fancybox_item;
 });
-jQuery("img").parent().click(function(e) {
+jQuery(".download-file").click(function(e) {
     e.preventDefault();
     var startIndex = thumbnails.indexOf(e.currentTarget.firstElementChild.getAttribute('src'));
     var imageTitle = e.currentTarget.firstElementChild.getAttribute('title');
