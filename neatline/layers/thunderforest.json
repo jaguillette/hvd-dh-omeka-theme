@@ -1,0 +1,78 @@
+{
+
+  "Thunderforest": [
+
+    {
+      "title": "Thunderforest OpenCycleMap",
+      "id": "Thunderforest.OpenCycleMap",
+      "type": "XYZ",
+      "properties": {
+        "urls": [
+          "http://a.tile.thunderforest.com/cycle/${z}/${x}/${y}.png",
+          "http://b.tile.thunderforest.com/cycle/${z}/${x}/${y}.png",
+          "http://c.tile.thunderforest.com/cycle/${z}/${x}/${y}.png"
+        ]
+      }
+    },
+    {
+      "title": "Thunderforest Transport",
+      "id": "Thunderforest.Transport",
+      "type": "XYZ",
+      "properties": {
+        "urls": [
+          "http://a.tile.thunderforest.com/transport/${z}/${x}/${y}.png",
+          "http://b.tile.thunderforest.com/transport/${z}/${x}/${y}.png",
+          "http://c.tile.thunderforest.com/transport/${z}/${x}/${y}.png"
+        ]
+      }
+    },
+    {
+      "title": "Thunderforest Transport Dark",
+      "id": "Thunderforest.TransportDark",
+      "type": "XYZ",
+      "properties": {
+        "urls": [
+          "http://a.tile.thunderforest.com/transport-dark/${z}/${x}/${y}.png",
+          "http://b.tile.thunderforest.com/transport-dark/${z}/${x}/${y}.png",
+          "http://c.tile.thunderforest.com/transport-dark/${z}/${x}/${y}.png"
+        ]
+      }
+    },
+    {
+      "title": "Thunderforest Landscape",
+      "id": "Thunderforest.Landscape",
+      "type": "XYZ",
+      "properties": {
+        "urls": [
+          "http://a.tile.thunderforest.com/landscape/${z}/${x}/${y}.png",
+          "http://b.tile.thunderforest.com/landscape/${z}/${x}/${y}.png",
+          "http://c.tile.thunderforest.com/landscape/${z}/${x}/${y}.png"
+        ]
+      }
+    },
+    {
+      "title": "Thunderforest Outdoors",
+      "id": "Thunderforest.Outdoors",
+      "type": "XYZ",
+      "properties": {
+        "urls": [
+          "http://a.tile.thunderforest.com/outdoors/${z}/${x}/${y}.png",
+          "http://b.tile.thunderforest.com/outdoors/${z}/${x}/${y}.png",
+          "http://c.tile.thunderforest.com/outdoors/${z}/${x}/${y}.png"
+        ]
+      }
+    },
+    {
+      "title": "Thunderforest Spinal Map",
+      "id": "Thunderforest.SpinalMap",
+      "type": "XYZ",
+      "properties": {
+        "urls": [
+          "http://a.tile.thunderforest.com/spinal-map/${z}/${x}/${y}.png",
+          "http://b.tile.thunderforest.com/spinal-map/${z}/${x}/${y}.png",
+          "http://c.tile.thunderforest.com/spinal-map/${z}/${x}/${y}.png"
+        ]
+      }
+    }
+  ]
+}
