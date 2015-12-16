@@ -77,4 +77,21 @@ function dh_display_random_featured_exhibits($num = 5, $hasImage = null)
     $html = apply_filters('exhibit_builder_display_random_featured_exhibit', $html);
     return $html;
 }
+/**
+ * Return the user for a given user_id
+ *
+ * @return user
+ */
+function dh_get_user_by_id($user_id)
+{
+  $table_user = get_db()->getTable('User');
+  $select = $table_user->getSelectForFind($user_id);
+  return $table_user->fetchObject($select);
+  /*try {
+    $user = $table_user->findActiveById($user_id);
+  } finally {
+    $user = null;
+  }
+  return $user;*/
+}
 ?>

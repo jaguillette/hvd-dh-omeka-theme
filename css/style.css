@@ -1937,7 +1937,8 @@ footer nav + p {
 .exhibits #content > h1:first-of-type,
 #exhibit-blocks,
 #exhibit-page-navigation,
-.exhibits.summary #primary {
+.exhibits.summary #primary,
+#exhibit-page-attribution {
   float: left;
   display: inline;
   margin-left: 10px;
@@ -1951,7 +1952,8 @@ footer nav + p {
   .exhibits #content > h1:first-of-type,
   #exhibit-blocks,
   #exhibit-page-navigation,
-  .exhibits.summary #primary {
+  .exhibits.summary #primary,
+  #exhibit-page-attribution {
     margin: 0;
   }
 }
@@ -1959,7 +1961,8 @@ footer nav + p {
   .exhibits #content > h1:first-of-type,
   #exhibit-blocks,
   #exhibit-page-navigation,
-  .exhibits.summary #primary {
+  .exhibits.summary #primary,
+  #exhibit-page-attribution {
     width: 556px;
   }
 }
@@ -1967,7 +1970,8 @@ footer nav + p {
   .exhibits #content > h1:first-of-type,
   #exhibit-blocks,
   #exhibit-page-navigation,
-  .exhibits.summary #primary {
+  .exhibits.summary #primary,
+  #exhibit-page-attribution {
     width: 300px;
   }
 }
@@ -1975,7 +1979,8 @@ footer nav + p {
   .exhibits #content > h1:first-of-type,
   #exhibit-blocks,
   #exhibit-page-navigation,
-  .exhibits.summary #primary {
+  .exhibits.summary #primary,
+  #exhibit-page-attribution {
     width: 420px;
   }
 }

@@ -11,6 +11,13 @@ echo head(array(
 <?php exhibit_builder_render_exhibit_page(); ?>
 </div>
 
+<div id="exhibit-page-attribution">
+  <?php
+    $exhibitOwnerName = dh_get_user_by_id($exhibit['owner_id'])['name'];
+    echo("Exhibit created by: $exhibitOwnerName");
+  ?>
+</div>
+
 <!--<div id="exhibit-page-navigation">
     <?php if ($prevLink = exhibit_builder_link_to_previous_page()): ?>
     <div id="exhibit-nav-prev">
