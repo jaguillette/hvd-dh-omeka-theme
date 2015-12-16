@@ -11,13 +11,6 @@ echo head(array(
 <?php exhibit_builder_render_exhibit_page(); ?>
 </div>
 
-<div id="exhibit-page-attribution">
-  <?php
-    $exhibitOwnerName = $exhibit->getOwner()['name'];
-    echo("Exhibit created by: $exhibitOwnerName");
-  ?>
-</div>
-
 <!--<div id="exhibit-page-navigation">
     <?php if ($prevLink = exhibit_builder_link_to_previous_page()): ?>
     <div id="exhibit-nav-prev">
@@ -38,6 +31,14 @@ echo head(array(
     <h4><?php echo exhibit_builder_link_to_exhibit($exhibit); ?></h4>
     <?php echo exhibit_builder_page_tree($exhibit, $exhibit_page); ?>
 </nav>
+
+<div id="exhibit-page-attribution">
+  <?php
+    $exhibitOwnerName = $exhibit->getOwner()['name'];
+    echo("Exhibit created by $exhibitOwnerName");
+  ?>
+</div>
+
 <script src="<?php echo(substr(PUBLIC_THEME_DIR,13)); ?>/dh-theme/javascripts/vendor/jquery.fancybox.js"></script>
 <script type="text/javascript">
 var thumbnails = jQuery.map(jQuery('.download-file img'), function(element) { return jQuery(element).attr('src'); });
