@@ -1998,6 +1998,7 @@ footer nav + p {
 
 #exhibit-page-attribution {
   font-style: italic;
+  float: right;
 }
 
 .exhibit .description,
