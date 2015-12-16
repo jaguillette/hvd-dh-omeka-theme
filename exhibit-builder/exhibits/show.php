@@ -13,7 +13,7 @@ echo head(array(
 
 <div id="exhibit-page-attribution">
   <?php
-    $exhibitOwnerName = dh_get_user_by_id($exhibit['owner_id'])['name'];
+    $exhibitOwnerName = $exhibit->getOwner()['name'];
     echo("Exhibit created by: $exhibitOwnerName");
   ?>
 </div>
