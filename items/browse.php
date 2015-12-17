@@ -37,6 +37,17 @@ $sortLinks[__('Date Added')] = 'added';
     <?php endif; ?>
 
     <?php if ($description = metadata('item', array('Dublin Core', 'Description'), array('snippet'=>250))): ?>
+
+    <?php if ($itemAttribution = get_theme_option('Item Attribution')) { ?>
+    <div id="item-attribution">
+    <?php
+      $itemOwnerName = dh_get_user_by_id($item['owner_id'])['name'];
+      $itemAttrLabel = get_theme_option('Item Attribution Label');
+      echo("$itemAttrLabel $itemOwnerName");
+    ?>
+    </div>
+    <?php } ?>
+
     <div class="item-description">
         <?php echo $description; ?>
     </div>
