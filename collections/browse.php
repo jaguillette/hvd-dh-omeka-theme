@@ -23,8 +23,18 @@ $sortLinks[__('Date Added')] = 'added';
     <?php if ($collectionImage = record_image('collection', 'square_thumbnail')): ?>
         <?php echo link_to_collection($collectionImage, array('class' => 'image')); ?>
     <?php endif; ?>
-    
+
     <div class="collection-meta">
+
+    <?php if ($collectionAttribution = get_theme_option('Collection Attribution')) { ?>
+    <div id="collection-attribution">
+    <?php
+      $collectionOwnerName = dh_get_user_by_id($collection['owner_id'])['name'];
+      $collectionAttrLabel = get_theme_option('Collection Attribution Label');
+      echo("$collectionAttrLabel $collectionOwnerName");
+    ?>
+    </div>
+    <?php } ?>
 
     <?php if (metadata('collection', array('Dublin Core', 'Description'))): ?>
     <div class="collection-description">
