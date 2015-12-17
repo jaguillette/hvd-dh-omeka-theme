@@ -32,12 +32,15 @@ echo head(array(
     <?php echo exhibit_builder_page_tree($exhibit, $exhibit_page); ?>
 </nav>
 
-<div id="exhibit-page-attribution">
-  <?php
-    $exhibitOwnerName = $exhibit->getOwner()['name'];
-    echo("Exhibit created by $exhibitOwnerName");
-  ?>
+<?php if ($exhibitAttribution = get_theme_option('Exhibit Attribution')) { ?>
+<div id="exhibit-attribution">
+<?php
+  $exhibitOwnerName = dh_get_user_by_id($exhibit['owner_id'])['name'];
+  $exhibitAttrLabel = get_theme_option('Exhibit Attribution Label');
+  echo("$exhibitAttrLabel $exhibitOwnerName");
+?>
 </div>
+<?php } ?>
 
 <script src="<?php echo(substr(PUBLIC_THEME_DIR,13)); ?>/dh-theme/javascripts/vendor/jquery.fancybox.js"></script>
 <script type="text/javascript">
