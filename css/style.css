@@ -1049,7 +1049,7 @@ nav, #nav-container {
   z-index: 0;
   font-family: "PT Serif", serif;
   font-size: 16px;
-  line-height: 28px;
+  line-height: 22px;
 }
 #content:after {
   content: "\0020";
