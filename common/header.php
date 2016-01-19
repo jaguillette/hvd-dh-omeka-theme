@@ -39,7 +39,22 @@
     <div id="header-container">
         <header role="banner">
             <?php fire_plugin_hook('public_header', array('view'=>$this)); ?>
-            <div id="site-title"><?php echo link_to_home_page(theme_logo()); ?></div>
+            <div id="site-title">
+              <?php
+              if (theme_logo()):
+                echo link_to_home_page(theme_logo());
+              else:
+                $site_title_text = option('site_title');
+                if ($secondaryTitle = get_theme_option('Secondary Page Title')):
+                  $site_title_text .= "<br/>$secondaryTitle";
+                endif;
+                if ($tertiaryTitle = get_theme_option('Tertiary Page Title')):
+                  $site_title_text .= "<br/>$tertiaryTitle";
+                endif;
+                echo link_to_home_page($site_title_text);
+              endif;
+              ?>
+            </div>
 
             <div id="search-container" role="search">
                 <?php if (get_theme_option('use_advanced_search') === null || get_theme_option('use_advanced_search')): ?>
@@ -62,9 +77,9 @@
              ?>
          </div>
     </div>
-        
+
         <?php echo theme_header_image(); ?>
-                       
+
     <div id="content" role="main" tabindex="-1">
 
 <?php fire_plugin_hook('public_content_top', array('view'=>$this)); ?>
