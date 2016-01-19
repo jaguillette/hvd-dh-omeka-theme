@@ -44,13 +44,29 @@
               if (theme_logo()):
                 echo link_to_home_page(theme_logo());
               else:
-                $site_title_text = option('site_title');
-                if ($secondaryTitle = get_theme_option('Secondary Page Title')):
-                  $site_title_text .= "<br/>$secondaryTitle";
-                endif;
-                if ($tertiaryTitle = get_theme_option('Tertiary Page Title')):
-                  $site_title_text .= "<br/>$tertiaryTitle";
-                endif;
+                if ($primaryTitleStyle = get_theme_option('Primary Page Title Style')) {
+                } else {
+                  $primaryTitleStyle = "font-size:18px; font-weight:normal;";
+                }
+                if ($secondaryTitleStyle = get_theme_option('Secondary Page Title Style')) {
+                } else {
+                  $secondaryTitleStyle = "font-size:40px;";
+                }
+                if ($tertiaryTitleStyle = get_theme_option('Tertiary Page Title Style')) {
+                } else {
+                  $tertiaryTitleStyle = "font-size:18px; font-weight: normal;";
+                }
+                if ($primaryTitle = get_theme_option('Primary Page Title')) {
+                  $site_title_text = "<span style=\"$primaryTitleStyle\">$primaryTitle</span>";
+                } else {
+                  $site_title_text = "<span style=\"$primaryTitleStyle\">".option('site_title')."</span>";
+                }
+                if ($secondaryTitle = get_theme_option('Secondary Page Title')) {
+                  $site_title_text .= "<br/><span style=\"$secondaryTitleStyle\">$secondaryTitle</span>";
+                }
+                if ($tertiaryTitle = get_theme_option('Tertiary Page Title')) {
+                  $site_title_text .= "<br/><span style=\"$tertiaryTitleStyle\">$tertiaryTitle</span>";
+                }
                 echo link_to_home_page($site_title_text);
               endif;
               ?>
