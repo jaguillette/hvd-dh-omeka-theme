@@ -435,11 +435,12 @@ h1, h2, h3 {
 }
 
 h1 {
-  font-size: 30px;
+  font-size: 28px;
   line-height: 36px;
-  text-transform: uppercase;
-  letter-spacing: .1em;
+  /* text-transform: uppercase; */
+  /* letter-spacing: .1em; */
   word-break: break-word;
+  font-weight: bold;
 }
 
 h2 {
@@ -848,9 +849,6 @@ header:after {
   list-style-type: none;
   margin: 0 0 -1px 0;
   position: relative;
-  font-family: 'Droid Sans', sans-serif;
-  font-size: 12px;
-  line-height: 18px;
 }
 #primary-nav .navigation {
   position: relative;
@@ -996,6 +994,13 @@ header:after {
   display: none;
 }
 
+nav, #nav-container {
+  font-family: 'Droid Sans', sans-serif;
+  font-size: 12px;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
 /* Pagination Classes */
 .pagination {
   float: left;
@@ -1042,6 +1047,9 @@ header:after {
   width: 960px;
   padding: 1.5em 10px;
   z-index: 0;
+  font-family: "PT Serif", serif;
+  font-size: 16px;
+  line-height: 28px;
 }
 #content:after {
   content: "\0020";
