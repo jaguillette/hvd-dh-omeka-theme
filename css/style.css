@@ -1001,6 +1001,10 @@ nav, #nav-container {
   text-transform: uppercase;
 }
 
+nav#admin-bar {
+  text-transform: none;
+}
+
 /* Pagination Classes */
 .pagination {
   float: left;
