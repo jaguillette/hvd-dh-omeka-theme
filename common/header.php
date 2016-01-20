@@ -59,7 +59,7 @@
                 if ($primaryTitle = get_theme_option('Primary Page Title')) {
                   $site_title_text = "<span style=\"$primaryTitleStyle\">$primaryTitle</span>";
                 } else {
-                  $site_title_text = "<span style=\"$primaryTitleStyle\">".option('site_title')."</span>";
+                  $site_title_text = "<span>".option('site_title')."</span>";
                 }
                 if ($secondaryTitle = get_theme_option('Secondary Page Title')) {
                   $site_title_text .= "<br/><span style=\"$secondaryTitleStyle\">$secondaryTitle</span>";
