@@ -94,4 +94,21 @@ function dh_get_user_by_id($user_id)
   }
   return $user;*/
 }
+
+/**
+ * Get only the theme's header image URL.
+ *
+ * @package Omeka\Function\View\Head
+ * @uses get_theme_option()
+ * @return string|null
+ */
+function dh_theme_header_image_url()
+{
+    $headerImage = get_theme_option('Header Image');
+    if ($headerImage) {
+        $storage = Zend_Registry::get('storage');
+        $headerImage = $storage->getUri($storage->getPathByType($headerImage, 'theme_uploads'));
+        return $headerImage;
+    }
+}
 ?>

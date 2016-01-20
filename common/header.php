@@ -36,7 +36,7 @@
  <?php echo body_tag(array('id' => @$bodyid, 'class' => @$bodyclass)); ?>
     <a href="#content" id="skipnav"><?php echo __('Skip to main content'); ?></a>
     <?php fire_plugin_hook('public_body', array('view'=>$this)); ?>
-    <div id="header-container">
+    <div id="header-container"<?php if ($headerImage = dh_theme_header_image_url()) { echo "style=\"background: url($headerImage); background-size:cover;\";";} ?>>
         <header role="banner">
             <?php fire_plugin_hook('public_header', array('view'=>$this)); ?>
             <div id="site-title">
@@ -80,21 +80,21 @@
                 <?php endif; ?>
             </div>
         </header>
-    </div>
-    <div id="nav-container">
-         <div id="primary-nav" role="navigation">
-             <?php
-                  echo public_nav_main();
-             ?>
-         </div>
-        <div id="mobile-nav" role="navigation" aria-label="<?php echo __('Mobile Navigation'); ?>">
-             <?php
-                  echo public_nav_main();
-             ?>
-         </div>
+        <div id="nav-container">
+             <div id="primary-nav" role="navigation">
+                 <?php
+                      echo public_nav_main();
+                 ?>
+             </div>
+            <div id="mobile-nav" role="navigation" aria-label="<?php echo __('Mobile Navigation'); ?>">
+                 <?php
+                      echo public_nav_main();
+                 ?>
+             </div>
+        </div>
     </div>
 
-        <?php echo theme_header_image(); ?>
+        <?php // echo theme_header_image(); ?>
 
     <div id="content" role="main" tabindex="-1">
 
