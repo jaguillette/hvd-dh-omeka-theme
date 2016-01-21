@@ -449,7 +449,7 @@ h2 {
 }
 
 h3 {
-  font-size: 14px;
+  font-size: 15px;
   line-height: 16px;
   color: #000;
   font-weight: bold;
@@ -461,7 +461,7 @@ h4, h5 {
 }
 
 h4 {
-  font-weight: bold;
+  font-weight: normal;
 }
 
 h5 {
