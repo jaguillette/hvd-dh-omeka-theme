@@ -393,11 +393,6 @@ table {
   border-spacing: 0;
 }
 
-table.item-metadata {
-  width: 60%;
-  float: left;
-}
-
 td,
 th {
   padding: 0;
@@ -1340,6 +1335,11 @@ ul.title-list {
 
 .items.show h3 {
   margin-bottom: 0.75em;
+}
+
+#item-metadata {
+  width: 60%;
+  float: left;
 }
 
 /* Items Classes*/
