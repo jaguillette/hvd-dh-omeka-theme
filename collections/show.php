@@ -16,7 +16,12 @@ $collectionTitle = strip_formatting(metadata('collection', array('Dublin Core', 
 </div>
 <?php } ?>
 
-<?php echo all_element_texts('collection'); ?>
+<?php 
+    $description =  metadata('collection', array('Dublin Core','Description'));
+    if ($description) {
+        echo("<p>$description</p>");
+    }
+?>
 
 <div id="collection-items">
     <h2><?php echo link_to_items_browse(__('Items in the %s Collection', $collectionTitle), array('collection' => metadata('collection', 'id'))); ?></h2>
