@@ -41,12 +41,13 @@ queue_css_file('jquery.fancybox');
     <?php endif;?>
 
     <!-- The following prints a citation for this item. -->
+    <?php if (False): ?>
     <div id="item-citation" class="element">
         <h3><?php echo __('Citation'); ?></h3>
         <div class="element-text"><?php echo metadata('item','citation',array('no_escape'=>true)); ?></div>
     </div>
        <?php fire_plugin_hook('public_items_show', array('view' => $this, 'item' => $item)); ?>
-
+    <?php endif; ?>
 
     <ul class="item-pagination navigation">
         <li id="previous-item" class="previous"><?php echo link_to_previous_item_show(); ?></li>
