@@ -528,6 +528,10 @@ th {
   text-align: left;
 }
 
+.item-metadata td, .item-metadata th {
+  border-bottom: none;
+}
+
 /* -- Links -- */
 a:link, a:visited {
   color: #850d2a;
