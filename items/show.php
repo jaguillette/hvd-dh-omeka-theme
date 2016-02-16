@@ -22,7 +22,7 @@ queue_css_file('jquery.fancybox');
 
     <div id="item-images">
         <h3><?php echo __('Files'); ?></h3>
-        <?php echo files_for_item(array('linkAttributes'=>array('data-lightbox'=>'file-gallery'))); ?>
+        <?php echo files_for_item(array('imageSize' => 'fullsize', 'linkAttributes'=>array('data-lightbox'=>'file-gallery'))); ?>
     </div>
 
    <?php if(metadata('item','Collection Name')): ?>
