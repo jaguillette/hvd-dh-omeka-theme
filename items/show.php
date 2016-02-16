@@ -20,9 +20,9 @@ queue_css_file('jquery.fancybox');
         <?php echo all_element_texts('item'); ?>
     </div>
 
-    <h3><?php echo __('Files'); ?></h3>
     <div id="item-images">
-         <?php echo files_for_item(array('linkAttributes'=>array('data-lightbox'=>'file-gallery'))); ?>
+        <h3><?php echo __('Files'); ?></h3>
+        <?php echo files_for_item(array('linkAttributes'=>array('data-lightbox'=>'file-gallery'))); ?>
     </div>
 
    <?php if(metadata('item','Collection Name')): ?>
