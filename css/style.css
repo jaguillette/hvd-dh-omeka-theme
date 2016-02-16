@@ -1342,6 +1342,10 @@ ul.title-list {
   float: left;
 }
 
+table.item-metadata th {
+  vertical-align: top;
+}
+
 /* Items Classes*/
 .element {
   overflow: hidden;
