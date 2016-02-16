@@ -17,7 +17,7 @@ queue_css_file('jquery.fancybox');
 
     <!-- Items metadata -->
     <div id="item-metadata">
-        <?php echo all_element_texts('item',array('show_element_set_headings' => false)); ?>
+        <?php echo all_element_texts('item'); ?>
     </div>
 
     <h3><?php echo __('Files'); ?></h3>
