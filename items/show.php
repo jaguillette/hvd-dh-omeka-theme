@@ -18,27 +18,31 @@ queue_css_file('jquery.fancybox');
     <!-- Items metadata -->
     <div id="item-metadata">
         <?php echo all_element_texts('item'); ?>
+
+        <?php if(metadata('item','Collection Name')): ?>
+          <table id="collection" class="element">
+          <tr>
+            <th><?php echo __('Collection:'); ?></th>
+            <td class="element-text"><?php echo link_to_collection_for_item(); ?></td>
+          </tr>
+          </table>
+        <?php endif; ?>
+
+        <!-- The following prints a list of all tags associated with the item -->
+        <?php if (metadata('item','has tags')): ?>
+        <table id="item-tags" class="element">
+        <tr>
+            <th><?php echo __('Tags:'); ?></th>
+            <td class="element-text"><?php echo tag_string('item'); ?></td>
+        </tr>
+        </table>
+        <?php endif;?>
     </div>
 
     <div id="item-images">
         <h3><?php echo __('Files'); ?></h3>
         <?php echo files_for_item(array('imageSize' => 'fullsize', 'linkAttributes'=>array('data-lightbox'=>'file-gallery'))); ?>
     </div>
-
-   <?php if(metadata('item','Collection Name')): ?>
-      <div id="collection" class="element">
-        <h3><?php echo __('Collection'); ?></h3>
-        <div class="element-text"><?php echo link_to_collection_for_item(); ?></div>
-      </div>
-   <?php endif; ?>
-
-     <!-- The following prints a list of all tags associated with the item -->
-    <?php if (metadata('item','has tags')): ?>
-    <div id="item-tags" class="element">
-        <h3><?php echo __('Tags'); ?></h3>
-        <div class="element-text"><?php echo tag_string('item'); ?></div>
-    </div>
-    <?php endif;?>
 
     <!-- The following prints a citation for this item. -->
     <?php if (False): ?>

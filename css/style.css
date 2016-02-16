@@ -528,7 +528,13 @@ th {
   text-align: left;
 }
 
-.item-metadata td, .item-metadata th {
+#item-metadata th {
+  text-align: right;
+  width: 30%;
+  font-family: 'Droid Sans', sans-serif;
+}
+
+#item-metadata td, #item-metadata th {
   border-bottom: none;
 }
 
