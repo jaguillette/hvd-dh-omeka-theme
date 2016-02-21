@@ -1656,6 +1656,11 @@ table.item-metadata th {
   margin-bottom: 0;
 }
 
+.element-text p {
+  margin-top: 0;
+  margin-bottom: 0.5em;
+}
+
 .collection .image,
 .exhibit .image {
   display: block;

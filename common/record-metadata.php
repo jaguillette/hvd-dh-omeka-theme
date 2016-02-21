@@ -7,9 +7,11 @@
     <?php foreach ($setElements as $elementName => $elementInfo): ?>
     <tr id="<?php echo text_to_id(html_escape("$setName $elementName")); ?>" class="element">
         <th><?php echo html_escape(__($elementName)); ?>:</th>
-        <?php foreach ($elementInfo['texts'] as $text): ?>
-            <td class="element-text"><?php echo $text; ?></td>
+        <td class="element-text">
+	<?php foreach ($elementInfo['texts'] as $text): ?>
+            <p><?php echo $text; ?></p>
         <?php endforeach; ?>
+	</td>
     </tr><!-- end element -->
     <?php endforeach; ?>
     </table>
