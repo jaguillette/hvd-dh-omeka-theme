@@ -990,7 +990,6 @@ header:after {
   color: #666;
 }
 #secondary-nav .active a, .secondary-nav .active a {
-  background: #fff;
   color: #333;
   font-weight: bold;
 }
