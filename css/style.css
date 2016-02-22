@@ -2100,6 +2100,11 @@ footer nav + p {
   display: inline;
 }
 
+#neatline #simile {
+  width: 62%;
+  height: 23%;
+}
+
 /* @end */
 @media screen and (max-width: 768px) {
   /* @group ----- Generic HTML elements ----- */
