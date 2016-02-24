@@ -1392,10 +1392,10 @@ table.item-metadata th {
 
 .item .item-file a {
   display: block;
-  height: 9em;
+  height: auto;
 }
 .item .item-file a img {
-  height: 100%;
+  height: auto;
   width: auto;
 }
 
