@@ -2,7 +2,17 @@
 $title = __('Browse Exhibits');
 echo head(array('title' => $title, 'bodyclass' => 'exhibits browse'));
 ?>
-<h1><?php echo $title; ?>
+<h1>
+<?php 
+if (array_key_exists('tags', $_GET)) {
+    $space_replace = array('-', '_');
+    $tag_title = ucwords(str_replace($space_replace, ' ', $_GET['tags']));
+    echo($tag_title);
+} else {
+    echo $title;
+}
+
+?>
 <?php if ($browseCount = get_theme_option('Browse Exhibit Show Count')): ?>
     <?php echo __('(%s total)', $total_results); ?>
 <?php endif; ?></h1>
