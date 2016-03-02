@@ -59,7 +59,9 @@ if (array_key_exists('tags', $_GET)) {
         <?php if ($exhibitDescription = metadata('exhibit', 'description', array('no_escape' => true, 'snippet' => 1000))): ?>
         <div class="description"><?php echo $exhibitDescription; ?></div>
         <?php endif; ?>
-        <?php if ($exhibitTags = tag_string('exhibit', 'exhibits')): ?>
+        <?php 
+        // Turned off exhibit tag display
+        if(False): //if ($exhibitTags = tag_string('exhibit', 'exhibits')): ?>
         <p class="tags"><?php echo $exhibitTags; ?></p>
         <?php endif; ?>
     </div>
