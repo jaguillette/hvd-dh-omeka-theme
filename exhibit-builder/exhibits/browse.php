@@ -61,7 +61,7 @@ if (array_key_exists('tags', $_GET)) {
         <?php endif; ?>
         <?php 
         // Turned off exhibit tag display
-        if(False): //if ($exhibitTags = tag_string('exhibit', 'exhibits')): ?>
+        if ($exhibitTags = tag_string('exhibit', 'exhibits') and !array_key_exists('tags', $_GET)): ?>
         <p class="tags"><?php echo $exhibitTags; ?></p>
         <?php endif; ?>
     </div>
