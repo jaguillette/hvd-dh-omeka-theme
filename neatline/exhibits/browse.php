@@ -35,6 +35,10 @@
             array('class' => 'neatline'), true
           );?>
         </h2>
+        <?php 
+        if ($browseNeatlineNarrative = get_theme_option("Browse Neatline Narrative")) {
+           echo(nl_getExhibitField('narrative'));
+         } ?>
       <?php endforeach; ?>
 
     <div class="pagination"><?php echo pagination_links(); ?></div>
