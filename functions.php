@@ -35,6 +35,7 @@ function dh_random_featured_collections($count = 5, $hasImage = null)
             $html .= get_view()->partial('collections/single.php', array('collection' => $collection));
             release_object($collection);
         }
+        $html .= '';
     } else {
         $html = '<p>' . __('No featured collections are available.') . '</p>';
     }
