@@ -1714,7 +1714,6 @@ table.item-metadata th {
 
 .browse .collection .image,
 .browse .exhibit .image {
-  margin-right: 0;
   float: left;
   text-align: right;
   height: 10.5em;
@@ -2045,7 +2044,6 @@ footer nav + p {
 
 .exhibit .description,
 .exhibit .description ~ * {
-  float: left;
   display: inline;
   margin-left: 10px;
   margin-right: 10px;
@@ -2109,6 +2107,12 @@ footer nav + p {
   height: 23%;
 }
 
+/* @end */
+/* @group ----- Browse-all ----- */
+.browse-attribution {
+  font-style: italic;
+  margin-bottom: .75em;
+}
 /* @end */
 @media screen and (max-width: 768px) {
   /* @group ----- Generic HTML elements ----- */

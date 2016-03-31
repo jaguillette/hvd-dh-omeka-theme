@@ -45,7 +45,7 @@ if (array_key_exists('tags', $_GET)) {
     <div class="exhibit <?php if ($exhibitCount%2==1) echo ' even'; else echo ' odd'; ?>">
         <h2><?php echo link_to_exhibit(); ?></h2>
         <?php if ($exhibitAttribution = get_theme_option('Exhibit Attribution')) { ?>
-        <div id="exhibit-attribution">
+        <div class="browse-attribution">
         <?php
           $exhibitOwnerName = dh_get_user_by_id($exhibit['owner_id'])['name'];
           $exhibitAttrLabel = get_theme_option('Exhibit Attribution Label');
