@@ -27,6 +27,7 @@ queue_css_file('jquery.fancybox');
           </tr>
           </table>
         <?php endif; ?>
+        <?php fire_plugin_hook('public_items_show', array('view' => $this, 'item' => $item)); ?>
 
         <!-- The following prints a list of all tags associated with the item -->
         <?php if (metadata('item','has tags')): ?>
