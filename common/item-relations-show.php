@@ -19,5 +19,5 @@
         </tr>
         <?php endforeach; ?>
     </table>
-    <?php endif; ?>
 </div>
+<?php endif; ?>
