@@ -30,7 +30,7 @@ $sortLinks[__('Date Added')] = 'added';
     </div>
     <?php endif; ?>
 
-    <?php if ($collectionImage = record_image('collection', 'square_thumbnail')): ?>
+    <?php if ($collectionImage = record_image('collection', 'square_thumbnail') and $browse_collection_image = get_theme_option("Browse Collection Image")): ?>
         <?php echo link_to_collection($collectionImage, array('class' => 'image')); ?>
     <?php endif; ?>
 
