@@ -1,6 +1,10 @@
 <?php
-$title = __('Browse Exhibits');
-echo head(array('title' => $title, 'bodyclass' => 'exhibits browse'));
+if ($pageTitle = get_theme_option("Browse Exhibit Title")) {
+ #$browseNeatlineTitle is set
+} else {
+ $pageTitle = "Broswe Exhibits";
+}
+echo head(array('title' => $pageTitle, 'bodyclass' => 'exhibits browse'));
 ?>
 <h1>
 <?php 
@@ -9,7 +13,7 @@ if (array_key_exists('tags', $_GET)) {
     $tag_title = ucwords(str_replace($space_replace, ' ', $_GET['tags']));
     echo($tag_title);
 } else {
-    echo $title;
+    echo $pageTitle;
 }
 
 ?>
