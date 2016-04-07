@@ -9,20 +9,21 @@
 
 ?>
 
-<?php echo head(array(
-  'title' => __('Neatline | Browse Exhibits'),
+<?php 
+if ($pageTitle = get_theme_option("Browse Neatline Title")) {
+ #$pageTitle is set
+} else {
+ $pageTitle = "Neatline | Browse Exhibits";
+}
+echo head(array(
+  'title' => __($pageTitle),
   'content_class' => 'neatline'
 )); ?>
 
 <div id="primary">
 
   <?php echo flash(); ?>
-  <h1><?php 
-  if ($browseNeatlineTitle = get_theme_option("Browse Neatline Title")) {
-     echo __($browseNeatlineTitle);
-   } else {
-    echo __('Neatline | Browse Exhibits');
-   } ?></h1>
+  <h1><?php echo __($pageTitle); ?></h1>
 
   <?php if (nl_exhibitsHaveBeenCreated()): ?>
 
