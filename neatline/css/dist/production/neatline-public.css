@@ -614,10 +614,6 @@ a.nl-fullscreen {
     width: 75%;
 }
 
-#waypoints a.title.highlighted {
-    background: #BEEAFF;
-}
-
 #neatline-map {
     position: relative;
     height: 800px
