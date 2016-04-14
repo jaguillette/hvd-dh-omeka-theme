@@ -57,7 +57,7 @@ if (array_key_exists('tags', $_GET)) {
         ?>
         </div>
         <?php } ?>
-        <?php if ($exhibitImage = record_image($exhibit, 'fullsize')): ?>
+        <?php if ($exhibitImage = record_image($exhibit, 'fullsize') and $showCoverImage = get_theme_option("Browse Exhibit Show Cover Image")): ?>
             <?php echo exhibit_builder_link_to_exhibit($exhibit, $exhibitImage, array('class' => 'image')); ?>
         <?php endif; ?>
         <?php if ($exhibitDescription = metadata('exhibit', 'description', array('no_escape' => true, 'snippet' => 1000))): ?>
