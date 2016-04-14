@@ -40,10 +40,12 @@ queue_css_file('jquery.fancybox');
         <?php endif;?>
     </div>
 
+    <?php if (metadata('item','has files')): ?>
     <div id="item-images">
         <h3><?php echo __('Files'); ?></h3>
         <?php echo files_for_item(array('imageSize' => 'fullsize', 'linkAttributes'=>array('data-lightbox'=>'file-gallery'))); ?>
     </div>
+    <?php endif; ?>
 
     <!-- The following prints a citation for this item. -->
     <?php if (False): ?>
