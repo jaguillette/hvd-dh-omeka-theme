@@ -1770,7 +1770,8 @@ table.item-metadata th {
 }
 .collections .item-img a {
   display: block;
-  height: 6em;
+  height: 10em;
+  margin-bottom: 1.5em;
   border: 1px solid #ccc;
   padding: 2px;
 }
@@ -1782,10 +1783,17 @@ table.item-metadata th {
 .collections .item {
   overflow: hidden;
   border-color: #ccc;
-  border-top-width: 0.08333em;
-  border-top-style: solid;
+  border-bottom-width: 0.08333em;
+  border-bottom-style: solid;
   padding-top: -0.08333em;
-  margin-top: 1.5em;
+  padding-bottom: 1.5em;
+  float: left;
+}
+
+#collection-browse-link {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
 }
 
 /* @end */
