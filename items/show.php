@@ -15,37 +15,41 @@ queue_css_file('jquery.fancybox');
     </div>
     <?php } ?>
 
-    <!-- Items metadata -->
-    <div id="item-metadata">
-        <?php echo all_element_texts('item'); ?>
+    <div class="item-col-left">
+        <!-- Items metadata -->
+        <div id="item-metadata">
+            <?php echo all_element_texts('item'); ?>
 
-        <?php if(metadata('item','Collection Name')): ?>
-          <table id="collection" class="element">
-          <tr>
-            <th><?php echo __('Collection:'); ?></th>
-            <td class="element-text"><?php echo link_to_collection_for_item(); ?></td>
-          </tr>
-          </table>
+            <?php if(metadata('item','Collection Name')): ?>
+              <table id="collection" class="element">
+              <tr>
+                <th><?php echo __('Collection:'); ?></th>
+                <td class="element-text"><?php echo link_to_collection_for_item(); ?></td>
+              </tr>
+              </table>
+            <?php endif; ?>
+            <?php fire_plugin_hook('public_items_show', array('view' => $this, 'item' => $item)); ?>
+
+            <!-- The following prints a list of all tags associated with the item -->
+            <?php if (metadata('item','has tags')): ?>
+            <table id="item-tags" class="element">
+            <tr>
+                <th><?php echo __('Tags:'); ?></th>
+                <td class="element-text"><?php echo tag_string('item'); ?></td>
+            </tr>
+            </table>
+            <?php endif;?>
+        </div>
+    </div>
+
+    <div class="item-col-right">
+        <?php if (metadata('item','has files')): ?>
+            <div id="item-images">
+                <h3><?php echo __('Files'); ?></h3>
+                <?php echo files_for_item(array('imageSize' => 'fullsize', 'linkAttributes'=>array('data-lightbox'=>'file-gallery'))); ?>
+            </div>
         <?php endif; ?>
-        <?php fire_plugin_hook('public_items_show', array('view' => $this, 'item' => $item)); ?>
-
-        <!-- The following prints a list of all tags associated with the item -->
-        <?php if (metadata('item','has tags')): ?>
-        <table id="item-tags" class="element">
-        <tr>
-            <th><?php echo __('Tags:'); ?></th>
-            <td class="element-text"><?php echo tag_string('item'); ?></td>
-        </tr>
-        </table>
-        <?php endif;?>
     </div>
-
-    <?php if (metadata('item','has files')): ?>
-    <div id="item-images">
-        <h3><?php echo __('Files'); ?></h3>
-        <?php echo files_for_item(array('imageSize' => 'fullsize', 'linkAttributes'=>array('data-lightbox'=>'file-gallery'))); ?>
-    </div>
-    <?php endif; ?>
 
     <!-- The following prints a citation for this item. -->
     <?php if (False): ?>

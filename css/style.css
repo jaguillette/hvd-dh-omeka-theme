@@ -1328,8 +1328,6 @@ ul.title-list {
   overflow: hidden;
   margin-bottom: 18px;
   margin-right: -10px;
-  width: 40%;
-  float: right;
 }
 
 .fullsize {
@@ -1344,9 +1342,14 @@ ul.title-list {
   margin-bottom: 0.75em;
 }
 
-#item-metadata {
+.item-col-left {
   width: 60%;
   float: left;
+}
+
+.item-col-right {
+  width: 40%;
+  float: right;
 }
 
 table.item-metadata th {
