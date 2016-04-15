@@ -23,26 +23,53 @@ $collectionTitle = strip_formatting(metadata('collection', array('Dublin Core', 
     }
 ?>
 
-<div id="collection-items">
-    <?php if (metadata('collection', 'total_items') > 0): ?>
-        <?php foreach (loop('items') as $item): ?>
-        <?php $itemTitle = strip_formatting(metadata('item', array('Dublin Core', 'Title'))); ?>
-        <div class="hentry">
 
-            <?php if (metadata('item', 'has thumbnail')): ?>
-            <div class="item-img">
-                <?php echo link_to_item(item_image('square_thumbnail', array('alt' => $itemTitle))); ?>
-            </div>
-            <?php endif; ?>
+<?php if (metadata('collection', 'total_items') > 10): ?>
+<div id="collection-items">
+    <?php foreach (loop('items') as $item): ?>
+    <?php $itemTitle = strip_formatting(metadata('item', array('Dublin Core', 'Title'))); ?>
+    <div class="hentry">
+
+        <?php if (metadata('item', 'has thumbnail')): ?>
+        <div class="item-img">
+            <?php echo link_to_item(item_image('square_thumbnail', array('alt' => $itemTitle))); ?>
         </div>
-        <?php endforeach; ?>
-    <?php else: ?>
-        <p><?php echo __("There are currently no items within this collection."); ?></p>
-    <?php endif; ?>
+        <?php endif; ?>
+    </div>
+    <?php endforeach; ?>
+<?php elseif (metadata('collection', 'total_items') > 0): ?>
+<div id="collection-items" class = "two-col">
+    <?php foreach (loop('items') as $item): ?>
+    <?php $itemTitle = strip_formatting(metadata('item', array('Dublin Core', 'Title'))); ?>
+    <div class="item hentry">
+        <h3><?php echo link_to_item($itemTitle, array('class'=>'permalink')); ?></h3>
+
+        <?php if (metadata('item', 'has thumbnail')): ?>
+        <div class="item-img">
+            <?php echo link_to_item(item_image('square_thumbnail', array('alt' => $itemTitle))); ?>
+        </div>
+        <?php endif; ?>
+
+        <?php if ($text = metadata('item', array('Item Type Metadata', 'Text'), array('snippet'=>250))): ?>
+        <div class="item-description">
+            <p><?php echo $text; ?></p>
+        </div>
+        <?php elseif ($description = metadata('item', array('Dublin Core', 'Description'), array('snippet'=>250))): ?>
+        <div class="item-description">
+            <?php echo $description; ?>
+        </div>
+        <?php endif; ?>
+    </div>
+    <?php endforeach; ?>
+<?php else: ?>
+<div id="collection-items">
+    <p><?php echo __("There are currently no items within this collection."); ?></p>
+<?php endif; ?>
 </div><!-- end collection-items -->
 
-
-<div id="collection-browse-link"><?php echo link_to_items_browse(__('View items in the %s Collection', $collectionTitle), array('collection' => metadata('collection', 'id'))); ?></div>
+<?php if (metadata('collection', 'total_items') > 10): ?>
+    <div id="collection-browse-link"><?php echo link_to_items_browse(__('View items in the %s Collection', $collectionTitle), array('collection' => metadata('collection', 'id'))); ?></div>
+<?php endif; ?>
 
 <?php fire_plugin_hook('public_collections_show', array('view' => $this, 'collection' => $collection)); ?>
 

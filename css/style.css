@@ -538,6 +538,16 @@ th {
   border-bottom: none;
 }
 
+.two-col {
+  column-count: 2;
+  -moz-column-count: 2;
+  -webkit-column-count: 2;
+}
+
+.two-col div {
+  display: inline-block;
+}
+
 /* -- Links -- */
 a:link, a:visited {
   color: #850d2a;
@@ -1790,7 +1800,6 @@ table.item-metadata th {
   border-bottom-style: solid;
   padding-top: -0.08333em;
   padding-bottom: 1.5em;
-  float: left;
 }
 
 #collection-browse-link {
