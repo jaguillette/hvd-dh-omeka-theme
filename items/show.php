@@ -28,7 +28,6 @@ queue_css_file('jquery.fancybox');
               </tr>
               </table>
             <?php endif; ?>
-            <?php fire_plugin_hook('public_items_show', array('view' => $this, 'item' => $item)); ?>
 
             <!-- The following prints a list of all tags associated with the item -->
             <?php if (metadata('item','has tags')): ?>
@@ -39,6 +38,10 @@ queue_css_file('jquery.fancybox');
             </tr>
             </table>
             <?php endif;?>
+            
+            <?php if (metadata('item','has files')): ?>
+                <?php fire_plugin_hook('public_items_show', array('view' => $this, 'item' => $item)); ?>
+            <?php endif; ?>
         </div>
     </div>
 
@@ -48,6 +51,8 @@ queue_css_file('jquery.fancybox');
                 <h3><?php echo __('Files'); ?></h3>
                 <?php echo files_for_item(array('imageSize' => 'fullsize', 'linkAttributes'=>array('data-lightbox'=>'file-gallery'))); ?>
             </div>
+        <?php else: ?>
+            <?php fire_plugin_hook('public_items_show', array('view' => $this, 'item' => $item)); ?>
         <?php endif; ?>
     </div>
 
@@ -57,7 +62,6 @@ queue_css_file('jquery.fancybox');
         <h3><?php echo __('Citation'); ?></h3>
         <div class="element-text"><?php echo metadata('item','citation',array('no_escape'=>true)); ?></div>
     </div>
-       <?php fire_plugin_hook('public_items_show', array('view' => $this, 'item' => $item)); ?>
     <?php endif; ?>
 
     <ul class="item-pagination navigation">
