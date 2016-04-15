@@ -3,7 +3,7 @@
 <?php else: ?>
 <div class="item-relations-display-browse">
     <h3><?php echo __('Item Relations'); ?></h3>
-    $relation_display_limit = 3; #Set number of relations to display on browse page here.
+    <?php $relation_display_limit = 3; #Set number of relations to display on browse page here.
     $relations_counter = 0;
     $relation_limit_reached = False;
     ?>
