@@ -62,7 +62,7 @@
 			minHeight : 100,
 			maxWidth  : 9999,
 			maxHeight : 9999,
-			pixelRatio: 2, // Set to 2 for retina display support
+			pixelRatio: 1, // Set to 2 for retina display support
 
 			autoSize   : true,
 			autoHeight : false,
