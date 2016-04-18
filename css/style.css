@@ -1428,11 +1428,13 @@ table.item-metadata th {
   list-style: none;
   margin-left: 0;
   padding-left: 0;
+  text-align: center;
 }
 
 .hTagcloud li {
-  display: inline;
+  display: inline-block;
   margin-right: 3px;
+  line-height: normal;
 }
 
 .popular a {
