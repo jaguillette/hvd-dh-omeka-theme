@@ -18,6 +18,7 @@ echo head(array('title' => $title, 'bodyclass' => 'exhibits tags'));
     ); ?>
 </nav>
 
+<?php uasort($tags, function($a, $b) { return strcasecmp($a['name'],$b['name']); }); ?>
 <?php echo tag_cloud($tags, 'exhibits/browse'); ?>
 
 <div id="multi-tag"></div>

@@ -9,6 +9,7 @@ echo head(array('title'=>$pageTitle, 'bodyclass'=>'items tags'));
     <?php echo public_nav_items(); ?>
 </nav>
 
+<?php uasort($tags, function($a, $b) { return strcasecmp($a['name'],$b['name']); }); ?>
 <?php echo tag_cloud($tags, 'items/browse'); ?>
 
 <div id="multi-tag"></div>
