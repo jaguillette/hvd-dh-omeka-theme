@@ -18,6 +18,10 @@ echo head(array('title' => $title, 'bodyclass' => 'exhibits tags'));
     ); ?>
 </nav>
 
+<div class="page-meta">
+    <p>Click on tags to find items with that tag, or check the boxes and click "Find selected tags" to search for items with all tags selected.</p>
+</div>
+
 <?php uasort($tags, function($a, $b) { return strcasecmp($a['name'],$b['name']); }); ?>
 <?php echo tag_cloud($tags, 'exhibits/browse'); ?>
 

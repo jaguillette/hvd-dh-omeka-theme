@@ -40,7 +40,7 @@ if (array_key_exists('tags', $_GET)) {
 
 <?php echo pagination_links(); ?>
 <?php if ($browseDescription = get_theme_option('Browse Exhibit Description')): ?>
-    <div class="browse-exhibit-description"><p><?php echo $browseDescription; ?></p></div>
+    <div class="page-meta"><p><?php echo $browseDescription; ?></p></div>
 <?php endif; ?>
 
 <?php $exhibitCount = 0; ?>

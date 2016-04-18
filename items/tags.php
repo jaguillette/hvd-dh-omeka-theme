@@ -9,6 +9,10 @@ echo head(array('title'=>$pageTitle, 'bodyclass'=>'items tags'));
     <?php echo public_nav_items(); ?>
 </nav>
 
+<div class="page-meta">
+	<p>Click on tags to find items with that tag, or check the boxes and click "Find selected tags" to search for items with all tags selected.</p>
+</div>
+
 <?php uasort($tags, function($a, $b) { return strcasecmp($a['name'],$b['name']); }); ?>
 <?php echo tag_cloud($tags, 'items/browse'); ?>
 
@@ -18,7 +22,8 @@ echo head(array('title'=>$pageTitle, 'bodyclass'=>'items tags'));
 	function insert_checkboxes(element_selector, form_selector) {
 		var items = jQuery(element_selector);
 		items.each( function() {
-			jQuery(this).before('<input type="checkbox" class="multi-tag" value="'+jQuery(this).text()+'">');
+			var tag = jQuery(this).text().replace(" ", "+")
+			jQuery(this).before('<input type="checkbox" class="multi-tag" value="'+tag+'" id="'+tag+'"><label for="'+tag+'"></label>');
 		})
 	}
 

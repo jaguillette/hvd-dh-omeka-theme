@@ -1433,43 +1433,60 @@ table.item-metadata th {
 
 .hTagcloud li {
   display: inline-block;
-  margin-right: 3px;
+  margin-right: .75em;
   line-height: normal;
 }
 
-.popular a {
+.hTagcloud input[type=checkbox] {
+  display: none;
+}
+
+.hTagcloud input[type=checkbox] + label::before {
+  content: "\f096";
+  font-family: "FontAwesome";
+  color: #850d2a;
+  width: 1em;
+  text-align: left;
+  display: inline-block;
+}
+
+.hTagcloud input[type=checkbox]:checked + label::before {
+  content: "\f046";
+}
+
+.popular a, .popular label {
   font-size: 120%;
 }
 
-.v-popular a {
+.v-popular a, .v-popular label {
   font-size: 140%;
 }
 
-.vv-popular a {
+.vv-popular a, .vv-popular label {
   font-size: 180%;
 }
 
-.vvv-popular a {
+.vvv-popular a, .vvv-popular label {
   font-size: 220%;
 }
 
-.vvvv-popular a {
+.vvvv-popular a, .vvvv-popular label {
   font-size: 260%;
 }
 
-.vvvvv-popular a {
+.vvvvv-popular a, .vvvvv-popular label {
   font-size: 300%;
 }
 
-.vvvvvv-popular a {
+.vvvvvv-popular a, .vvvvvv-popular label {
   font-size: 320%;
 }
 
-.vvvvvvv-popular a {
+.vvvvvvv-popular a, .vvvvvvv-popular label {
   font-size: 340%;
 }
 
-.vvvvvvvv-popular a {
+.vvvvvvvv-popular a, .vvvvvvvv-popular label {
   font-size: 360%;
 }
 
@@ -1925,14 +1942,6 @@ footer nav + p {
 
 /* @end */
 /* @group ----- Exhibit Builder ----- */
-.browse-exhibit-description {
-  float: left;
-  font-style: italic;
-}
-
-.browse-exhibit-description p {
-  margin-top: 0;
-}
 
 .pagination + .exhibit {
   border-top: 1px solid #eee;
@@ -2143,6 +2152,15 @@ footer nav + p {
 .browse-attribution {
   font-style: italic;
   margin-bottom: .75em;
+}
+
+.page-meta {
+  float: left;
+  font-style: italic;
+}
+
+.page-meta p {
+  margin-top: 0;
 }
 /* @end */
 @media screen and (max-width: 768px) {
