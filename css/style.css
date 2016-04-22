@@ -544,7 +544,7 @@ th {
   -webkit-column-count: 2;
 }
 
-.two-col div {
+.two-col>div {
   display: inline-block;
 }
 
