@@ -2,7 +2,7 @@
 if ($pageTitle = get_theme_option("Browse Item Title")) {
  #$browseNeatlineTitle is set
 } else {
- $pageTitle = "Broswe Items";
+ $pageTitle = "Browse Items";
 }
 echo head(array('title'=>$pageTitle,'bodyclass' => 'items browse'));
 ?>
