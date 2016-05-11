@@ -36,13 +36,11 @@ $sortLinks[__('Date Added')] = 'added';
 <div class="item record">
     <div class="item-meta-title">
         <h2><?php echo link_to_item(metadata('item', array('Dublin Core', 'Title')), array('class'=>'permalink')); ?></h2>
-        <p><em><a href="<?php echo absolute_url(); 
-        if (empty($_GET)): 
-            echo "?type=";
-        else:
-            echo "&type=";
-        endif;
-        echo $item->item_type_id;?>">
+        <?php 
+        $queryParams = $_GET;
+        $queryParams['type'] = $item->item_type_id;
+        ?>
+        <p><em><a href="<?php echo absolute_url(array(),null,$queryParams); ?>">
         <?php echo metadata('item','item_type_name'); ?></a></em></p>
     </div>
     <div class="item-meta">
