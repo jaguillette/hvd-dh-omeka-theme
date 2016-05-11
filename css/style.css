@@ -1508,13 +1508,16 @@ table.item-metadata th {
 
 /* @end */
 /* @group ----- Items/Browse ----- */
-.browse .item h2,
+.browse .item .item-meta-title,
 .browse .item-meta .item-img {
   float: left;
   display: inline;
   margin-left: 10px;
   margin-right: 10px;
   width: 220px;
+}
+.browse .item .item-meta-title p {
+  margin: 0.5em 0;
 }
 @media only screen and (max-width: 767px) {
   .browse .item h2,

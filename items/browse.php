@@ -30,9 +30,21 @@ $sortLinks[__('Date Added')] = 'added';
 
 <?php endif; ?>
 
+<?php #echo $select; ?>
+
 <?php foreach (loop('items') as $item): ?>
 <div class="item record">
-    <h2><?php echo link_to_item(metadata('item', array('Dublin Core', 'Title')), array('class'=>'permalink')); ?></h2>
+    <div class="item-meta-title">
+        <h2><?php echo link_to_item(metadata('item', array('Dublin Core', 'Title')), array('class'=>'permalink')); ?></h2>
+        <p><em><a href="<?php echo absolute_url(); 
+        if (empty($_GET)): 
+            echo "?type=";
+        else:
+            echo "&type=";
+        endif;
+        echo $item->item_type_id;?>">
+        <?php echo metadata('item','item_type_name'); ?></a></em></p>
+    </div>
     <div class="item-meta">
     <?php if (metadata('item', 'has thumbnail')): ?>
     <div class="item-img">
