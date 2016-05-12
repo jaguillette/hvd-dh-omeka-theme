@@ -27,7 +27,7 @@ $collectionTitle = strip_formatting(metadata('collection', array('Dublin Core', 
 <?php if (metadata('collection', 'total_items') > 10): ?>
 <div id="collection-items">
     <?php foreach (loop('items') as $item): ?>
-    <?php $itemTitle = strip_formatting(metadata('item', array('Dublin Core', 'Title'))); ?>
+    <?php $itemTitle = strip_formatting(dh_theme_get_display_title()); ?>
     <div class="hentry">
 
         <?php if (metadata('item', 'has thumbnail')): ?>
@@ -40,7 +40,7 @@ $collectionTitle = strip_formatting(metadata('collection', array('Dublin Core', 
 <?php elseif (metadata('collection', 'total_items') > 0): ?>
 <div id="collection-items" class = "two-col">
     <?php foreach (loop('items') as $item): ?>
-    <?php $itemTitle = strip_formatting(metadata('item', array('Dublin Core', 'Title'))); ?>
+    <?php $itemTitle = strip_formatting(dh_theme_get_display_title()); ?>
     <div class="item hentry">
         <h3><?php echo link_to_item($itemTitle, array('class'=>'permalink')); ?></h3>
 
@@ -50,13 +50,9 @@ $collectionTitle = strip_formatting(metadata('collection', array('Dublin Core', 
         </div>
         <?php endif; ?>
 
-        <?php if ($text = metadata('item', array('Item Type Metadata', 'Text'), array('snippet'=>250))): ?>
+        <?php if ($description = dh_theme_get_display_description(250)): ?>
         <div class="item-description">
-            <p><?php echo $text; ?></p>
-        </div>
-        <?php elseif ($description = metadata('item', array('Dublin Core', 'Description'), array('snippet'=>250))): ?>
-        <div class="item-description">
-            <?php echo $description; ?>
+            <p><?php echo $description; ?></p>
         </div>
         <?php endif; ?>
     </div>
