@@ -1,9 +1,9 @@
 <?php
 queue_css_file('jquery.fancybox');
 ?>
-<?php echo head(array('title' => metadata('item', array('Dublin Core', 'Title')),'bodyclass' => 'items show')); ?>
+<?php echo head(array('title' => dh_theme_get_display_title(),'bodyclass' => 'items show')); ?>
 <div id="primary">
-    <h1><?php echo metadata('item', array('Dublin Core','Title')); ?></h1>
+    <h1><?php echo dh_theme_get_display_title(); ?></h1>
 
     <?php if ($itemAttribution = get_theme_option('Item Attribution')) { ?>
     <div id="item-attribution">

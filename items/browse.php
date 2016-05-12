@@ -35,7 +35,7 @@ $sortLinks[__('Date Added')] = 'added';
 <?php foreach (loop('items') as $item): ?>
 <div class="item record">
     <div class="item-meta-title">
-        <h2><?php echo link_to_item(metadata('item', array('Dublin Core', 'Title')), array('class'=>'permalink')); ?></h2>
+        <h2><?php echo link_to_item(dh_theme_get_display_title(), array('class'=>'permalink')); ?></h2>
         <?php 
         $queryParams = $_GET;
         $queryParams['type'] = $item->item_type_id;
@@ -50,7 +50,7 @@ $sortLinks[__('Date Added')] = 'added';
     </div>
     <?php endif; ?>
 
-    <?php if ($description = metadata('item', array('Dublin Core', 'Description'), array('snippet'=>250))): ?>
+    <?php if ($description = dh_theme_get_display_description(250)): ?>
 
     <?php if ($itemAttribution = get_theme_option('Item Attribution')) { ?>
     <div id="item-attribution">

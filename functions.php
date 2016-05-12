@@ -112,4 +112,67 @@ function dh_theme_header_image_url()
         return $headerImage;
     }
 }
+
+/**
+ * Get the set of values for item type elements, including element descriptions.
+ *
+ * @package Omeka\Function\View\ItemType
+ * @uses Item::getItemTypeElements()
+ * @param Item|null $item Check for this specific item record (current item if null).
+ * @return array
+ */
+function detailed_item_type_elements($item = null)
+{
+    if (!$item) {
+        $item = get_current_record('item');
+    }
+    $elements = $item->getItemTypeElements();
+    foreach ($elements as $element) {
+        $elementText[$element->name] = array();
+        $elementText[$element->name]['text'] = metadata($item, array(ElementSet::ITEM_TYPE_NAME, $element->name));
+        $elementText[$element->name]['element_description'] = $element->description;
+    }
+    return $elementText;
+}
+
+/**
+ * Get the display title for an item. 
+ * If there is an element in the Item Type Metadata called Display Title, the
+ * element referenced there will be used. If not, the default Dublin Core 
+ * title will be used.
+ */
+function dh_theme_get_display_title()
+{
+  $itemTypeElements = detailed_item_type_elements();
+  foreach ($itemTypeElements as $element => $elementInfo) {
+    if (strpos($elementInfo['element_description'], 'Display Title')!==false) {
+      return $elementInfo['text'];
+    }
+  }
+  return metadata('item', array('Dublin Core', 'Title'));
+}
+
+/**
+ * Get the display description for an item. 
+ * If there is an element in the Item Type Metadata called Display Description, the
+ * element referenced there will be used. If not, the default Dublin Core 
+ * description will be used.
+ *
+ * @param int|null $snippet Slice the description to desired length with trailing 
+ * ellipsis.
+ */
+function dh_theme_get_display_description($snippet=false)
+{
+  $itemTypeElements = detailed_item_type_elements();
+  foreach ($itemTypeElements as $element => $elementInfo) {
+    if (strpos($elementInfo['element_description'], 'Display Description')!==false) {
+      if ($snippet and strlen($elementInfo['text'] > $snippet)) {
+        return substr($elementInfo['text'],0,$snippet)."...";
+      } else {
+        return $elementInfo['text'];
+      }
+    }
+  }
+  return metadata('item', array('Dublin Core', 'Description'),array('snippet'=>$snippet));
+}
 ?>
