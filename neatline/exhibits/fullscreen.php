@@ -34,7 +34,10 @@ function inIframe () {
         return true;
     }
 }
-if (inIframe()) {jQuery("#embed-code").attr("style","display:none;")}
+if (inIframe()) {
+  jQuery("#embed-code").attr("style","display:none;");
+  jQuery("#static-bubble").attr("style","max-width:45%;");
+}
 </script>
 
 </body>

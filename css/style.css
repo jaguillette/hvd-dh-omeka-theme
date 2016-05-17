@@ -2162,6 +2162,10 @@ footer nav + p {
   height: 23%;
 }
 
+#neatline.Simile #static-bubble {
+  max-height: 74%;
+}
+
 #waypoints a.title.highlighted {
     background: #BEEAFF;
 }
