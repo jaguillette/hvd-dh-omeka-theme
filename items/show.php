@@ -38,10 +38,6 @@ queue_css_file('jquery.fancybox');
             </tr>
             </table>
             <?php endif;?>
-            
-            <?php if (metadata('item','has files')): ?>
-                <?php fire_plugin_hook('public_items_show', array('view' => $this, 'item' => $item)); ?>
-            <?php endif; ?>
         </div>
     </div>
 
@@ -55,6 +51,16 @@ queue_css_file('jquery.fancybox');
             <?php fire_plugin_hook('public_items_show', array('view' => $this, 'item' => $item)); ?>
         <?php endif; ?>
     </div>
+
+    <div class="item-center-bottom">
+        <?php if (metadata('item','has files')): ?>
+            <?php fire_plugin_hook('public_items_show', array('view' => $this, 'item' => $item)); ?>
+        <?php endif; ?>
+    </div>
+
+    <script type="text/javascript">
+        if (jQuery(".item-col-right").height()==0) {jQuery(".item-col-left").attr('style', "width:100%;")}
+    </script>
 
     <!-- The following prints a citation for this item. -->
     <?php if (False): ?>

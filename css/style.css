@@ -1353,13 +1353,18 @@ ul.title-list {
 }
 
 .item-col-left {
-  width: 60%;
+  width: 40%;
   float: left;
 }
 
 .item-col-right {
-  width: 40%;
+  width: 60%;
   float: right;
+}
+
+.item-center-bottom {
+  width: 100%;
+  display: inline-block;
 }
 
 table.item-metadata th {
