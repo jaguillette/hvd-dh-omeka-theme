@@ -34,7 +34,7 @@ $sortLinks[__('Date Added')] = 'added';
 
 <?php foreach (loop('items') as $item): ?>
 <div class="item record">
-    <div class="item-meta-title">
+    <div class="item-meta-title mfull t1of3">
         <h2><?php echo link_to_item(dh_theme_get_display_title(), array('class'=>'permalink')); ?></h2>
         <?php 
         $queryParams = $_GET;
@@ -43,9 +43,9 @@ $sortLinks[__('Date Added')] = 'added';
         <p><em><a href="<?php echo absolute_url(array(),null,$queryParams); ?>">
         <?php echo metadata('item','item_type_name'); ?></a></em></p>
     </div>
-    <div class="item-meta">
+    <div class="item-meta mfull t2of3">
     <?php if (metadata('item', 'has thumbnail')): ?>
-    <div class="item-img">
+    <div class="item-img m1of3">
         <?php echo link_to_item(item_image('fullsize')); ?>
     </div>
     <?php endif; ?>

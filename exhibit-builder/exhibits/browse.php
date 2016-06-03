@@ -46,7 +46,7 @@ if (array_key_exists('tags', $_GET)) {
 <?php $exhibitCount = 0; ?>
 <?php foreach (loop('exhibit') as $exhibit): ?>
     <?php $exhibitCount++; ?>
-    <div class="exhibit <?php if ($exhibitCount%2==1) echo ' even'; else echo ' odd'; ?>">
+    <div class="exhibit record <?php if ($exhibitCount%2==1) echo ' even'; else echo ' odd'; ?>">
         <h2><?php echo link_to_exhibit(); ?></h2>
         <?php if ($exhibitAttribution = get_theme_option('Exhibit Attribution')) { ?>
         <div class="browse-attribution">

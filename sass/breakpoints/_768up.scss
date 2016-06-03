@@ -35,15 +35,8 @@ header {
 .items #content {
     width: 768px;
 }
-.browse .item h2,
-.browse .item-meta .item-img {
-	width: 172px;
-}
-.browse .item-meta {
-	width: 556px;
-}
-.browse .item-meta > div {
-	width: 364px;
+.browse .item {
+	padding: 1.5em 0;
 }
 .collection-meta {
 	width: 412px;
@@ -67,17 +60,17 @@ footer {
 
 /* columns for tablet-ish widths */
 .tfull {
-	width: 100%;
+	width: 100% !important;
 }
 .t1of2 {
-	width: 50%;
+	width: 50% !important;
 	float: left;
 }
 .t1of3 {
-	width: 33%;
+	width: 33% !important;
 	float: left;
 }
 .t2of3 {
-	width: 67%;
+	width: 67% !important;
 	float: left;
 }

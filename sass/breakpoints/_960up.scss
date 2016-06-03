@@ -28,12 +28,6 @@ header {
 	margin-right: 0;
 	width: 220px;
 }
-.browse .item-meta {
-	width: 700px;
-}
-.browse .item-meta > div {
-	width: 460px;
-}
 .browse .collection h2,
 .browse .exhibit h2 {
 	width: inherit;
@@ -60,17 +54,17 @@ footer {
 
 /* columns for desktop-ish widths */
 .dfull {
-	width: 100%;
+	width: 100% !important;
 }
 .d1of2 {
-	width: 50%;
+	width: 50% !important;
 	float: left;
 }
 .d1of3 {
-	width: 33%;
+	width: 33% !important;
 	float: left;
 }
 .d2of3 {
-	width: 67%;
+	width: 67% !important;
 	float: left;
 }

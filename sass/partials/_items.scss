@@ -125,7 +125,7 @@ table.item-metadata th {
 .browse .item {
   clear: both;
   border-bottom: 1px solid #eee;
-  padding: 3em 0;
+  padding: 0.5em 0;
   float: left;
   width: 100%;
 }
@@ -257,29 +257,26 @@ table.item-metadata th {
 /* @group ----- Items/Browse ----- */
 .browse .item .item-meta-title,
 .browse .item-meta .item-img {
-  float: left;
   display: inline;
-  margin-left: 10px;
-  margin-right: 10px;
-  width: 220px;
 }
 .browse .item .item-meta-title p {
   margin: 0.5em 0;
 }
-.browse .item h2,
+.browse .item h2 {
+  margin: 0;
+  padding-right: 1em;
+}
 .browse .item-meta .item-img {
   margin: 0;
-  width: 100%;
 }
 .browse .item-img img {
-  height: 10.5em;
+  width: 94%;
 }
 .browse .item-meta {
   float: left;
   display: inline;
   margin-left: 10px;
   margin-right: 10px;
-  width: 300px;
   margin: 0;
   max-width: 100%;
 }
@@ -291,12 +288,12 @@ table.item-metadata th {
   display: inline;
   margin-left: 10px;
   margin-right: 10px;
-  width: 300px;
   margin: 0;
-  max-width: 100%;
+  width: 100%;
 }
 .browse .item-meta .item-description {
   margin-bottom: 1.5em;
+  float: none;
 }
 .browse .item-meta .item-description:only-of-type {
   margin-bottom: 0;
