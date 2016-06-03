@@ -2471,6 +2471,30 @@ nav + .exhibit {
     width: 67% !important;
     float: left;
   }
+
+  /* line 77, ../sass/breakpoints/_768up.scss */
+  .t1of5 {
+    width: 20% !important;
+    float: left;
+  }
+
+  /* line 81, ../sass/breakpoints/_768up.scss */
+  .t2of5 {
+    width: 40% !important;
+    float: left;
+  }
+
+  /* line 85, ../sass/breakpoints/_768up.scss */
+  .t3of5 {
+    width: 60% !important;
+    float: left;
+  }
+
+  /* line 89, ../sass/breakpoints/_768up.scss */
+  .t4of5 {
+    width: 80% !important;
+    float: left;
+  }
 }
 /* -- 960px &up -- */
 @media only screen and (min-width: 960px) {

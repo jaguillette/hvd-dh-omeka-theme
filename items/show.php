@@ -15,7 +15,7 @@ queue_css_file('jquery.fancybox');
     </div>
     <?php } ?>
 
-    <div class="item-col-left">
+    <div class="mfull t2of5">
         <!-- Items metadata -->
         <div id="item-metadata">
             <?php echo all_element_texts('item'); ?>
@@ -41,7 +41,7 @@ queue_css_file('jquery.fancybox');
         </div>
     </div>
 
-    <div class="item-col-right">
+    <div class="mfull t3of5">
         <?php if (metadata('item','has files')): ?>
             <div id="item-images">
                 <h3><?php echo __('Files'); ?></h3>
@@ -52,7 +52,7 @@ queue_css_file('jquery.fancybox');
         <?php endif; ?>
     </div>
 
-    <div class="item-center-bottom">
+    <div class="mfull">
         <?php if (metadata('item','has files')): ?>
             <?php fire_plugin_hook('public_items_show', array('view' => $this, 'item' => $item)); ?>
         <?php endif; ?>
@@ -98,6 +98,9 @@ jQuery(".download-file").click(function(e) {
         index:startIndex
     });
 })
+if (!jQuery(".t3of5").height()) {
+    jQuery(".t2of5").removeClass("t2of5");
+}
 </script>
 
  <?php echo foot(); ?>
