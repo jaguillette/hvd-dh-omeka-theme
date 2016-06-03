@@ -42,7 +42,7 @@ $sortLinks[__('Date Added')] = 'added';
 
     <?php if (metadata('collection', array('Dublin Core', 'Description'))): ?>
     <div class="collection-description">
-        <?php echo text_to_paragraphs(metadata('collection', array('Dublin Core', 'Description'), array('snippet'=>150))); ?>
+        <?php echo text_to_paragraphs(metadata('collection', array('Dublin Core', 'Description'), array('snippet'=>350))); ?>
     </div>
     <?php endif; ?>
 

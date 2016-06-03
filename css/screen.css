@@ -522,32 +522,31 @@ th {
 
 /* line 63, ../sass/partials/_collections.scss */
 .collection-meta {
-  float: left;
+  float: none;
   display: inline;
   margin: 0;
-  width: 300px;
 }
 
-/* line 70, ../sass/partials/_collections.scss */
+/* line 69, ../sass/partials/_collections.scss */
 .collection-description p:first-of-type,
 .view-items-link:only-child {
   margin-top: 0.75em;
 }
 
-/* line 75, ../sass/partials/_collections.scss */
+/* line 74, ../sass/partials/_collections.scss */
 .browse .collection .element {
   clear: none;
 }
 
 /* @end */
 /* @group ----- Collections/Show ----- */
-/* line 81, ../sass/partials/_collections.scss */
+/* line 80, ../sass/partials/_collections.scss */
 .collections .item-img {
   float: left;
   margin: 0 1.5em 0 0;
 }
 
-/* line 85, ../sass/partials/_collections.scss */
+/* line 84, ../sass/partials/_collections.scss */
 .collections .item-img a {
   display: block;
   height: 10em;
@@ -556,13 +555,13 @@ th {
   padding: 2px;
 }
 
-/* line 92, ../sass/partials/_collections.scss */
+/* line 91, ../sass/partials/_collections.scss */
 .collections .item-img img {
   height: 100%;
   width: auto;
 }
 
-/* line 97, ../sass/partials/_collections.scss */
+/* line 96, ../sass/partials/_collections.scss */
 .collections .item {
   overflow: hidden;
   border-color: #ccc;
@@ -572,7 +571,7 @@ th {
   padding-bottom: 1.5em;
 }
 
-/* line 106, ../sass/partials/_collections.scss */
+/* line 105, ../sass/partials/_collections.scss */
 #collection-browse-link {
   display: inline-block;
   width: 100%;
@@ -581,68 +580,68 @@ th {
 
 /* @end */
 /* @group ----- Search Results ----- */
-/* line 114, ../sass/partials/_collections.scss */
+/* line 113, ../sass/partials/_collections.scss */
 #search-results + .pagination {
   margin-top: 2.25em;
 }
 
-/* line 118, ../sass/partials/_collections.scss */
+/* line 117, ../sass/partials/_collections.scss */
 #search-results td {
   vertical-align: top;
 }
 
-/* line 122, ../sass/partials/_collections.scss */
+/* line 121, ../sass/partials/_collections.scss */
 #search-results .image {
   float: left;
   height: 6em;
   margin: 0 1.5em 0 0;
 }
 
-/* line 127, ../sass/partials/_collections.scss */
+/* line 126, ../sass/partials/_collections.scss */
 #search-results .image img {
   height: 100%;
   width: auto;
 }
 
-/* line 132, ../sass/partials/_collections.scss */
+/* line 131, ../sass/partials/_collections.scss */
 #item-filters ul, #search-filters ul {
   padding-left: 0;
   list-style-type: none;
 }
 
-/* line 136, ../sass/partials/_collections.scss */
+/* line 135, ../sass/partials/_collections.scss */
 #item-filters ul > li, #search-filters ul > li {
   display: inline-block;
 }
 
-/* line 139, ../sass/partials/_collections.scss */
+/* line 138, ../sass/partials/_collections.scss */
 #item-filters ul > li:after, #search-filters ul > li:after {
   content: " \00B7";
   margin: 0 10px 0 5px;
 }
 
-/* line 143, ../sass/partials/_collections.scss */
+/* line 142, ../sass/partials/_collections.scss */
 #item-filters ul > li:last-child:after, #search-filters ul > li:last-child:after {
   content: "\00A0";
 }
 
-/* line 146, ../sass/partials/_collections.scss */
+/* line 145, ../sass/partials/_collections.scss */
 #item-filters ul li ul, #search-filters ul li ul {
   display: inline;
 }
 
-/* line 149, ../sass/partials/_collections.scss */
+/* line 148, ../sass/partials/_collections.scss */
 #item-filters ul li ul li, #search-filters ul li ul li {
   display: inline-block;
 }
 
-/* line 152, ../sass/partials/_collections.scss */
+/* line 151, ../sass/partials/_collections.scss */
 #item-filters ul li ul li:after, #search-filters ul li ul li:after {
   content: ", ";
   margin: 0;
 }
 
-/* line 156, ../sass/partials/_collections.scss */
+/* line 155, ../sass/partials/_collections.scss */
 #item-filters ul li ul li:last-child:after, #search-filters ul li ul li:last-child:after {
   content: "";
 }
@@ -2327,22 +2326,11 @@ nav + .exhibit {
   }
 
   /* line 19, ../sass/breakpoints/_480up.scss */
-  .browse .collection h2,
-  .browse .exhibit h2 {
-    width: 420px;
-  }
-
-  /* line 23, ../sass/breakpoints/_480up.scss */
-  .collection-meta {
-    width: 420px;
-  }
-
-  /* line 26, ../sass/breakpoints/_480up.scss */
   footer {
     width: 420px;
   }
 
-  /* line 29, ../sass/breakpoints/_480up.scss */
+  /* line 22, ../sass/breakpoints/_480up.scss */
   .exhibits #content > h1:first-of-type,
   #exhibit-blocks,
   #exhibit-page-navigation,
@@ -2350,7 +2338,7 @@ nav + .exhibit {
     width: 420px;
   }
 
-  /* line 35, ../sass/breakpoints/_480up.scss */
+  /* line 28, ../sass/breakpoints/_480up.scss */
   .exhibit .description,
   .exhibit .description ~ * {
     width: 420px;
@@ -2420,21 +2408,16 @@ nav + .exhibit {
   }
 
   /* line 41, ../sass/breakpoints/_768up.scss */
-  .collection-meta {
-    width: 412px;
-  }
-
-  /* line 44, ../sass/breakpoints/_768up.scss */
   footer {
     width: 768px;
   }
 
-  /* line 47, ../sass/breakpoints/_768up.scss */
+  /* line 44, ../sass/breakpoints/_768up.scss */
   #exhibit-pages {
     width: 172px;
   }
 
-  /* line 50, ../sass/breakpoints/_768up.scss */
+  /* line 47, ../sass/breakpoints/_768up.scss */
   .exhibits #content > h1:first-of-type,
   #exhibit-blocks,
   #exhibit-page-navigation,
@@ -2442,55 +2425,55 @@ nav + .exhibit {
     width: 556px;
   }
 
-  /* line 56, ../sass/breakpoints/_768up.scss */
+  /* line 53, ../sass/breakpoints/_768up.scss */
   .exhibit .description,
   .exhibit .description ~ * {
     width: 412px;
   }
 
   /* columns for tablet-ish widths */
-  /* line 62, ../sass/breakpoints/_768up.scss */
+  /* line 59, ../sass/breakpoints/_768up.scss */
   .tfull {
     width: 100% !important;
   }
 
-  /* line 65, ../sass/breakpoints/_768up.scss */
+  /* line 62, ../sass/breakpoints/_768up.scss */
   .t1of2 {
     width: 50% !important;
     float: left;
   }
 
-  /* line 69, ../sass/breakpoints/_768up.scss */
+  /* line 66, ../sass/breakpoints/_768up.scss */
   .t1of3 {
     width: 33% !important;
     float: left;
   }
 
-  /* line 73, ../sass/breakpoints/_768up.scss */
+  /* line 70, ../sass/breakpoints/_768up.scss */
   .t2of3 {
     width: 67% !important;
     float: left;
   }
 
-  /* line 77, ../sass/breakpoints/_768up.scss */
+  /* line 74, ../sass/breakpoints/_768up.scss */
   .t1of5 {
     width: 20% !important;
     float: left;
   }
 
-  /* line 81, ../sass/breakpoints/_768up.scss */
+  /* line 78, ../sass/breakpoints/_768up.scss */
   .t2of5 {
     width: 40% !important;
     float: left;
   }
 
-  /* line 85, ../sass/breakpoints/_768up.scss */
+  /* line 82, ../sass/breakpoints/_768up.scss */
   .t3of5 {
     width: 60% !important;
     float: left;
   }
 
-  /* line 89, ../sass/breakpoints/_768up.scss */
+  /* line 86, ../sass/breakpoints/_768up.scss */
   .t4of5 {
     width: 80% !important;
     float: left;
@@ -2545,27 +2528,21 @@ nav + .exhibit {
   }
 
   /* line 31, ../sass/breakpoints/_960up.scss */
-  .browse .collection h2,
-  .browse .exhibit h2 {
-    width: inherit;
-  }
-
-  /* line 35, ../sass/breakpoints/_960up.scss */
   .collection-meta {
     width: 520px;
   }
 
-  /* line 38, ../sass/breakpoints/_960up.scss */
+  /* line 34, ../sass/breakpoints/_960up.scss */
   footer {
     width: 960px;
   }
 
-  /* line 41, ../sass/breakpoints/_960up.scss */
+  /* line 37, ../sass/breakpoints/_960up.scss */
   #exhibit-pages {
     width: 220px;
   }
 
-  /* line 44, ../sass/breakpoints/_960up.scss */
+  /* line 40, ../sass/breakpoints/_960up.scss */
   .exhibits #content > h1:first-of-type,
   #exhibit-blocks,
   #exhibit-page-navigation,
@@ -2573,31 +2550,31 @@ nav + .exhibit {
     width: 700px;
   }
 
-  /* line 50, ../sass/breakpoints/_960up.scss */
+  /* line 46, ../sass/breakpoints/_960up.scss */
   .exhibit .description,
   .exhibit .description ~ * {
     width: 785px;
   }
 
   /* columns for desktop-ish widths */
-  /* line 56, ../sass/breakpoints/_960up.scss */
+  /* line 52, ../sass/breakpoints/_960up.scss */
   .dfull {
     width: 100% !important;
   }
 
-  /* line 59, ../sass/breakpoints/_960up.scss */
+  /* line 55, ../sass/breakpoints/_960up.scss */
   .d1of2 {
     width: 50% !important;
     float: left;
   }
 
-  /* line 63, ../sass/breakpoints/_960up.scss */
+  /* line 59, ../sass/breakpoints/_960up.scss */
   .d1of3 {
     width: 33% !important;
     float: left;
   }
 
-  /* line 67, ../sass/breakpoints/_960up.scss */
+  /* line 63, ../sass/breakpoints/_960up.scss */
   .d2of3 {
     width: 67% !important;
     float: left;
