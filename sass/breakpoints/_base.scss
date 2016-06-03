@@ -1,0 +1,332 @@
+/* @group ----- Generic ----- */
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font: 12px $pt_serif;
+  line-height: 18px;
+  color: #333;
+  background: #F5EFEB;
+}
+
+form, fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+input[type=text], input[type=password], textarea {
+  border: 1px solid #ccc;
+  display: block;
+}
+
+/* -- Headings -- */
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 18px;
+}
+
+h1, h2, h3 {
+  font-weight: normal;
+  font-family: $droid_sans;
+  color: #850d2a;
+}
+
+h1 {
+  font-size: 28px;
+  line-height: 36px;
+  word-break: break-word;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 24px;
+  line-height: 36px;
+}
+
+h3 {
+  font-size: 16px;
+  line-height: 16px;
+  color: #000;
+  font-weight: bold;
+}
+
+h4, h5 {
+  font-size: 15px;
+  line-height: 18px;
+}
+
+h4 {
+  font-weight: bold;
+}
+
+h5 {
+  font-style: italic;
+}
+
+h6 {
+  color: #666;
+}
+
+h1 a, h2 a, h3 a {
+  text-decoration: none;
+}
+
+/* -- Misc Block elements -- */
+p, ul, ol, dl {
+  margin: 1.5em 0;
+}
+
+ul ul, ul ol, ol ol, ol ul {
+  margin-bottom: 0;
+}
+
+/* -- Misc Inline elements -- */
+em, i {
+  font-style: italic;
+}
+
+strong, b {
+  font-weight: bold;
+}
+
+abbr, acronym {
+  border: none;
+  font-style: normal;
+}
+
+blockquote {
+  margin: 0 3em;
+  font-style: italic;
+}
+
+dt {
+  font-weight: bold;
+}
+
+dd {
+  margin-left: 1.5em;
+}
+
+/* -- Tables -- */
+table {
+  width: 100%;
+}
+
+th, td {
+  border-bottom: 1px solid #ccc;
+  margin: 0;
+  padding: 0.5em;
+}
+
+th {
+  border-width: 3px;
+  text-align: left;
+}
+
+/* --Columns -- */
+
+.two-col {
+  column-count: 2;
+  -moz-column-count: 2;
+  -webkit-column-count: 2;
+}
+
+.two-col>div {
+  display: inline-block;
+}
+/* columns for mobile */
+.mfull {
+	width: 100%;
+}
+.m1of2 {
+	width: 50%;
+	float: left;
+}
+.m1of3 {
+	width: 33%;
+	float: left;
+}
+.m2of3 {
+	width: 67%;
+	float: left;
+}
+
+/* -- Links -- */
+a:link, a:visited {
+  color: #850d2a;
+}
+
+a:hover, a:active {
+  color: #0ea4de;
+}
+
+img a {
+  border: none;
+}
+
+/* @end */
+/* @group ----- Global selectors ----- */
+#content {
+  overflow: hidden;
+  /* border: 1px solid #ccc; */
+  background: #F5EFEB;
+  position: relative;
+  margin: 0 auto;
+  padding: 0;
+  width: 300px;
+  padding: 1.5em 10px;
+  z-index: 0;
+  font-family: "PT Serif", serif;
+  font-size: 16px;
+  line-height: 22px;
+}
+#content:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+.hidden {
+  display: none;
+}
+
+.image {
+  float: left;
+  margin: 0 1.5em 1.5em 0;
+}
+
+.image img {
+  border: 1px solid #ccc;
+  float: left;
+  padding: 2px;
+  width: auto;
+  vertical-align: top;
+  height: 100%;
+}
+
+.record {
+  clear: both;
+  overflow: auto;
+  width: 296.666666667px;
+  padding: 5px;
+}
+
+#sort-links + .record,
+nav + .exhibit {
+  border-top: 1px solid #eee;
+}
+
+.record + .pagination-nav ul{
+  margin-top: 1.5em;
+}
+
+/* @end */
+/* @group ----- Home Page ----- */
+#home #primary {
+  margin: 0;
+  padding-right: 10px;
+}
+.record {
+	width: inherit;
+}
+#home #secondary {
+  float: right;
+  float: left;
+  display: inline;
+  margin: 0;
+  width: 300px;
+  margin-right: 0;
+  padding-left: 10px;
+}
+#home #content h2 {
+  text-transform: uppercase;
+  letter-spacing: .1em;
+}
+.featured,
+#featured-exhibit,
+#featured-item,
+#featured-collection {
+  overflow: hidden;
+  background: #ede6e0;
+  padding: 1.5em 20px;
+  margin-bottom: 1.5em;
+}
+.featured h2,
+#featured-exhibit h2 {
+  margin: 0;
+}
+.featured h3,
+#featured-exhibit h3 {
+  margin: 0 0 1em;
+}
+.featured img,
+#featured-exhibit img {
+  float: left;
+  border: 1px solid #ccc;
+  padding: 2px;
+  height: 10.5em;
+  width: auto;
+  background-color: #fff;
+}
+
+#recent-items .item {
+  overflow: hidden;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 1.5em;
+}
+#recent-items .item .image {
+  height: 6em;
+}
+#recent-items .item h3 {
+  margin-top: 0;
+}
+
+.view-items-link {
+  margin-bottom: 0em;
+}
+
+/* @end */
+/* @group ----- Other plugin styles ----- */
+#collection-tree {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#recaptcha_area input {
+  display: inline;
+}
+
+#neatline #simile {
+  width: 62%;
+  height: 23%;
+}
+
+#neatline.Simile #static-bubble {
+  max-height: 74%;
+}
+
+#waypoints a.title.highlighted {
+    background: #BEEAFF;
+}
+
+/* @end */
+/* @group ----- Browse-all ----- */
+.browse-attribution {
+  font-style: italic;
+  margin-bottom: .75em;
+}
+
+.page-meta {
+  float: left;
+  font-style: italic;
+}
+
+.page-meta p {
+  margin-top: 0;
+}
+/* @end */

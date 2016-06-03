@@ -1,0 +1,122 @@
+/* @group ----- Exhibit Builder ----- */
+
+.pagination + .exhibit {
+  border-top: 1px solid #eee;
+}
+
+#exhibit-pages {
+  width: 220px;
+  display: inline-block;
+}
+#exhibit-pages h4 {
+  font-family: $droid_sans;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+#exhibit-pages a {
+  text-decoration: none;
+}
+#exhibit-pages > ul {
+  margin-left: 0;
+  border-top-width: 0.08333em;
+  border-top-style: solid;
+  padding-top: 1.41667em;
+  border-color: #9c928b;
+  padding-left: 0;
+  list-style-type: none;
+}
+#exhibit-pages > ul > li {
+  border-bottom-width: 0.08333em;
+  border-bottom-style: solid;
+  padding-bottom: 1.41667em;
+  border-color: #9c928b;
+  margin-bottom: 1.5em;
+}
+#exhibit-pages ul li > ul {
+  padding-left: 1.5em;
+  margin-left: 0;
+}
+#exhibit-pages ul li > ul li {
+  text-indent: -1.5em;
+}
+#exhibit-pages ul li > ul li:before {
+  content: "\2014";
+}
+#exhibit-pages li {
+  list-style-type: none;
+  margin-left: 0;
+}
+#exhibit-pages .current {
+  font-weight: bold;
+}
+#exhibit-pages .current > *:not(a) {
+  font-weight: normal;
+}
+#exhibit-pages > ul > li:not(.parent) ul {
+  /* display: none; */
+}
+#exhibit-pages > ul > li.current ul {
+  display: block;
+}
+
+#exhibit-pages ul ul {
+  margin: 0;
+}
+.exhibits #content > h1:first-of-type,
+#exhibit-blocks,
+#exhibit-page-navigation,
+.exhibits.summary #primary {
+  float: left;
+  display: inline;
+  width: 300px;
+  margin-left: 0;
+  padding-right: 20px;
+  margin-left: 0;
+}
+.exhibit-page-nav a:hover,
+.exhibit-page-nav a:active,
+.exhibit-page-nav .current a {
+  background: #0ea4de;
+}
+
+.exhibit-pagination .next a {
+  float: right;
+  text-align: right;
+}
+
+#exhibit-page-navigation {
+  clear: none;
+  margin: 3em 0 1.5em;
+}
+
+#exhibit-page-attribution {
+  font-style: italic;
+  float: right;
+}
+
+.exhibit .description,
+.exhibit .description ~ * {
+  display: inline;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 300px;
+}
+.exhibit .description p:first-of-type,
+.exhibit .description ~ * p:first-of-type {
+  margin-top: 0.75em;
+}
+
+.exhibit .description ~ * {
+  display: block;
+  margin: 10px 10px 0 10px;
+  float: left;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+.exhibit-items .download-file:last-child {
+  margin-bottom: 1.5em;
+}
+
+/* @end */

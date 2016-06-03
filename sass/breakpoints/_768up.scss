@@ -1,0 +1,83 @@
+header {
+	width: 768px;
+}
+#content {
+	width: 768px;
+}
+#primary-nav {
+	width: 768px;
+}
+/* @group Header */
+#header-image {
+	width: 768px;
+}
+#site-title {
+	width: 50%;
+}
+#search-container {
+	width: 35%;
+	margin: 0;
+}
+/* @end */
+#home #primary {}
+.record {
+	width: 232.666666667px;
+}
+#home #secondary {
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-right: 0;
+	width: 460px;
+}
+#home #secondary {
+	width: 364px;
+}
+.items #content {
+    width: 768px;
+}
+.browse .item h2,
+.browse .item-meta .item-img {
+	width: 172px;
+}
+.browse .item-meta {
+	width: 556px;
+}
+.browse .item-meta > div {
+	width: 364px;
+}
+.collection-meta {
+	width: 412px;
+}
+footer {
+	width: 768px;
+}
+#exhibit-pages {
+	width: 172px;
+}
+.exhibits #content > h1:first-of-type,
+#exhibit-blocks,
+#exhibit-page-navigation,
+.exhibits.summary #primary {
+	width: 556px;
+}
+.exhibit .description,
+.exhibit .description ~ * {
+	width: 412px;
+}
+
+/* columns for tablet-ish widths */
+.tfull {
+	width: 100%;
+}
+.t1of2 {
+	width: 50%;
+	float: left;
+}
+.t1of3 {
+	width: 33%;
+	float: left;
+}
+.t2of3 {
+	width: 67%;
+	float: left;
+}

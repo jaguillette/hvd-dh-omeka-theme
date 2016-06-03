@@ -1,0 +1,160 @@
+/* @group ----- Collections/Browse ----- */
+.browse .collection,
+.browse .exhibit {
+  clear: both;
+  border-bottom: 1px solid #eee;
+  float: left;
+  width: 100%;
+  padding-top: 1.5em;
+}
+.browse .collection .view-items-link,
+.browse .exhibit .view-items-link {
+  margin-bottom: 2.25em;
+}
+.browse .collection h3,
+.browse .exhibit h3 {
+  margin: 0;
+}
+
+.collection .element-text p:only-child {
+  margin-bottom: 0;
+}
+
+.element-text p {
+  margin-top: 0;
+  margin-bottom: 0.5em;
+}
+
+.collection .image,
+.exhibit .image,
+.item .image {
+  display: block;
+  -moz-box-shadow: -5px -5px 0 -1px #f2f2f2, -5px -5px 0 #ccc, -8px -8px 0 -1px #ddd, -8px -8px 0 #CCC;
+  -webkit-box-shadow: -5px -5px 0 -1px #f2f2f2, -5px -5px 0 #ccc, -8px -8px 0 -1px #ddd, -8px -8px 0 #CCC;
+  box-shadow: -5px -5px 0 -1px #f2f2f2, -5px -5px 0 #ccc, -8px -8px 0 -1px #ddd, -8px -8px 0 #CCC;
+  margin: 0 1.5em 1.5em 9px;
+}
+
+.collection .image img,
+.exhibit .image img ,
+.item .image img{
+  height: 10.5em;
+}
+
+.browse .collection h2,
+.browse .exhibit h2 {
+  margin: 0;
+  max-width: 100%;
+}
+
+.browse .collection .image,
+.browse .exhibit .image {
+  float: left;
+  text-align: right;
+  height: 10.5em;
+  margin-top: 1em;
+}
+.browse .collection .image img,
+.browse .exhibit .image img {
+  height: 100%;
+  width: auto;
+}
+
+.collection-meta {
+  float: left;
+  display: inline;
+  margin: 0;
+  width: 300px;
+}
+
+.collection-description p:first-of-type,
+.view-items-link:only-child {
+  margin-top: 0.75em;
+}
+
+.browse .collection .element {
+  clear: none;
+}
+
+/* @end */
+/* @group ----- Collections/Show ----- */
+.collections .item-img {
+  float: left;
+  margin: 0 1.5em 0 0;
+}
+.collections .item-img a {
+  display: block;
+  height: 10em;
+  margin-bottom: 1.5em;
+  border: 1px solid #ccc;
+  padding: 2px;
+}
+.collections .item-img img {
+  height: 100%;
+  width: auto;
+}
+
+.collections .item {
+  overflow: hidden;
+  border-color: #ccc;
+  border-bottom-width: 0.08333em;
+  border-bottom-style: solid;
+  padding-top: -0.08333em;
+  padding-bottom: 1.5em;
+}
+
+#collection-browse-link {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+}
+
+/* @end */
+/* @group ----- Search Results ----- */
+#search-results + .pagination {
+  margin-top: 2.25em;
+}
+
+#search-results td {
+  vertical-align: top;
+}
+
+#search-results .image {
+  float: left;
+  height: 6em;
+  margin: 0 1.5em 0 0;
+}
+#search-results .image img {
+  height: 100%;
+  width: auto;
+}
+
+#item-filters ul, #search-filters ul {
+  padding-left: 0;
+  list-style-type: none;
+}
+#item-filters ul > li, #search-filters ul > li {
+  display: inline-block;
+}
+#item-filters ul > li:after, #search-filters ul > li:after {
+  content: " \00B7";
+  margin: 0 10px 0 5px;
+}
+#item-filters ul > li:last-child:after, #search-filters ul > li:last-child:after {
+  content: "\00A0";
+}
+#item-filters ul li ul, #search-filters ul li ul {
+  display: inline;
+}
+#item-filters ul li ul li, #search-filters ul li ul li {
+  display: inline-block;
+}
+#item-filters ul li ul li:after, #search-filters ul li ul li:after {
+  content: ", ";
+  margin: 0;
+}
+#item-filters ul li ul li:last-child:after, #search-filters ul li ul li:last-child:after {
+  content: "";
+}
+
+/* @end */

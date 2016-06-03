@@ -1,0 +1,50 @@
+/* @group ----- Footer ----- */
+footer {
+  clear: both;
+  position: relative;
+  margin: 0 auto;
+  padding: 0;
+  width: 300px;
+  overflow: hidden;
+  margin-top: 1.5em;
+}
+footer:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+footer a {
+  text-decoration: none;
+}
+footer .navigation {
+  font-weight: bold;
+}
+footer .navigation li {
+  display: inline;
+}
+footer .navigation li:after {
+  content: " \00B7";
+  margin: 0 10px 0 5px;
+}
+footer .navigation li:last-child {
+  margin: 0;
+}
+footer .navigation li:last-child:after {
+  content: "\00A0";
+  display: none;
+}
+footer .navigation a {
+  white-space: nowrap;
+}
+footer nav + p {
+  text-align: right;
+}
+
+#footer-text {
+  float: left;
+  width: 48%;
+}
+
+/* @end */

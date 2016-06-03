@@ -1,0 +1,241 @@
+/* @group ----- Navigation ----- */
+#nav-container {
+  background-color: $dark_crimson;
+}
+.navigation {
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+}
+.navigation a {
+  text-decoration: none;
+}
+.navigation li {
+  float: left;
+}
+
+#admin-bar ul {
+  display: inline-block;
+}
+
+#primary-nav {
+  clear: both;
+  position: relative;
+  margin: 0 auto;
+  padding: 0;
+  width: 300px;
+  z-index: 50;
+  /* mega menu list */
+  /* a top level navigation item in the mega menu */
+  /* first descendant link within a top level navigation item */
+  /* focus/open states of first descendant link within a top level
+     navigation item */
+  /* open state of first descendant link within a top level
+     navigation item */
+  /* sub-navigation panel */
+  /* sub-navigation panel open state */
+  /* list of items within sub-navigation panel */
+  /* list item within sub-navigation panel */
+}
+#primary-nav:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+#primary-nav .nav-menu {
+  display: block;
+  position: relative;
+  list-style: none;
+  margin: 0 0 0 -1px;
+  padding: 0 0 0 1px;
+  z-index: 15;
+}
+#primary-nav li {
+  list-style-type: none;
+  margin: 0 0 -1px 0;
+  position: relative;
+}
+#primary-nav .navigation {
+  position: relative;
+  z-index: 100;
+  overflow: visible;
+}
+#primary-nav .nav-item {
+  list-style: none;
+  display: block;
+  padding: 0;
+  margin: 0;
+  float: left;
+  position: relative;
+  overflow: visible;
+}
+#primary-nav .nav-item:first-child > a {
+  /* border-left: 1px solid #ccc; */
+}
+#primary-nav .nav-item > a {
+  position: relative;
+  display: inline-block;
+  /* margin: 0 0 -1px 0; */
+  /* border: 1px solid #ccc; */
+  color: white;
+}
+#primary-nav .nav-item:not(:first-child) > a {
+  margin-left: -1px;
+}
+#primary-nav .nav-item > a:focus,
+#primary-nav .nav-item > a.open {
+  /* border: 1px solid #dedede; */
+}
+#primary-nav .nav-item > a.open {
+  background-color: $crimson;
+  z-index: 1;
+}
+#primary-nav .sub-nav {
+  position: absolute;
+  display: none;
+  top: 3em;
+  margin-top: 1px;
+  padding: 0;
+  border: 1px solid #dedede;
+  background-color: #fff;
+}
+#primary-nav .sub-nav.open {
+  display: block;
+  width: 160px;
+}
+#primary-nav .sub-nav.open li {
+  width: 100%;
+}
+#primary-nav .subnav a:hover + ul,
+#primary-nav .subnav a:focus + ul {
+  display: block;
+  position: absolute;
+  top: 3em;
+  margin-top: 1px;
+  z-index: 1000;
+  -moz-box-shadow: #ccc 0 3px 5px;
+  -webkit-box-shadow: #ccc 0 3px 5px;
+  box-shadow: #ccc 0 3px 5px;
+}
+#primary-nav .sub-nav ul {
+  vertical-align: top;
+  margin: 0;
+  padding: 0;
+}
+#primary-nav .sub-nav ul a {
+  margin-top: -0.75em;
+  padding-left: 2.25em;
+}
+#primary-nav .sub-nav li {
+  display: block;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+#primary-nav .sub-nav > li {
+  border-color: #ccc;
+  border-bottom-width: 0.08333em;
+  border-bottom-style: solid;
+  padding-bottom: -0.08333em;
+}
+#primary-nav .sub-nav a {
+  width: 100%;
+}
+#primary-nav a {
+  behavior: url("../javascripts/boxsizing.htc");
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  text-decoration: none;
+  display: block;
+  padding: 0.75em 18px;
+  /* background: #fafafa; */
+}
+#primary-nav a:hover,
+#primary-nav a:focus,
+#primary-nav li.active a {
+  background-color: $crimson;
+  color: white;
+  position: relative;
+  z-index: 1;
+}
+#primary-nav [aria-haspopup="true"]:after {
+  font-family: "FontAwesome";
+  content: "\f0da";
+  margin: -1px 0 0 .5em;
+  display: inline-block;
+}
+#primary-nav [aria-haspopup="true"].open:after {
+  content: "\f0d7";
+}
+
+#secondary-nav, .secondary-nav {
+  margin-bottom: 1em;
+  overflow: auto;
+  clear: both;
+}
+#secondary-nav li, .secondary-nav li {
+  padding: 0.25em 0;
+  margin-right: 20px;
+}
+#secondary-nav a, .secondary-nav a {
+  color: #666;
+}
+#secondary-nav .active a, .secondary-nav .active a {
+  color: #333;
+  font-weight: bold;
+}
+#secondary-nav .tags .nav-browse-all a, .secondary-nav .tags .nav-browse-all a {
+  font-weight: normal;
+  border: none;
+  border-bottom: 1px solid #fff;
+  background: none;
+}
+
+#mobile-nav {
+  display: none;
+}
+
+nav, #nav-container {
+  font-family: $droid_sans;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+/* Pagination Classes */
+.pagination {
+  float: left;
+  padding-left: 0;
+  margin: 0 0 1em 0;
+}
+.pagination ul {
+  margin-left: 0;
+}
+.pagination li {
+  height: 3em;
+  border: solid #e7e7e7;
+  border-width: 1px 0 1px 1px;
+  float: left;
+  list-style-type: none;
+}
+.pagination li:last-of-type {
+  border-right: 1px solid #e7e7e7;
+}
+.pagination a, .pagination form {
+  text-decoration: none;
+  padding: 0 10px;
+  line-height: 36px;
+  display: inline-block;
+}
+
+.page-input input[type=text] {
+  border: 1px solid #ccc;
+  text-align: right;
+  width: 50px;
+  margin-right: 5px;
+  display: inline-block;
+}
+
+/* @end */

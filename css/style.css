@@ -1192,16 +1192,12 @@ nav + .exhibit {
 @media only screen and (max-width: 767px) {
   #home #secondary {
     margin: 0;
+    width: 300px;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 959px) {
   #home #secondary {
     width: 364px;
-  }
-}
-@media only screen and (max-width: 767px) {
-  #home #secondary {
-    width: 300px;
   }
 }
 @media only screen and (min-width: 480px) and (max-width: 767px) {
@@ -1533,6 +1529,7 @@ table.item-metadata th {
 @media only screen and (max-width: 767px) {
   .browse .item h2,
   .browse .item-meta .item-img {
+    width: 300px;
     margin: 0;
   }
 }
@@ -1540,12 +1537,6 @@ table.item-metadata th {
   .browse .item h2,
   .browse .item-meta .item-img {
     width: 172px;
-  }
-}
-@media only screen and (max-width: 767px) {
-  .browse .item h2,
-  .browse .item-meta .item-img {
-    width: 300px;
   }
 }
 @media only screen and (min-width: 480px) and (max-width: 767px) {
@@ -1583,16 +1574,12 @@ table.item-metadata th {
 @media only screen and (max-width: 767px) {
   .browse .item-meta {
     margin: 0;
+    width: 300px;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 959px) {
   .browse .item-meta {
     width: 556px;
-  }
-}
-@media only screen and (max-width: 767px) {
-  .browse .item-meta {
-    width: 300px;
   }
 }
 @media only screen and (min-width: 480px) and (max-width: 767px) {
@@ -1616,16 +1603,12 @@ table.item-metadata th {
 @media only screen and (max-width: 767px) {
   .browse .item-meta > div {
     margin: 0;
+    width: 300px;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 959px) {
   .browse .item-meta > div {
     width: 364px;
-  }
-}
-@media only screen and (max-width: 767px) {
-  .browse .item-meta > div {
-    width: 300px;
   }
 }
 @media only screen and (min-width: 480px) and (max-width: 767px) {
@@ -1752,6 +1735,7 @@ table.item-metadata th {
 @media only screen and (max-width: 767px) {
   .browse .collection h2,
   .browse .exhibit h2 {
+    width: 300px;
     margin: 0;
   }
 }
@@ -1759,12 +1743,6 @@ table.item-metadata th {
   .browse .collection h2,
   .browse .exhibit h2 {
     width: 172px;
-  }
-}
-@media only screen and (max-width: 767px) {
-  .browse .collection h2,
-  .browse .exhibit h2 {
-    width: 300px;
   }
 }
 @media only screen and (min-width: 480px) and (max-width: 767px) {
@@ -1797,16 +1775,12 @@ table.item-metadata th {
 @media only screen and (max-width: 767px) {
   .collection-meta {
     margin: 0;
+    width: 300px;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 959px) {
   .collection-meta {
     width: 412px;
-  }
-}
-@media only screen and (max-width: 767px) {
-  .collection-meta {
-    width: 300px;
   }
 }
 @media only screen and (min-width: 480px) and (max-width: 767px) {
@@ -2060,6 +2034,7 @@ footer nav + p {
   #exhibit-page-navigation,
   .exhibits.summary #primary {
     margin: 0;
+    width: 300px;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 959px) {
@@ -2068,14 +2043,6 @@ footer nav + p {
   #exhibit-page-navigation,
   .exhibits.summary #primary {
     width: 556px;
-  }
-}
-@media only screen and (max-width: 767px) {
-  .exhibits #content > h1:first-of-type,
-  #exhibit-blocks,
-  #exhibit-page-navigation,
-  .exhibits.summary #primary {
-    width: 300px;
   }
 }
 @media only screen and (min-width: 480px) and (max-width: 767px) {

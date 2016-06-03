@@ -1,0 +1,76 @@
+header {
+	width: 960px;
+}
+#content {
+	width: 960px;
+}
+#primary-nav {
+	width: 960px;
+}
+#header-image {
+	width: 960px;
+}
+#home #secondary {
+	margin-left: 10px;
+	margin-right: 0;
+	width: 460px;
+}
+.items #content {
+	width: 960px;
+}
+.browse .item h2 {
+	margin-left: 0;
+	margin-bottom: 0;
+	max-width: 100%;
+}
+.browse .item-meta .item-img {
+	margin-left: 10px;
+	margin-right: 0;
+	width: 220px;
+}
+.browse .item-meta {
+	width: 700px;
+}
+.browse .item-meta > div {
+	width: 460px;
+}
+.browse .collection h2,
+.browse .exhibit h2 {
+	width: inherit;
+}
+.collection-meta {
+	width: 520px;
+}
+footer {
+	width: 960px;
+}
+#exhibit-pages {
+	width: 220px;
+}
+.exhibits #content > h1:first-of-type,
+#exhibit-blocks,
+#exhibit-page-navigation,
+.exhibits.summary #primary {
+	width: 700px;
+}
+.exhibit .description,
+.exhibit .description ~ * {
+	width: 785px;
+}
+
+/* columns for desktop-ish widths */
+.dfull {
+	width: 100%;
+}
+.d1of2 {
+	width: 50%;
+	float: left;
+}
+.d1of3 {
+	width: 33%;
+	float: left;
+}
+.d2of3 {
+	width: 67%;
+	float: left;
+}
