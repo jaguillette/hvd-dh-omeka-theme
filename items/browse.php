@@ -55,7 +55,8 @@ $sortLinks[__('Date Added')] = 'added';
     <?php if ($itemAttribution = get_theme_option('Item Attribution')) { ?>
     <div id="item-attribution">
     <?php
-      $itemOwnerName = dh_get_user_by_id($item['owner_id'])['name'];
+      $itemOwner = dh_get_user_by_id($item['owner_id']);
+      $itemOwnerName = $itemOwner['name'];
       $itemAttrLabel = get_theme_option('Item Attribution Label');
       echo("$itemAttrLabel $itemOwnerName");
     ?>
