@@ -175,4 +175,116 @@ function dh_theme_get_display_description($snippet=false)
   }
   return metadata('item', array('Dublin Core', 'Description'),array('snippet'=>$snippet));
 }
+
+/**
+ * Get a link to an item.
+ *
+ * The only differences from link_to are that this function will automatically
+ * use the "current" item, and will use the item's title as the link text.
+ * This custom version of link_to_item allows for passing queryParams
+ *
+ * @package Omeka\Function\View\Navigation
+ * @uses link_to()
+ * @param string $text HTML for the text of the link.
+ * @param array $props Properties for the <a> tag.
+ * @param string $action The page to link to (this will be the 'show' page almost always
+ * within the public theme).
+ * @param Item $item Used for dependency injection testing or to use this function
+ * outside the context of a loop.
+ * @return string HTML
+ */
+function dh_link_to_item($text = null, $props = array(), $action = 'show', $item = null, $queryParams = array())
+{
+    if (!$item) {
+        $item = get_current_record('item');
+    }
+    $text = (!empty($text) ? $text : strip_formatting(metadata($item, array('Dublin Core', 'Title'))));
+    return link_to($item, $action, $text, $props, $queryParams);
+}
+
+/**
+ * Change the behavior of previous/next buttons on items/show
+ * Written by Valdeva Crema (https://github.com/ives1227)
+ */
+function custom_next_previous() 
+{
+  //Starts a conditional statement that determines a search has been run
+  if (isset($_SERVER['QUERY_STRING'])) {
+
+    // Sets the current item ID to the variable $current
+    $current = metadata('item', 'id');
+        
+    //Break the query into an array
+    parse_str($_SERVER['QUERY_STRING'], $queryarray);
+        
+    //Items don't need the page level
+    unset($queryarray['page']);
+        
+    $itemIds = array();
+    $list = array();
+    if (isset($queryarray['query'])) {
+      //We only want to browse previous and next for Items
+      $queryarray['record_types'] = array('Item');
+      //Get an array of the texts from the query.
+      $textlist = get_db()->getTable('SearchText')->findBy($queryarray);
+      //Loop through the texts and populate the ids and records.
+      foreach ($textlist as $value) {
+        $itemIds[] = $value->record_id;
+        $record = get_record_by_id($value['record_type'], $value['record_id']);
+        $list[] = $record;
+      }
+    }
+    elseif (isset($queryarray['advanced'])) {
+      if (!array_key_exists('sort_field', $queryarray)) {
+        $queryarray['sort_field'] = 'added';
+        $queryarray['sort_dir'] = 'd';
+      }
+      //Get an array of the items from the query.
+      $list = get_db()->getTable('Item')->findBy($queryarray);
+      foreach ($list as $value) {
+        $itemIds[] = $value->id;
+        $list[] = $value;
+      }
+    }
+    //Browsing all items in general
+    else {
+      if (!array_key_exists('sort_field', $queryarray)) {
+        $queryarray['sort_field'] = 'added';
+        $queryarray['sort_dir'] = 'd';
+      }
+      $list = get_db()->getTable('Item')->findBy($queryarray);
+        foreach ($list as $value) {
+          $itemIds[] = $value->id;
+        }
+      }
+      
+      //Update the query string without the page and with the sort_fields
+      $updatedquery = http_build_query($queryarray);
+      $updatedquery = preg_replace('/%5B[0-9]+%5D/simU', '%5B%5D', $updatedquery);
+        
+      // Find where we currently are in the result set
+      $key = array_search($current, $itemIds);
+
+      // If we aren't at the beginning, print a Previous link
+      if ($key > 0) {
+        $previousItem = $list[$key - 1];
+        $previousUrl = record_url($previousItem, 'show') . '?' . $updatedquery;
+        $text = __('&larr; Previous Item');
+        echo '<li id="previous-item" class="previous"><a href="' . html_escape($previousUrl) . '">' . $text . '</a></li>';
+      }
+
+      // If we aren't at the end, print a Next link
+      if ($key >= 0 && $key < (count($list) - 1)) {
+        $nextItem = $list[$key + 1];
+        $nextUrl = record_url($nextItem, 'show') . '?' . $updatedquery;
+        $text = __("Next Item &rarr;");
+        echo '<li id="next-item" class="next"><a href="' . html_escape($nextUrl) . '">' . $text . '</a></li>';
+      }
+    } else {
+      // If a search was not run, then the normal next/previous navigation is displayed.
+      echo '<li id="previous-item" class="previous">'.link_to_previous_item_show().'</li>';
+      echo '<li id="next-item" class="next">'.link_to_next_item_show().'</li>';
+    }
+}
+
 ?>

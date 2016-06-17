@@ -32,7 +32,7 @@ $collectionTitle = strip_formatting(metadata('collection', array('Dublin Core', 
 
         <?php if (metadata('item', 'has thumbnail')): ?>
         <div class="item-img">
-            <?php echo link_to_item(item_image('square_thumbnail', array('alt' => $itemTitle))); ?>
+            <?php echo dh_link_to_item(item_image('square_thumbnail', array('alt' => $itemTitle)),array(),'show',null,array('collection'=>metadata('collection','id'))); ?>
         </div>
         <?php endif; ?>
     </div>
@@ -42,11 +42,11 @@ $collectionTitle = strip_formatting(metadata('collection', array('Dublin Core', 
     <?php foreach (loop('items') as $item): ?>
     <?php $itemTitle = strip_formatting(dh_theme_get_display_title()); ?>
     <div class="item hentry">
-        <h3><?php echo link_to_item($itemTitle, array('class'=>'permalink')); ?></h3>
+        <h3><?php echo dh_link_to_item($itemTitle, array('class'=>'permalink'),'show',null,array('collection'=>metadata('collection','id'))); ?></h3>
 
         <?php if (metadata('item', 'has thumbnail')): ?>
         <div class="item-img">
-            <?php echo link_to_item(item_image('square_thumbnail', array('alt' => $itemTitle))); ?>
+            <?php echo dh_link_to_item(item_image('square_thumbnail', array('alt' => $itemTitle)),'show',null,array('collection'=>metadata('collection','id'))); ?>
         </div>
         <?php endif; ?>
 
