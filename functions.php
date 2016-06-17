@@ -126,6 +126,9 @@ function detailed_item_type_elements($item = null)
     if (!$item) {
         $item = get_current_record('item');
     }
+    if (!isset($elementText)) {
+      $elementText = array();
+    }
     $elements = $item->getItemTypeElements();
     foreach ($elements as $element) {
         $elementText[$element->name] = array();
