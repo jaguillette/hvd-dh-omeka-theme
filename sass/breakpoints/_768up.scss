@@ -42,13 +42,17 @@ footer {
 	width: 768px;
 }
 #exhibit-pages {
-	width: 172px;
+	max-width: 172px;
+	margin-right: 20px;
 }
 .exhibits #content > h1:first-of-type,
 #exhibit-blocks,
 #exhibit-page-navigation,
 .exhibits.summary #primary {
 	width: 556px;
+}
+.exhibits #content > h1:first-of-type {
+	margin-left: 212px;
 }
 .exhibit .description,
 .exhibit .description ~ * {

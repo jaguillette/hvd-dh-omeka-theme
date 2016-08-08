@@ -294,6 +294,15 @@ nav + .exhibit {
 
 /* @end */
 /* @group ----- Other plugin styles ----- */
+#exhibit-pages {
+  float: right;
+}
+#exhibit-blocks {
+  float: right;
+}
+.exhibits #content > h1:first-of-type {
+	text-align: center;
+}
 #collection-tree {
   margin-left: auto;
   margin-right: auto;
