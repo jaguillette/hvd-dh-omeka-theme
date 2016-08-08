@@ -35,13 +35,20 @@ footer {
 	width: 960px;
 }
 #exhibit-pages {
-	width: 220px;
+	max-width: 220px;
+	margin-right: 20px;
+	h4, li {
+		padding: 0, 10px;
+	}
 }
 .exhibits #content > h1:first-of-type,
 #exhibit-blocks,
 #exhibit-page-navigation,
 .exhibits.summary #primary {
 	width: 700px;
+}
+.exhibits #content > h1:first-of-type {
+	margin-left: 260px;
 }
 .exhibit .description,
 .exhibit .description ~ * {

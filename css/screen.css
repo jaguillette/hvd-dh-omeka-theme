@@ -655,23 +655,22 @@ th {
 
 /* line 7, ../sass/partials/_exhibits.scss */
 #exhibit-pages {
-  width: 220px;
   display: inline-block;
 }
 
-/* line 11, ../sass/partials/_exhibits.scss */
+/* line 10, ../sass/partials/_exhibits.scss */
 #exhibit-pages h4 {
   font-family: "Droid Sans", sans-serif;
   font-weight: normal;
   text-transform: uppercase;
 }
 
-/* line 16, ../sass/partials/_exhibits.scss */
+/* line 15, ../sass/partials/_exhibits.scss */
 #exhibit-pages a {
   text-decoration: none;
 }
 
-/* line 19, ../sass/partials/_exhibits.scss */
+/* line 18, ../sass/partials/_exhibits.scss */
 #exhibit-pages > ul {
   margin-left: 0;
   border-top-width: 0.08333em;
@@ -682,7 +681,7 @@ th {
   list-style-type: none;
 }
 
-/* line 28, ../sass/partials/_exhibits.scss */
+/* line 27, ../sass/partials/_exhibits.scss */
 #exhibit-pages > ul > li {
   border-bottom-width: 0.08333em;
   border-bottom-style: solid;
@@ -691,54 +690,54 @@ th {
   margin-bottom: 1.5em;
 }
 
-/* line 35, ../sass/partials/_exhibits.scss */
+/* line 34, ../sass/partials/_exhibits.scss */
 #exhibit-pages ul li > ul {
   padding-left: 1.5em;
   margin-left: 0;
 }
 
-/* line 39, ../sass/partials/_exhibits.scss */
+/* line 38, ../sass/partials/_exhibits.scss */
 #exhibit-pages ul li > ul li {
   text-indent: -1.5em;
 }
 
-/* line 42, ../sass/partials/_exhibits.scss */
+/* line 41, ../sass/partials/_exhibits.scss */
 #exhibit-pages ul li > ul li:before {
   content: "\2014";
 }
 
-/* line 45, ../sass/partials/_exhibits.scss */
+/* line 44, ../sass/partials/_exhibits.scss */
 #exhibit-pages li {
   list-style-type: none;
   margin-left: 0;
 }
 
-/* line 49, ../sass/partials/_exhibits.scss */
+/* line 48, ../sass/partials/_exhibits.scss */
 #exhibit-pages .current {
   font-weight: bold;
 }
 
-/* line 52, ../sass/partials/_exhibits.scss */
+/* line 51, ../sass/partials/_exhibits.scss */
 #exhibit-pages .current > *:not(a) {
   font-weight: normal;
 }
 
-/* line 55, ../sass/partials/_exhibits.scss */
+/* line 54, ../sass/partials/_exhibits.scss */
 #exhibit-pages > ul > li:not(.parent) ul {
   /* display: none; */
 }
 
-/* line 58, ../sass/partials/_exhibits.scss */
+/* line 57, ../sass/partials/_exhibits.scss */
 #exhibit-pages > ul > li.current ul {
   display: block;
 }
 
-/* line 62, ../sass/partials/_exhibits.scss */
+/* line 61, ../sass/partials/_exhibits.scss */
 #exhibit-pages ul ul {
   margin: 0;
 }
 
-/* line 65, ../sass/partials/_exhibits.scss */
+/* line 64, ../sass/partials/_exhibits.scss */
 .exhibits #content > h1:first-of-type,
 #exhibit-blocks,
 #exhibit-page-navigation,
@@ -751,32 +750,32 @@ th {
   margin-left: 0;
 }
 
-/* line 76, ../sass/partials/_exhibits.scss */
+/* line 75, ../sass/partials/_exhibits.scss */
 .exhibit-page-nav a:hover,
 .exhibit-page-nav a:active,
 .exhibit-page-nav .current a {
   background: #0ea4de;
 }
 
-/* line 82, ../sass/partials/_exhibits.scss */
+/* line 81, ../sass/partials/_exhibits.scss */
 .exhibit-pagination .next a {
   float: right;
   text-align: right;
 }
 
-/* line 87, ../sass/partials/_exhibits.scss */
+/* line 86, ../sass/partials/_exhibits.scss */
 #exhibit-page-navigation {
   clear: none;
   margin: 3em 0 1.5em;
 }
 
-/* line 92, ../sass/partials/_exhibits.scss */
+/* line 91, ../sass/partials/_exhibits.scss */
 #exhibit-page-attribution {
   font-style: italic;
   float: right;
 }
 
-/* line 97, ../sass/partials/_exhibits.scss */
+/* line 96, ../sass/partials/_exhibits.scss */
 .exhibit .description,
 .exhibit .description ~ * {
   display: inline;
@@ -785,13 +784,13 @@ th {
   width: 300px;
 }
 
-/* line 104, ../sass/partials/_exhibits.scss */
+/* line 103, ../sass/partials/_exhibits.scss */
 .exhibit .description p:first-of-type,
 .exhibit .description ~ * p:first-of-type {
   margin-top: 0.75em;
 }
 
-/* line 109, ../sass/partials/_exhibits.scss */
+/* line 108, ../sass/partials/_exhibits.scss */
 .exhibit .description ~ * {
   display: block;
   margin: 10px 10px 0 10px;
@@ -801,7 +800,7 @@ th {
   box-sizing: content-box;
 }
 
-/* line 118, ../sass/partials/_exhibits.scss */
+/* line 117, ../sass/partials/_exhibits.scss */
 .exhibit-items .download-file:last-child {
   margin-bottom: 1.5em;
 }
@@ -2249,47 +2248,62 @@ nav + .exhibit {
 /* @end */
 /* @group ----- Other plugin styles ----- */
 /* line 297, ../sass/breakpoints/_base.scss */
+#exhibit-pages {
+  float: right;
+}
+
+/* line 300, ../sass/breakpoints/_base.scss */
+#exhibit-blocks {
+  float: right;
+}
+
+/* line 303, ../sass/breakpoints/_base.scss */
+.exhibits #content > h1:first-of-type {
+  text-align: center;
+}
+
+/* line 306, ../sass/breakpoints/_base.scss */
 #collection-tree {
   margin-left: auto;
   margin-right: auto;
 }
 
-/* line 302, ../sass/breakpoints/_base.scss */
+/* line 311, ../sass/breakpoints/_base.scss */
 #recaptcha_area input {
   display: inline;
 }
 
-/* line 306, ../sass/breakpoints/_base.scss */
+/* line 315, ../sass/breakpoints/_base.scss */
 #neatline #simile {
   width: 62%;
   height: 23%;
 }
 
-/* line 311, ../sass/breakpoints/_base.scss */
+/* line 320, ../sass/breakpoints/_base.scss */
 #neatline.Simile #static-bubble {
   max-height: 74%;
 }
 
-/* line 315, ../sass/breakpoints/_base.scss */
+/* line 324, ../sass/breakpoints/_base.scss */
 #waypoints a.title.highlighted {
   background: #BEEAFF;
 }
 
 /* @end */
 /* @group ----- Browse-all ----- */
-/* line 321, ../sass/breakpoints/_base.scss */
+/* line 330, ../sass/breakpoints/_base.scss */
 .browse-attribution {
   font-style: italic;
   margin-bottom: .75em;
 }
 
-/* line 326, ../sass/breakpoints/_base.scss */
+/* line 335, ../sass/breakpoints/_base.scss */
 .page-meta {
   float: left;
   font-style: italic;
 }
 
-/* line 331, ../sass/breakpoints/_base.scss */
+/* line 340, ../sass/breakpoints/_base.scss */
 .page-meta p {
   margin-top: 0;
 }
@@ -2416,10 +2430,11 @@ nav + .exhibit {
 
   /* line 44, ../sass/breakpoints/_768up.scss */
   #exhibit-pages {
-    width: 172px;
+    max-width: 172px;
+    margin-right: 20px;
   }
 
-  /* line 47, ../sass/breakpoints/_768up.scss */
+  /* line 48, ../sass/breakpoints/_768up.scss */
   .exhibits #content > h1:first-of-type,
   #exhibit-blocks,
   #exhibit-page-navigation,
@@ -2427,55 +2442,60 @@ nav + .exhibit {
     width: 556px;
   }
 
-  /* line 53, ../sass/breakpoints/_768up.scss */
+  /* line 54, ../sass/breakpoints/_768up.scss */
+  .exhibits #content > h1:first-of-type {
+    margin-left: 212px;
+  }
+
+  /* line 57, ../sass/breakpoints/_768up.scss */
   .exhibit .description,
   .exhibit .description ~ * {
     width: 412px;
   }
 
   /* columns for tablet-ish widths */
-  /* line 59, ../sass/breakpoints/_768up.scss */
+  /* line 63, ../sass/breakpoints/_768up.scss */
   .tfull {
     width: 100% !important;
   }
 
-  /* line 62, ../sass/breakpoints/_768up.scss */
+  /* line 66, ../sass/breakpoints/_768up.scss */
   .t1of2 {
     width: 50% !important;
     float: left;
   }
 
-  /* line 66, ../sass/breakpoints/_768up.scss */
+  /* line 70, ../sass/breakpoints/_768up.scss */
   .t1of3 {
     width: 33% !important;
     float: left;
   }
 
-  /* line 70, ../sass/breakpoints/_768up.scss */
+  /* line 74, ../sass/breakpoints/_768up.scss */
   .t2of3 {
     width: 67% !important;
     float: left;
   }
 
-  /* line 74, ../sass/breakpoints/_768up.scss */
+  /* line 78, ../sass/breakpoints/_768up.scss */
   .t1of5 {
     width: 20% !important;
     float: left;
   }
 
-  /* line 78, ../sass/breakpoints/_768up.scss */
+  /* line 82, ../sass/breakpoints/_768up.scss */
   .t2of5 {
     width: 40% !important;
     float: left;
   }
 
-  /* line 82, ../sass/breakpoints/_768up.scss */
+  /* line 86, ../sass/breakpoints/_768up.scss */
   .t3of5 {
     width: 60% !important;
     float: left;
   }
 
-  /* line 86, ../sass/breakpoints/_768up.scss */
+  /* line 90, ../sass/breakpoints/_768up.scss */
   .t4of5 {
     width: 80% !important;
     float: left;
@@ -2541,10 +2561,15 @@ nav + .exhibit {
 
   /* line 37, ../sass/breakpoints/_960up.scss */
   #exhibit-pages {
-    width: 220px;
+    max-width: 220px;
+    margin-right: 20px;
+  }
+  /* line 40, ../sass/breakpoints/_960up.scss */
+  #exhibit-pages h4, #exhibit-pages li {
+    padding: 0, 10px;
   }
 
-  /* line 40, ../sass/breakpoints/_960up.scss */
+  /* line 44, ../sass/breakpoints/_960up.scss */
   .exhibits #content > h1:first-of-type,
   #exhibit-blocks,
   #exhibit-page-navigation,
@@ -2552,31 +2577,36 @@ nav + .exhibit {
     width: 700px;
   }
 
-  /* line 46, ../sass/breakpoints/_960up.scss */
+  /* line 50, ../sass/breakpoints/_960up.scss */
+  .exhibits #content > h1:first-of-type {
+    margin-left: 260px;
+  }
+
+  /* line 53, ../sass/breakpoints/_960up.scss */
   .exhibit .description,
   .exhibit .description ~ * {
     width: 785px;
   }
 
   /* columns for desktop-ish widths */
-  /* line 52, ../sass/breakpoints/_960up.scss */
+  /* line 59, ../sass/breakpoints/_960up.scss */
   .dfull {
     width: 100% !important;
   }
 
-  /* line 55, ../sass/breakpoints/_960up.scss */
+  /* line 62, ../sass/breakpoints/_960up.scss */
   .d1of2 {
     width: 50% !important;
     float: left;
   }
 
-  /* line 59, ../sass/breakpoints/_960up.scss */
+  /* line 66, ../sass/breakpoints/_960up.scss */
   .d1of3 {
     width: 33% !important;
     float: left;
   }
 
-  /* line 63, ../sass/breakpoints/_960up.scss */
+  /* line 70, ../sass/breakpoints/_960up.scss */
   .d2of3 {
     width: 67% !important;
     float: left;
