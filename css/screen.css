@@ -2257,64 +2257,68 @@ nav + .exhibit {
 #exhibit-pages {
   float: right;
 }
+/* line 299, ../sass/breakpoints/_base.scss */
+#exhibit-pages h4, #exhibit-pages li {
+  padding: 0 10px;
+}
 
-/* line 300, ../sass/breakpoints/_base.scss */
+/* line 303, ../sass/breakpoints/_base.scss */
 #exhibit-blocks, .exhibits #content #primary {
   float: right;
 }
 
-/* line 303, ../sass/breakpoints/_base.scss */
+/* line 306, ../sass/breakpoints/_base.scss */
 .exhibits #content > h1:first-of-type {
   text-align: center;
 }
 
-/* line 306, ../sass/breakpoints/_base.scss */
+/* line 309, ../sass/breakpoints/_base.scss */
 .exhibits.browse #content > h1:first-of-type {
   width: 100%;
 }
 
-/* line 307, ../sass/breakpoints/_base.scss */
+/* line 310, ../sass/breakpoints/_base.scss */
 #collection-tree {
   margin-left: auto;
   margin-right: auto;
 }
 
-/* line 312, ../sass/breakpoints/_base.scss */
+/* line 315, ../sass/breakpoints/_base.scss */
 #recaptcha_area input {
   display: inline;
 }
 
-/* line 316, ../sass/breakpoints/_base.scss */
+/* line 319, ../sass/breakpoints/_base.scss */
 #neatline #simile {
   width: 62%;
   height: 23%;
 }
 
-/* line 321, ../sass/breakpoints/_base.scss */
+/* line 324, ../sass/breakpoints/_base.scss */
 #neatline.Simile #static-bubble {
   max-height: 74%;
 }
 
-/* line 325, ../sass/breakpoints/_base.scss */
+/* line 328, ../sass/breakpoints/_base.scss */
 #waypoints a.title.highlighted {
   background: #BEEAFF;
 }
 
 /* @end */
 /* @group ----- Browse-all ----- */
-/* line 331, ../sass/breakpoints/_base.scss */
+/* line 334, ../sass/breakpoints/_base.scss */
 .browse-attribution {
   font-style: italic;
   margin-bottom: .75em;
 }
 
-/* line 336, ../sass/breakpoints/_base.scss */
+/* line 339, ../sass/breakpoints/_base.scss */
 .page-meta {
   float: left;
   font-style: italic;
 }
 
-/* line 341, ../sass/breakpoints/_base.scss */
+/* line 344, ../sass/breakpoints/_base.scss */
 .page-meta p {
   margin-top: 0;
 }
@@ -2441,7 +2445,7 @@ nav + .exhibit {
 
   /* line 44, ../sass/breakpoints/_768up.scss */
   #exhibit-pages {
-    max-width: 172px;
+    width: 172px;
     margin-right: 20px;
   }
 
@@ -2573,15 +2577,11 @@ nav + .exhibit {
 
   /* line 37, ../sass/breakpoints/_960up.scss */
   #exhibit-pages {
-    max-width: 220px;
+    width: 220px;
     margin-right: 20px;
   }
-  /* line 40, ../sass/breakpoints/_960up.scss */
-  #exhibit-pages h4, #exhibit-pages li {
-    padding: 0, 10px;
-  }
 
-  /* line 44, ../sass/breakpoints/_960up.scss */
+  /* line 41, ../sass/breakpoints/_960up.scss */
   .exhibits #content > h1:first-of-type,
   #exhibit-blocks,
   #exhibit-page-navigation,
@@ -2589,37 +2589,37 @@ nav + .exhibit {
     width: 700px;
   }
 
-  /* line 50, ../sass/breakpoints/_960up.scss */
+  /* line 47, ../sass/breakpoints/_960up.scss */
   .exhibits.show #content > h1:first-of-type,
   .exhibits.summary #content > h1:first-of-type {
     margin-left: 260px;
   }
 
-  /* line 54, ../sass/breakpoints/_960up.scss */
+  /* line 51, ../sass/breakpoints/_960up.scss */
   .exhibit .description,
   .exhibit .description ~ * {
     width: 785px;
   }
 
   /* columns for desktop-ish widths */
-  /* line 60, ../sass/breakpoints/_960up.scss */
+  /* line 57, ../sass/breakpoints/_960up.scss */
   .dfull {
     width: 100% !important;
   }
 
-  /* line 63, ../sass/breakpoints/_960up.scss */
+  /* line 60, ../sass/breakpoints/_960up.scss */
   .d1of2 {
     width: 50% !important;
     float: left;
   }
 
-  /* line 67, ../sass/breakpoints/_960up.scss */
+  /* line 64, ../sass/breakpoints/_960up.scss */
   .d1of3 {
     width: 33% !important;
     float: left;
   }
 
-  /* line 71, ../sass/breakpoints/_960up.scss */
+  /* line 68, ../sass/breakpoints/_960up.scss */
   .d2of3 {
     width: 67% !important;
     float: left;
