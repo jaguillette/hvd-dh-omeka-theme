@@ -296,6 +296,9 @@ nav + .exhibit {
 /* @group ----- Other plugin styles ----- */
 #exhibit-pages {
   float: right;
+	h4, li {
+		padding: 0 10px;
+	}
 }
 #exhibit-blocks, .exhibits #content #primary {
   float: right;
