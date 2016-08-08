@@ -297,7 +297,7 @@ nav + .exhibit {
 #exhibit-pages {
   float: right;
 }
-#exhibit-blocks {
+#exhibit-blocks, .exhibits #content #primary {
   float: right;
 }
 .exhibits #content > h1:first-of-type {
