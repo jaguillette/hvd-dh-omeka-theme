@@ -2259,7 +2259,7 @@ nav + .exhibit {
 }
 
 /* line 300, ../sass/breakpoints/_base.scss */
-#exhibit-blocks {
+#exhibit-blocks, .exhibits #content #primary {
   float: right;
 }
 
