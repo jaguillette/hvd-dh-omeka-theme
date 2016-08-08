@@ -47,7 +47,8 @@ footer {
 .exhibits.summary #primary {
 	width: 700px;
 }
-.exhibits #content > h1:first-of-type {
+.exhibits.show #content > h1:first-of-type,
+.exhibits.summary #content > h1:first-of-type {
 	margin-left: 260px;
 }
 .exhibit .description,

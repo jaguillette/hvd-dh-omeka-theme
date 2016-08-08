@@ -303,6 +303,7 @@ nav + .exhibit {
 .exhibits #content > h1:first-of-type {
 	text-align: center;
 }
+.exhibits.browse #content > h1:first-of-type { width: 100%; }
 #collection-tree {
   margin-left: auto;
   margin-right: auto;
