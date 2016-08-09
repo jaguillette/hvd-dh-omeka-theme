@@ -2249,7 +2249,7 @@ nav + .exhibit {
 /* @group ----- Other plugin styles ----- */
 /* line 297, ../sass/breakpoints/_base.scss */
 #exhibit-pages {
-  float: right;
+  float: left;
 }
 /* line 299, ../sass/breakpoints/_base.scss */
 #exhibit-pages h4, #exhibit-pages li {
@@ -2263,7 +2263,7 @@ nav + .exhibit {
 
 /* line 306, ../sass/breakpoints/_base.scss */
 .exhibits #content > h1:first-of-type {
-  text-align: center;
+  text-align: left;
 }
 
 /* line 309, ../sass/breakpoints/_base.scss */
@@ -2452,60 +2452,54 @@ nav + .exhibit {
   }
 
   /* line 55, ../sass/breakpoints/_768up.scss */
-  .exhibits.show #content > h1:first-of-type,
-  .exhibits.summary #content > h1:first-of-type {
-    margin-left: 212px;
-  }
-
-  /* line 59, ../sass/breakpoints/_768up.scss */
   .exhibit .description,
   .exhibit .description ~ * {
     width: 412px;
   }
 
   /* columns for tablet-ish widths */
-  /* line 65, ../sass/breakpoints/_768up.scss */
+  /* line 61, ../sass/breakpoints/_768up.scss */
   .tfull {
     width: 100% !important;
   }
 
-  /* line 68, ../sass/breakpoints/_768up.scss */
+  /* line 64, ../sass/breakpoints/_768up.scss */
   .t1of2 {
     width: 50% !important;
     float: left;
   }
 
-  /* line 72, ../sass/breakpoints/_768up.scss */
+  /* line 68, ../sass/breakpoints/_768up.scss */
   .t1of3 {
     width: 33% !important;
     float: left;
   }
 
-  /* line 76, ../sass/breakpoints/_768up.scss */
+  /* line 72, ../sass/breakpoints/_768up.scss */
   .t2of3 {
     width: 67% !important;
     float: left;
   }
 
-  /* line 80, ../sass/breakpoints/_768up.scss */
+  /* line 76, ../sass/breakpoints/_768up.scss */
   .t1of5 {
     width: 20% !important;
     float: left;
   }
 
-  /* line 84, ../sass/breakpoints/_768up.scss */
+  /* line 80, ../sass/breakpoints/_768up.scss */
   .t2of5 {
     width: 40% !important;
     float: left;
   }
 
-  /* line 88, ../sass/breakpoints/_768up.scss */
+  /* line 84, ../sass/breakpoints/_768up.scss */
   .t3of5 {
     width: 60% !important;
     float: left;
   }
 
-  /* line 92, ../sass/breakpoints/_768up.scss */
+  /* line 88, ../sass/breakpoints/_768up.scss */
   .t4of5 {
     width: 80% !important;
     float: left;
@@ -2584,36 +2578,30 @@ nav + .exhibit {
   }
 
   /* line 47, ../sass/breakpoints/_960up.scss */
-  .exhibits.show #content > h1:first-of-type,
-  .exhibits.summary #content > h1:first-of-type {
-    margin-left: 260px;
-  }
-
-  /* line 51, ../sass/breakpoints/_960up.scss */
   .exhibit .description,
   .exhibit .description ~ * {
     width: 785px;
   }
 
   /* columns for desktop-ish widths */
-  /* line 57, ../sass/breakpoints/_960up.scss */
+  /* line 53, ../sass/breakpoints/_960up.scss */
   .dfull {
     width: 100% !important;
   }
 
-  /* line 60, ../sass/breakpoints/_960up.scss */
+  /* line 56, ../sass/breakpoints/_960up.scss */
   .d1of2 {
     width: 50% !important;
     float: left;
   }
 
-  /* line 64, ../sass/breakpoints/_960up.scss */
+  /* line 60, ../sass/breakpoints/_960up.scss */
   .d1of3 {
     width: 33% !important;
     float: left;
   }
 
-  /* line 68, ../sass/breakpoints/_960up.scss */
+  /* line 64, ../sass/breakpoints/_960up.scss */
   .d2of3 {
     width: 67% !important;
     float: left;

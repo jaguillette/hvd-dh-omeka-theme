@@ -1,5 +1,14 @@
 <?php echo head(array('title' => metadata('exhibit', 'title'), 'bodyclass'=>'exhibits summary')); ?>
 
+<?php
+$pageTree = exhibit_builder_page_tree();
+if ($pageTree):
+?>
+<nav id="exhibit-pages">
+    <?php echo $pageTree; ?>
+</nav>
+<?php endif; ?>
+
 <h1><?php echo metadata('exhibit', 'title'); ?></h1>
 <?php echo exhibit_builder_page_nav(); ?>
 
@@ -17,15 +26,6 @@
 </div>
 <?php endif; ?>
 </div>
-
-<?php
-$pageTree = exhibit_builder_page_tree();
-if ($pageTree):
-?>
-<nav id="exhibit-pages">
-    <?php echo $pageTree; ?>
-</nav>
-<?php endif; ?>
 
 <?php if ($exhibitAttribution = get_theme_option('Exhibit Attribution')) { ?>
 <div id="exhibit-attribution">
