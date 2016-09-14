@@ -76,7 +76,6 @@ queue_css_file('jquery.fancybox');
 
 </div> <!-- End of Primary. -->
 
-<script src="<?php echo(substr(PUBLIC_THEME_DIR,13)); ?>/dh-theme/javascripts/vendor/jquery.fancybox.js"></script>
 <script type="text/javascript">
 var thumbnails = jQuery.map(jQuery('.download-file img'), function(element) { return jQuery(element).attr('src'); });
 var fancybox_gallery = jQuery.map(jQuery('.download-file img'), function(element) {

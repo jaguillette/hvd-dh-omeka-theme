@@ -28,6 +28,7 @@
     <?php queue_js_file('vendor/selectivizr', 'javascripts', array('conditional' => '(gte IE 6)&(lte IE 8)')); ?>
     <?php queue_js_file('vendor/respond'); ?>
     <?php queue_js_file('vendor/jquery-accessibleMegaMenu'); ?>
+    <?php queue_js_file('vendor/jquery.fancybox.pack'); ?>
     <?php queue_js_file('berlin'); ?>
     <?php queue_js_file('globals'); ?>
     <?php queue_js_file('masonry.pkgd'); ?>
