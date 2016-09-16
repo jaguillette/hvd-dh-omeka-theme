@@ -46,7 +46,7 @@ $collectionTitle = strip_formatting(metadata('collection', array('Dublin Core', 
 
         <?php if (metadata('item', 'has thumbnail')): ?>
         <div class="item-img">
-            <?php echo dh_link_to_item(item_image('square_thumbnail', array('alt' => $itemTitle)),'show',null,array('collection'=>metadata('collection','id'))); ?>
+            <?php echo dh_link_to_item(item_image('square_thumbnail', array('alt' => $itemTitle)),array(),'show',null,array('collection'=>metadata('collection','id'))); ?>
         </div>
         <?php endif; ?>
 
