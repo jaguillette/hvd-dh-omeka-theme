@@ -139,34 +139,38 @@ function detailed_item_type_elements($item = null)
 }
 
 /**
- * Get the display title for an item. 
+ * Get the display title for an item.
  * If there is an element in the Item Type Metadata called Display Title, the
- * element referenced there will be used. If not, the default Dublin Core 
+ * element referenced there will be used. If not, the default Dublin Core
  * title will be used.
  */
-function dh_theme_get_display_title()
+function dh_theme_get_display_title($item = null)
 {
-  $itemTypeElements = detailed_item_type_elements();
+  $itemTypeElements = detailed_item_type_elements($item);
   foreach ($itemTypeElements as $element => $elementInfo) {
     if (strpos($elementInfo['element_description'], 'Display Title')!==false) {
       return $elementInfo['text'];
     }
   }
-  return metadata('item', array('Dublin Core', 'Title'));
+  if (!$item) {
+    return metadata('item', array('Dublin Core', 'Title'));
+  } else {
+    return metadata($item, array('Dublin Core', 'Title'));
+  }
 }
 
 /**
- * Get the display description for an item. 
+ * Get the display description for an item.
  * If there is an element in the Item Type Metadata called Display Description, the
- * element referenced there will be used. If not, the default Dublin Core 
+ * element referenced there will be used. If not, the default Dublin Core
  * description will be used.
  *
- * @param int|null $snippet Slice the description to desired length with trailing 
+ * @param int|null $snippet Slice the description to desired length with trailing
  * ellipsis.
  */
-function dh_theme_get_display_description($snippet=false)
+function dh_theme_get_display_description($snippet=false, $item=null)
 {
-  $itemTypeElements = detailed_item_type_elements();
+  $itemTypeElements = detailed_item_type_elements($item);
   foreach ($itemTypeElements as $element => $elementInfo) {
     if (strpos($elementInfo['element_description'], 'Display Description')!==false) {
       if ($snippet and strlen($elementInfo['text'] > $snippet)) {
@@ -176,7 +180,11 @@ function dh_theme_get_display_description($snippet=false)
       }
     }
   }
-  return metadata('item', array('Dublin Core', 'Description'),array('snippet'=>$snippet));
+  if (!$item) {
+    return metadata('item', array('Dublin Core', 'Description'),array('snippet'=>$snippet));
+  } else {
+    return metadata($item, array('Dublin Core', 'Description'),array('snippet'=>$snippet));
+  }
 }
 
 /**
@@ -209,20 +217,20 @@ function dh_link_to_item($text = null, $props = array(), $action = 'show', $item
  * Change the behavior of previous/next buttons on items/show
  * Written by Valdeva Crema (https://github.com/ives1227)
  */
-function custom_next_previous() 
+function custom_next_previous()
 {
   //Starts a conditional statement that determines a search has been run
   if (isset($_SERVER['QUERY_STRING'])) {
 
     // Sets the current item ID to the variable $current
     $current = metadata('item', 'id');
-        
+
     //Break the query into an array
     parse_str($_SERVER['QUERY_STRING'], $queryarray);
-        
+
     //Items don't need the page level
     unset($queryarray['page']);
-        
+
     $itemIds = array();
     $list = array();
     if (isset($queryarray['query'])) {
@@ -260,11 +268,11 @@ function custom_next_previous()
           $itemIds[] = $value->id;
         }
       }
-      
+
       //Update the query string without the page and with the sort_fields
       $updatedquery = http_build_query($queryarray);
       $updatedquery = preg_replace('/%5B[0-9]+%5D/simU', '%5B%5D', $updatedquery);
-        
+
       // Find where we currently are in the result set
       $key = array_search($current, $itemIds);
 
