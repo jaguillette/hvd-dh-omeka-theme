@@ -41,6 +41,11 @@
   height: 10.5em;
 }
 
+.layout-collection-group .collection .image img,
+.layout-exhibit-group .exhibit .image img {
+  height: auto;
+}
+
 .browse .collection h2,
 .browse .exhibit h2 {
   margin: 0;

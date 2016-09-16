@@ -16,48 +16,57 @@ $collectionTitle = strip_formatting(metadata('collection', array('Dublin Core', 
 </div>
 <?php endif; ?>
 
-<?php 
+<?php
     $description =  metadata('collection', array('Dublin Core','Description'));
     if ($description) {
         echo("<p>$description</p>");
     }
 ?>
 
-
-<?php if (metadata('collection', 'total_items') > 10): ?>
+<?php
+  $collectionMaxDisplay = intval(get_theme_option('Browse Collection Max Items'));
+  if (metadata('collection', 'total_items') > $collectionMaxDisplay):
+  # If we have more than the maximum number of items we want to display,
+  # Get the maximum number of items we'll display, and only show that many.
+  # This item display is abbreviated.
+?>
 <div id="collection-items">
-    <?php foreach (loop('items') as $item): ?>
-    <?php $itemTitle = strip_formatting(dh_theme_get_display_title()); ?>
+    <?php foreach (get_records('Item', array('collection'=>metadata('collection','id')), $collectionMaxDisplay) as $item): ?>
+    <?php $itemTitle = strip_formatting(dh_theme_get_display_title($item)); ?>
     <div class="hentry">
 
-        <?php if (metadata('item', 'has thumbnail')): ?>
+        <?php if (metadata($item, 'has thumbnail')): ?>
         <div class="item-img">
-            <?php echo dh_link_to_item(item_image('square_thumbnail', array('alt' => $itemTitle)),array(),'show',null,array('collection'=>metadata('collection','id'))); ?>
+            <?php echo dh_link_to_item(item_image('square_thumbnail', array('alt' => $itemTitle),0,$item),array(),'show',$item,array('collection'=>metadata('collection','id'))); ?>
         </div>
         <?php endif; ?>
     </div>
     <?php endforeach; ?>
-<?php elseif (metadata('collection', 'total_items') > 0): ?>
+<?php
+  elseif (metadata('collection', 'total_items') > 0):
+  # Otherwise, if there are fewer items than the maximum but still some items,
+  # Just display all of them, including descriptions.
+?>
 <div id="collection-items" class = "two-col">
-    <?php foreach (loop('items') as $item): ?>
-    <?php $itemTitle = strip_formatting(dh_theme_get_display_title()); ?>
+    <?php foreach (get_records('Item', array('collection'=>metadata('collection','id')), $collectionMaxDisplay) as $item): ?>
+    <?php $itemTitle = strip_formatting(dh_theme_get_display_title($item)); ?>
     <div class="item hentry">
-        <h3><?php echo dh_link_to_item($itemTitle, array('class'=>'permalink'),'show',null,array('collection'=>metadata('collection','id'))); ?></h3>
+        <h3><?php echo dh_link_to_item($itemTitle, array('class'=>'permalink'),'show',$item,array('collection'=>metadata('collection','id'))); ?></h3>
 
-        <?php if (metadata('item', 'has thumbnail')): ?>
+        <?php if (metadata($item, 'has thumbnail')): ?>
         <div class="item-img">
-            <?php echo dh_link_to_item(item_image('square_thumbnail', array('alt' => $itemTitle)),'show',null,array('collection'=>metadata('collection','id'))); ?>
+            <?php echo dh_link_to_item(item_image('square_thumbnail', array('alt' => $itemTitle),0,$item),array(),'show',$item,array('collection'=>metadata('collection','id'))); ?>
         </div>
         <?php endif; ?>
 
-        <?php if ($description = dh_theme_get_display_description(250)): ?>
+        <?php if ($description = dh_theme_get_display_description(250, $item)): ?>
         <div class="item-description">
             <p><?php echo $description; ?></p>
         </div>
         <?php endif; ?>
     </div>
     <?php endforeach; ?>
-<?php else: ?>
+<?php else: # Let folks know that there aren't any items here?>
 <div id="collection-items">
     <p><?php echo __("There are currently no items within this collection."); ?></p>
 <?php endif; ?>

@@ -173,7 +173,7 @@ function dh_theme_get_display_description($snippet=false, $item=null)
   $itemTypeElements = detailed_item_type_elements($item);
   foreach ($itemTypeElements as $element => $elementInfo) {
     if (strpos($elementInfo['element_description'], 'Display Description')!==false) {
-      if ($snippet and strlen($elementInfo['text'] > $snippet)) {
+      if ($snippet and strlen($elementInfo['text']) > $snippet) {
         return substr($elementInfo['text'],0,$snippet)."...";
       } else {
         return $elementInfo['text'];

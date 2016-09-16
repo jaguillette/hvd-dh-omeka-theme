@@ -498,13 +498,19 @@ th {
 }
 
 /* line 44, ../sass/partials/_collections.scss */
+.layout-collection-group .collection .image img,
+.layout-exhibit-group .exhibit .image img {
+  height: auto;
+}
+
+/* line 49, ../sass/partials/_collections.scss */
 .browse .collection h2,
 .browse .exhibit h2 {
   margin: 0;
   max-width: 100%;
 }
 
-/* line 50, ../sass/partials/_collections.scss */
+/* line 55, ../sass/partials/_collections.scss */
 .browse .collection .image,
 .browse .exhibit .image {
   float: left;
@@ -513,40 +519,40 @@ th {
   margin-top: 1em;
 }
 
-/* line 57, ../sass/partials/_collections.scss */
+/* line 62, ../sass/partials/_collections.scss */
 .browse .collection .image img,
 .browse .exhibit .image img {
   height: 100%;
   width: auto;
 }
 
-/* line 63, ../sass/partials/_collections.scss */
+/* line 68, ../sass/partials/_collections.scss */
 .collection-meta {
   float: none;
   display: inline;
   margin: 0;
 }
 
-/* line 69, ../sass/partials/_collections.scss */
+/* line 74, ../sass/partials/_collections.scss */
 .collection-description p:first-of-type,
 .view-items-link:only-child {
   margin-top: 0.75em;
 }
 
-/* line 74, ../sass/partials/_collections.scss */
+/* line 79, ../sass/partials/_collections.scss */
 .browse .collection .element {
   clear: none;
 }
 
 /* @end */
 /* @group ----- Collections/Show ----- */
-/* line 80, ../sass/partials/_collections.scss */
+/* line 85, ../sass/partials/_collections.scss */
 .collections .item-img {
   float: left;
   margin: 0 1.5em 0 0;
 }
 
-/* line 84, ../sass/partials/_collections.scss */
+/* line 89, ../sass/partials/_collections.scss */
 .collections .item-img a {
   display: block;
   height: 10em;
@@ -555,13 +561,13 @@ th {
   padding: 2px;
 }
 
-/* line 91, ../sass/partials/_collections.scss */
+/* line 96, ../sass/partials/_collections.scss */
 .collections .item-img img {
   height: 100%;
   width: auto;
 }
 
-/* line 96, ../sass/partials/_collections.scss */
+/* line 101, ../sass/partials/_collections.scss */
 .collections .item {
   overflow: hidden;
   border-color: #ccc;
@@ -571,7 +577,7 @@ th {
   padding-bottom: 1.5em;
 }
 
-/* line 105, ../sass/partials/_collections.scss */
+/* line 110, ../sass/partials/_collections.scss */
 #collection-browse-link {
   display: inline-block;
   width: 100%;
@@ -580,68 +586,68 @@ th {
 
 /* @end */
 /* @group ----- Search Results ----- */
-/* line 113, ../sass/partials/_collections.scss */
+/* line 118, ../sass/partials/_collections.scss */
 #search-results + .pagination {
   margin-top: 2.25em;
 }
 
-/* line 117, ../sass/partials/_collections.scss */
+/* line 122, ../sass/partials/_collections.scss */
 #search-results td {
   vertical-align: top;
 }
 
-/* line 121, ../sass/partials/_collections.scss */
+/* line 126, ../sass/partials/_collections.scss */
 #search-results .image {
   float: left;
   height: 6em;
   margin: 0 1.5em 0 0;
 }
 
-/* line 126, ../sass/partials/_collections.scss */
+/* line 131, ../sass/partials/_collections.scss */
 #search-results .image img {
   height: 100%;
   width: auto;
 }
 
-/* line 131, ../sass/partials/_collections.scss */
+/* line 136, ../sass/partials/_collections.scss */
 #item-filters ul, #search-filters ul {
   padding-left: 0;
   list-style-type: none;
 }
 
-/* line 135, ../sass/partials/_collections.scss */
+/* line 140, ../sass/partials/_collections.scss */
 #item-filters ul > li, #search-filters ul > li {
   display: inline-block;
 }
 
-/* line 138, ../sass/partials/_collections.scss */
+/* line 143, ../sass/partials/_collections.scss */
 #item-filters ul > li:after, #search-filters ul > li:after {
   content: " \00B7";
   margin: 0 10px 0 5px;
 }
 
-/* line 142, ../sass/partials/_collections.scss */
+/* line 147, ../sass/partials/_collections.scss */
 #item-filters ul > li:last-child:after, #search-filters ul > li:last-child:after {
   content: "\00A0";
 }
 
-/* line 145, ../sass/partials/_collections.scss */
+/* line 150, ../sass/partials/_collections.scss */
 #item-filters ul li ul, #search-filters ul li ul {
   display: inline;
 }
 
-/* line 148, ../sass/partials/_collections.scss */
+/* line 153, ../sass/partials/_collections.scss */
 #item-filters ul li ul li, #search-filters ul li ul li {
   display: inline-block;
 }
 
-/* line 151, ../sass/partials/_collections.scss */
+/* line 156, ../sass/partials/_collections.scss */
 #item-filters ul li ul li:after, #search-filters ul li ul li:after {
   content: ", ";
   margin: 0;
 }
 
-/* line 155, ../sass/partials/_collections.scss */
+/* line 160, ../sass/partials/_collections.scss */
 #item-filters ul li ul li:last-child:after, #search-filters ul li ul li:last-child:after {
   content: "";
 }
