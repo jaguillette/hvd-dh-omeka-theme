@@ -1572,6 +1572,32 @@ table.item-metadata th {
 }
 
 /* @end */
+/* line 1, ../sass/partials/_neatline.scss */
+#neatline-narrative {
+  width: 400px;
+  padding: 0.5em;
+  position: absolute;
+  z-index: 1;
+  overflow-y: scroll;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+}
+/* line 9, ../sass/partials/_neatline.scss */
+#neatline-narrative h1 {
+  color: #d21543;
+}
+
+/* line 14, ../sass/partials/_neatline.scss */
+#static-bubble {
+  right: 70px;
+  left: initial;
+}
+
+/* line 18, ../sass/partials/_neatline.scss */
+.olControlPanZoom {
+  display: none;
+}
+
 /* @group ----- Navigation ----- */
 /* line 2, ../sass/partials/_nav.scss */
 #nav-container {

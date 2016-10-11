@@ -19,10 +19,22 @@
     preg_match('/.*<body.*>/simU', $header, $matches);
     echo $matches[0];
 ?>
+<?php if (nl_getExhibitField('narrative')): ?>
+<!-- Narrative -->
+<div id="neatline-narrative" class="narrative">
+  <!-- Content. -->
+  <h1><?php echo nl_getExhibitField('title'); ?></h1>
+  <?php echo nl_getExhibitField('narrative'); ?>
+</div>
+<?php endif; ?>
 
+<!-- Plugin Hook -->
 <?php fire_plugin_hook('public_content_top', array('view'=>$this)); ?>
+<!-- End Plugin Hook -->
 
+<!-- Exhibit Markup -->
 <?php echo nl_getExhibitMarkup(); ?>
+<!-- End Exhibit Markup -->
 
 <span id="embed-code"><label>Embed code: </label><input onClick="this.select();" type="text" value='&lt;iframe src="<?php echo absolute_url(); ?>" height="500" width="100%"&gt;&lt;/iframe&gt;'></input></span>
 

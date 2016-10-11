@@ -1,0 +1,20 @@
+#neatline-narrative {
+  width: 400px;
+  padding: 0.5em;
+  position: absolute;
+  z-index: 1;
+  overflow-y: scroll;
+  background-color: rgba(0,0,0,0.6);
+  color: #fff;
+  h1 {
+    color: lighten($crimson, 10%)
+  }
+}
+
+#static-bubble {
+  right: 70px;
+  left: initial;
+}
+.olControlPanZoom {
+  display: none;
+}
