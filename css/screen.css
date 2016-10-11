@@ -1609,21 +1609,22 @@ table.item-metadata th {
   text-align: center;
   padding-top: 9px;
   color: #fff;
+  cursor: pointer;
 }
-/* line 34, ../sass/partials/_neatline.scss */
+/* line 35, ../sass/partials/_neatline.scss */
 #minimize-button.minimized {
   left: -10px;
   transform: rotate(180deg);
   -webkit-transform: rotate(180deg);
 }
 
-/* line 41, ../sass/partials/_neatline.scss */
+/* line 42, ../sass/partials/_neatline.scss */
 #static-bubble {
   right: 70px;
   left: initial;
 }
 
-/* line 45, ../sass/partials/_neatline.scss */
+/* line 46, ../sass/partials/_neatline.scss */
 .olControlPanZoom {
   display: none;
 }
