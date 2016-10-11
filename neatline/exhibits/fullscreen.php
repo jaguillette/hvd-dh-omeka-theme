@@ -21,6 +21,7 @@
 ?>
 <?php if (nl_getExhibitField('narrative')): ?>
 <!-- Narrative -->
+<div id="minimize-button">&lt;</div>
 <div id="neatline-narrative" class="narrative">
   <!-- Content. -->
   <h1><?php echo nl_getExhibitField('title'); ?></h1>
@@ -50,6 +51,10 @@ if (inIframe()) {
   jQuery("#embed-code").attr("style","display:none;");
   jQuery("#static-bubble").attr("style","max-width:45%;");
 }
+jQuery("#minimize-button").on("click",function() {
+  jQuery("#neatline-narrative").toggleClass('minimized');
+  jQuery("#minimize-button").toggleClass('minimized');
+});
 </script>
 
 </body>
