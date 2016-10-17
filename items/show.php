@@ -3,7 +3,11 @@ queue_css_file('jquery.fancybox');
 ?>
 <?php echo head(array('title' => dh_theme_get_display_title(),'bodyclass' => 'items show')); ?>
 <div id="primary">
-    <h1><?php echo dh_theme_get_display_title(); ?> <span class="item-metadata">(<?php echo metadata('item', 'item_type_name'); ?>)</span></h1>
+    <h1><?php echo dh_theme_get_display_title(); ?>
+      <?php if ($itemTypeName = metadata('item','item_type_name')): ?>
+        <span class="item-metadata">(<?php echo metadata('item', 'item_type_name'); ?>)</span>
+      <?php endif; ?>
+      </h1>
 
     <?php if ($itemAttribution = get_theme_option('Item Attribution')) { ?>
     <div id="item-attribution">
