@@ -1,4 +1,7 @@
-var thumbnails = jQuery.map(jQuery('.download-file img'), function(element) { return jQuery(element).attr('src'); });
+var thumbnails = jQuery.map(
+  jQuery('.download-file img'),
+  function(element) { return jQuery(element).attr('src'); }
+);
 var fancybox_gallery = jQuery.map(jQuery('.download-file img'), function(element) {
     jElement = jQuery(element);
     var href = jElement.attr('src');
@@ -14,6 +17,10 @@ jQuery(".download-file").click(function(e) {
     var startIndex = thumbnails.indexOf(e.currentTarget.firstElementChild.getAttribute('src'));
     var imageTitle = e.currentTarget.firstElementChild.getAttribute('title');
     jQuery.fancybox(fancybox_gallery,{
-        index:startIndex
+        index:startIndex,
+        afterLoad:function() {
+          console.log(this.title);
+          this.title = '<a href="'+this.href+'">Fullsize Image</a>  |  ' + this.title;
+        }
     });
 })
