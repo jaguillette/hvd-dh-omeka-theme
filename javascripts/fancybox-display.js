@@ -5,21 +5,29 @@ var thumbnails = jQuery.map(
 var fancybox_gallery = jQuery.map(jQuery('.download-file img'), function(element) {
     jElement = jQuery(element);
     var href = jElement.attr('src');
-    href = href.replace("square_thumbnails","fullsize");
+    href = href.replace("square_thumbnail","original");
+    href = href.replace("thumbnail","original");
+    href = href.replace("fullsize","original");
+    href = href.replace(".jpg","");
+    console.log(href);
     var title = jElement.attr('title');
     var linkOut = jElement.parent().attr('href');
     title = '<a href="'+linkOut+'">'+title+'</a>';
-    fancybox_item = {"href":href,"title":title};
+    fancybox_item = {
+      "href":href,
+      "title":title,
+      "type":"image",
+    };
     return fancybox_item;
 });
 jQuery(".download-file").click(function(e) {
+    console.log("happened");
     e.preventDefault();
     var startIndex = thumbnails.indexOf(e.currentTarget.firstElementChild.getAttribute('src'));
     var imageTitle = e.currentTarget.firstElementChild.getAttribute('title');
     jQuery.fancybox(fancybox_gallery,{
         index:startIndex,
         afterLoad:function() {
-          console.log(this.title);
           this.title = '<a href="'+this.href+'">Fullsize Image</a>  |  ' + this.title;
         }
     });
