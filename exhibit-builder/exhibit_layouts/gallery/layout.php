@@ -17,8 +17,8 @@ $captionPosition = isset($options['captions-position'])
 <div class="gallery-showcase <?php echo $showcasePosition; ?> with-<?php echo $galleryPosition; ?> captions-<?php echo $captionPosition; ?>">
     <?php
         $attachment = array_shift($attachments);
-        $original_filename = $attachment->getFile()['original_filename'];
-        echo $this->exhibitAttachment($attachment, array('imageSize' => 'fullsize','imgAttributes' => array('original_filename' => $original_filename)));
+        $filename = $attachment->getFile()['filename'];
+        echo $this->exhibitAttachment($attachment, array('imageSize' => 'fullsize','imgAttributes' => array('filename' => $filename)));
     ?>
 </div>
 <?php endif; ?>
@@ -29,9 +29,9 @@ $captionPosition = isset($options['captions-position'])
       }
       $html = '';
       foreach ($attachments as $attachment) {
-        $original_filename = $attachment->getFile()['original_filename'];
+        $filename = $attachment->getFile()['filename'];
         $html .= '<div class="exhibit-item exhibit-gallery-item">';
-        $html .= $this->exhibitAttachment($attachment, array('imageSize' => $galleryFileSize,'imgAttributes' => array('original_filename' => $original_filename)));
+        $html .= $this->exhibitAttachment($attachment, array('imageSize' => $galleryFileSize,'imgAttributes' => array('filename' => $filename)));
         $html .= '</div>';
       }
       echo(apply_filters('exhibit_attachment_gallery_markup', $html,

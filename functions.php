@@ -338,7 +338,8 @@ function dh_file_markup($files, array $props = array(), $wrapperAttributes = arr
     $helper = new Omeka_View_Helper_FileMarkup;
     $output = '';
     foreach ($files as $file) {
-        $props['imgAttributes']['original_filename'] = $file['original_filename'];
+        #echo(var_dump($file));
+        $props['imgAttributes']['filename'] = $file['filename'];
         $output .= $helper->fileMarkup($file, $props, $wrapperAttributes);
     }
     return $output;

@@ -4,7 +4,14 @@ var thumbnails = jQuery.map(
 );
 var fancybox_gallery = jQuery.map(jQuery('.download-file img'), function(element) {
     jElement = jQuery(element);
-    var href = jElement.attr('original_filename');
+    // var href = jElement.attr('filename');
+    var href = jElement.attr('src');
+    href = href.split('/');
+    href.reverse();
+    href[0] = jElement.attr('filename');
+    href[1] = 'original';
+    href.reverse();
+    href = href.join('/');
     console.log(href);
     var title = jElement.attr('title');
     var linkOut = jElement.parent().attr('href');
@@ -17,7 +24,6 @@ var fancybox_gallery = jQuery.map(jQuery('.download-file img'), function(element
     return fancybox_item;
 });
 jQuery(".download-file").click(function(e) {
-    console.log("happened");
     e.preventDefault();
     var startIndex = thumbnails.indexOf(e.currentTarget.firstElementChild.getAttribute('src'));
     var imageTitle = e.currentTarget.firstElementChild.getAttribute('title');
