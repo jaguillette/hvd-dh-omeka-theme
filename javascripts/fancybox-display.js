@@ -6,6 +6,7 @@ var fancybox_gallery = jQuery.map(jQuery('.download-file img'), function(element
     jElement = jQuery(element);
     // var href = jElement.attr('filename');
     var href = jElement.attr('src');
+    href = href.replace(/%2F/g,'/');
     href = href.split('/');
     href.reverse();
     href[0] = jElement.attr('filename');
