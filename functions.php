@@ -298,4 +298,50 @@ function custom_next_previous()
     }
 }
 
+/**
+ * Get HTML for all files assigned to an item.
+ * Uses custom dh_file_markup function
+ *
+ * @package Omeka\Function\View\Item
+ * @uses file_markup()
+ * @param array $options
+ * @param array $wrapperAttributes
+ * @param Item|null $item Check for this specific item record (current item if null).
+ * @return string HTML
+ */
+function dh_files_for_item($options = array(), $wrapperAttributes = array('class' => 'item-file'), $item = null)
+{
+    if (!$item) {
+        $item = get_current_record('item');
+    }
+    return dh_file_markup($item->Files, $options, $wrapperAttributes);
+}
+
+/**
+ * Get HTML for a set of files.
+ * Adds original filename as attribute to file link.
+ *
+ * @package Omeka\Function\View\File
+ * @uses Omeka_View_Helper_FileMarkup::fileMarkup()
+ * @param File $files A file record or an array of File records to display.
+ * @param array $props Properties to customize display for different file types.
+ * @param array $wrapperAttributes Attributes HTML attributes for the div that
+ * wraps each displayed file. If empty or null, this will not wrap the displayed
+ * file in a div.
+ * @return string HTML
+ */
+function dh_file_markup($files, array $props = array(), $wrapperAttributes = array('class' => 'item-file'))
+{
+    if (!is_array($files)) {
+        $files = array($files);
+    }
+    $helper = new Omeka_View_Helper_FileMarkup;
+    $output = '';
+    foreach ($files as $file) {
+        $props['imgAttributes']['original_filename'] = $file['original_filename'];
+        $output .= $helper->fileMarkup($file, $props, $wrapperAttributes);
+    }
+    return $output;
+}
+
 ?>

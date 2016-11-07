@@ -4,11 +4,7 @@ var thumbnails = jQuery.map(
 );
 var fancybox_gallery = jQuery.map(jQuery('.download-file img'), function(element) {
     jElement = jQuery(element);
-    var href = jElement.attr('src');
-    href = href.replace("square_thumbnail","original");
-    href = href.replace("thumbnail","original");
-    href = href.replace("fullsize","original");
-    href = href.replace(".jpg","");
+    var href = jElement.attr('original_filename');
     console.log(href);
     var title = jElement.attr('title');
     var linkOut = jElement.parent().attr('href');
