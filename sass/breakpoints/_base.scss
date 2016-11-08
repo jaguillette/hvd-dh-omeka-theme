@@ -109,6 +109,21 @@ dt {
 dd {
   margin-left: 1.5em;
 }
+code {
+  background-color: #ddd;
+  border-radius: 3px;
+  padding: 0 3px;
+}
+
+pre.editor-colors {
+  background-color: #ddd;
+  border-radius: 3px;
+  padding: 5px;
+}
+
+div.line {
+  display: inline-block;
+}
 
 /* -- Tables -- */
 table {
