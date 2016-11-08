@@ -49,7 +49,11 @@ queue_css_file('jquery.fancybox');
         <?php if (metadata('item','has files')): ?>
             <div id="item-images">
                 <h3><?php echo __('Files'); ?></h3>
-                <?php echo dh_files_for_item(array('imageSize' => 'fullsize', 'linkAttributes'=>array('data-lightbox'=>'file-gallery'))); ?>
+                <?php if (get_theme_option('Show Item File Gallery') == 0): ?>
+                  <?php echo dh_files_for_item(array('imageSize' => 'fullsize', 'linkAttributes'=>array('data-lightbox'=>'file-gallery'))); ?>
+                <?php else: ?>
+                  <?php echo dh_item_image_gallery(); ?>
+                <?php endif; ?>
             </div>
         <?php else: ?>
             <?php fire_plugin_hook('public_items_show', array('view' => $this, 'item' => $item)); ?>

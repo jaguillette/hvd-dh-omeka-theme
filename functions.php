@@ -345,4 +345,71 @@ function dh_file_markup($files, array $props = array(), $wrapperAttributes = arr
     return $output;
 }
 
+/**
+ * Get a gallery of file thumbnails for an item.
+ *
+ * @package Omeka\Function\View\Item
+ * @param array $attrs HTML attributes for the components of the gallery, in
+ *  sub-arrays for 'wrapper', 'linkWrapper', 'link', and 'image'. Set a wrapper
+ *  to null to omit it.
+ * @param string $imageType The type of derivative image to display.
+ * @param boolean $filesShow Whether to link to the files/show. Defaults to
+ *  false, links to the original file.
+ * @param Item $item The Item to use, the current item if omitted.
+ * @return string
+ */
+function dh_item_image_gallery($attrs = array(), $imageType = 'square_thumbnail', $filesShow = false, $item = null)
+{
+    if (!$item) {
+        $item = get_current_record('item');
+    }
+
+    $files = $item->Files;
+    if (!$files) {
+        return '';
+    }
+
+    $defaultAttrs = array(
+        'wrapper' => null,
+        'linkWrapper' => array('class' => 'item-gallery-image'),
+        'link' => array(),
+        'image' => array()
+    );
+    $attrs = array_merge($defaultAttrs, $attrs);
+
+    $html = '';
+    if ($attrs['wrapper'] !== null) {
+        $html .= '<div ' . tag_attributes($attrs['wrapper']) . '>';
+    }
+    foreach ($files as $file) {
+        if ($attrs['linkWrapper'] !== null) {
+            $html .= '<div ' . tag_attributes($attrs['linkWrapper']) . '>';
+        }
+
+        $attrs['image']['filename'] = $file['filename'];
+
+        if (array_key_exists('class',$attrs['link'])) {
+          $attrs['link']['class'] .= ' download-file';
+        } else {
+          $attrs['link']['class'] = 'download-file';
+        }
+
+        $image = file_image($imageType, $attrs['image'], $file);
+        if ($filesShow) {
+            $html .= link_to($file, 'show', $image, $attrs['link']);
+        } else {
+            $linkAttrs = $attrs['link'] + array('href' => $file->getWebPath('original'));
+            $html .= '<a ' . tag_attributes($linkAttrs) . '>' . $image . '</a>';
+        }
+
+        if ($attrs['linkWrapper'] !== null) {
+            $html .= '</div>';
+        }
+    }
+    if ($attrs['wrapper'] !== null) {
+        $html .= '</div>';
+    }
+    return $html;
+}
+
 ?>
