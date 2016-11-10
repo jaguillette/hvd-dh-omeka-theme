@@ -21,6 +21,7 @@
     <!-- Stylesheets -->
     <?php
     queue_css_file(array('iconfonts', 'screen'));
+    queue_css_file(array('jquery.fancybox'));
 
     echo head_css();
     ?>

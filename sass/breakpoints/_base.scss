@@ -230,15 +230,21 @@ img a {
   height: 100%;
 }
 
-.item-gallery-image {
-  display: inline-block;
-  width: 23%;
-  margin: 1%;
-  a {
+.gallery-item {
+  width: 100%;
+  .omeka-media {
+    width: 100%;
+  }
+  &.image-jpeg {
     display: inline-block;
-    img {
-      width: 100%;
-      height: 100%;
+    width: 23%;
+    margin: 1%;
+    a {
+      display: inline-block;
+      img {
+        width: 100%;
+        height: 100%;
+      }
     }
   }
 }

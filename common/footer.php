@@ -29,6 +29,8 @@
     });
 </script>
 
+<?php echo js_tag("fancybox-display"); ?>
+
 </body>
 
 </html>

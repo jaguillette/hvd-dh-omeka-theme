@@ -52,7 +52,15 @@ queue_css_file('jquery.fancybox');
                 <?php if (get_theme_option('Show Item File Gallery') == 0): ?>
                   <?php echo dh_files_for_item(array('imageSize' => 'fullsize', 'linkAttributes'=>array('data-lightbox'=>'file-gallery'))); ?>
                 <?php else: ?>
-                  <?php echo dh_item_image_gallery(); ?>
+                  <?php echo dh_files_for_item(
+                    array(
+                      'imageSize' => 'square_thumbnail',
+                      'linkAttributes'=>array('data-lightbox'=>'file-gallery')
+                    ),
+                    array(
+                      'class'=>'gallery-item item-file'
+                    )
+                  ); ?>
                 <?php endif; ?>
             </div>
         <?php else: ?>
@@ -84,7 +92,6 @@ queue_css_file('jquery.fancybox');
 
 </div> <!-- End of Primary. -->
 
-<?php echo js_tag("fancybox-display"); ?>
 <script type="text/javascript">
 if (!jQuery(".t3of5").height()) {
     jQuery(".t2of5").removeClass("t2of5");

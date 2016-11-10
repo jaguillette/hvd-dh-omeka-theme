@@ -39,6 +39,8 @@
 
 <span id="embed-code"><label>Embed code: </label><input onClick="this.select();" type="text" value='&lt;iframe src="<?php echo absolute_url(); ?>" height="500" width="100%"&gt;&lt;/iframe&gt;'></input></span>
 
+<?php echo js_tag("fancybox-display"); ?>
+
 <script type="text/javascript">
 function inIframe () {
     try {

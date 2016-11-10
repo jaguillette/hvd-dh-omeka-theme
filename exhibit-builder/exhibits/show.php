@@ -42,5 +42,4 @@ echo head(array(
 </div>
 <?php } ?>
 
-<?php echo js_tag("fancybox-display"); ?>
 <?php echo foot(); ?>
