@@ -45,7 +45,6 @@ var onImageClick = function(e,thumbnails,fancybox_gallery) {
   jQuery.fancybox(fancybox_gallery,{
       index:startIndex,
       afterLoad:function() {
-        console.log("afterload");
         this.title = '<a href="'+this.href+'">Fullsize Image</a>  |  ' + this.title;
       }
   });
