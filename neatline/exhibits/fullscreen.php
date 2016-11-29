@@ -21,12 +21,12 @@
 ?>
 <?php if (nl_getExhibitField('narrative')): ?>
 <!-- Narrative -->
-<div id="minimize-button">&lt;</div>
-<div id="neatline-narrative" class="narrative">
+<!-- <div id="minimize-button">&lt;</div>
+<div id="neatline-narrative" class="narrative"> -->
   <!-- Content. -->
-  <h1><?php echo nl_getExhibitField('title'); ?></h1>
+  <!-- <h1><?php echo nl_getExhibitField('title'); ?></h1>
   <?php echo nl_getExhibitField('narrative'); ?>
-</div>
+</div> -->
 <?php endif; ?>
 
 <!-- Plugin Hook -->

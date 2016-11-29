@@ -1,19 +1,25 @@
 #neatline-narrative {
-  width: 400px;
+  width: 300px;
   padding: 0.5em;
   position: absolute;
   z-index: 1;
   overflow-y: scroll;
-  background-color: rgba(0,0,0,0.6);
-  color: #fff;
+  background-color: rgba(255,255,255,0.3);
+  border-style: solid;
+  border-width: 0 0 0 2px;
+  border-color: black;
+  color: #000;
   transition: all 0.5s;
   -webkit-transition: all 0.5s;
-  left: 0;
+  right: 0;
   h1 {
     color: lighten($crimson, 10%)
   }
   &.minimized {
     left: -400px;
+  }
+  &:hover {
+    background-color: rgba(255,255,255,0.9);
   }
 }
 
@@ -39,10 +45,110 @@
   }
 }
 
-#static-bubble {
-  right: 70px;
-  left: initial;
+body.neatline.fullscreen,
+body.neatline.show {
+  div#neatline-map {
+    width: 100%;
+  }
+  div#neatline-narrative {
+    width: 25%;
+  }
 }
+
+body.neatline.show {
+  div#neatline-narrative {
+    width: 235px;
+    height: 640px;
+    right: 10px;
+  }
+}
+
 .olControlPanZoom {
   display: none;
+}
+
+#neatline #simile {
+  width: 62%;
+  height: 23%;
+}
+
+#neatline.Simile #static-bubble {
+  max-height: 74%;
+}
+
+#waypoints a.title.highlighted {
+    background: #BEEAFF;
+}
+
+#embed-code {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(255,255,255,0.5);
+    padding: .3em;
+}
+
+#embed-code input {
+    display: inline-block;
+    background-color: transparent;
+}
+
+#neatline.Simile {
+  &~ #embed-code {
+    bottom: 20%;
+  }
+  #simile {
+    border-style: solid;
+    border-width: 2px 0 0 0;
+    .timeline-ether-bg {
+      background-color: transparent;
+    }
+    .timeline-band {
+      background-color: transparent;
+    }
+  }
+}
+
+#neatline.Waypoints {
+  #waypoints {
+    border-style: solid;
+    border-width: 0 0 0 2px;
+  }
+}
+
+#neatline.Waypoints.Text {
+  #waypoints {
+    left: 0;
+    width: 20%;
+    border-style: solid;
+    border-width: 0 2px 0 0;
+  }
+  #static-bubble {
+    left: 23%;
+  }
+}
+
+#neatline.Waypoints.Simile {
+  #waypoints {
+    height: 80%;
+  }
+  #simile {
+    width: 100%;
+  }
+}
+
+body.neatline.fullscreen #neatline.Simile.Text {
+  &~ #neatline-narrative {
+    height: 80%;
+  }
+}
+
+#neatline .widget {
+    position: absolute;
+    z-index: 999;
+    background-color: rgba(255,255,255,0.3);
+    transition: all 0.5s;
+    &:hover {
+      background-color: rgba(255,255,255,0.9);
+    }
 }

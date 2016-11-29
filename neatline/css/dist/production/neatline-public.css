@@ -610,10 +610,6 @@ a.nl-fullscreen {
     width: 100%;
 }
 
-#neatline.Simile.Waypoints #simile {
-    width: 75%;
-}
-
 #neatline-map {
     position: relative;
     height: 800px
@@ -643,28 +639,4 @@ a.nl-fullscreen {
 
 .olImageLoadError {
     display: none!important
-}
-
-#neatline .widget {
-    opacity: .7;
-    position: absolute;
-    z-index: 999
-}
-
-#embed-code {
-    position: fixed;
-    bottom: 0;
-    left: 50%;
-    transform: translate(-50%, 0);
-    background-color: rgba(255,255,255,0.5);
-    padding: .3em;
-}
-
-#embed-code input {
-    display: inline-block;
-    background-color: transparent;
-}
-
-#neatline.Simile ~ #embed-code {
-    bottom: 20%;
 }
