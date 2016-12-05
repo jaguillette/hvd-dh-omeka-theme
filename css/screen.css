@@ -1572,7 +1572,7 @@ table.item-metadata th {
 }
 
 /* @end */
-/* line 1, ../sass/partials/_neatline.scss */
+/* line 4, ../sass/partials/_neatline.scss */
 #neatline-narrative {
   width: 300px;
   padding: 0.5em;
@@ -1588,20 +1588,31 @@ table.item-metadata th {
   -webkit-transition: all 0.5s;
   right: 0;
 }
-/* line 15, ../sass/partials/_neatline.scss */
+/* line 18, ../sass/partials/_neatline.scss */
 #neatline-narrative h1 {
   color: #d21543;
 }
-/* line 18, ../sass/partials/_neatline.scss */
+/* line 21, ../sass/partials/_neatline.scss */
 #neatline-narrative.minimized {
   left: -400px;
 }
-/* line 21, ../sass/partials/_neatline.scss */
+/* line 24, ../sass/partials/_neatline.scss */
 #neatline-narrative:hover {
   background-color: rgba(255, 255, 255, 0.9);
 }
 
-/* line 26, ../sass/partials/_neatline.scss */
+/* line 29, ../sass/partials/_neatline.scss */
+#static-bubble.selected {
+  background-color: rgba(255, 255, 255, 0.3);
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+}
+/* line 33, ../sass/partials/_neatline.scss */
+#static-bubble.selected:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+/* line 38, ../sass/partials/_neatline.scss */
 #minimize-button {
   background-color: #A41034;
   width: 40px;
@@ -1618,53 +1629,49 @@ table.item-metadata th {
   color: #fff;
   cursor: pointer;
 }
-/* line 41, ../sass/partials/_neatline.scss */
+/* line 53, ../sass/partials/_neatline.scss */
 #minimize-button.minimized {
   left: -10px;
   transform: rotate(180deg);
   -webkit-transform: rotate(180deg);
 }
 
-/* line 50, ../sass/partials/_neatline.scss */
+/* line 62, ../sass/partials/_neatline.scss */
 body.neatline.fullscreen div#neatline-map,
 body.neatline.show div#neatline-map {
   width: 100%;
 }
-/* line 53, ../sass/partials/_neatline.scss */
+/* line 65, ../sass/partials/_neatline.scss */
 body.neatline.fullscreen div#neatline-narrative,
 body.neatline.show div#neatline-narrative {
   width: 25%;
 }
 
-/* line 59, ../sass/partials/_neatline.scss */
+/* line 71, ../sass/partials/_neatline.scss */
 body.neatline.show div#neatline-narrative {
   width: 235px;
   height: 640px;
   right: 10px;
+  padding: 0 1em;
 }
 
-/* line 66, ../sass/partials/_neatline.scss */
-.olControlPanZoom {
-  display: none;
-}
-
-/* line 70, ../sass/partials/_neatline.scss */
+/* line 79, ../sass/partials/_neatline.scss */
 #neatline #simile {
   width: 62%;
   height: 23%;
 }
 
-/* line 75, ../sass/partials/_neatline.scss */
+/* line 84, ../sass/partials/_neatline.scss */
 #neatline.Simile #static-bubble {
   max-height: 74%;
 }
 
-/* line 79, ../sass/partials/_neatline.scss */
+/* line 88, ../sass/partials/_neatline.scss */
 #waypoints a.title.highlighted {
   background: #BEEAFF;
 }
 
-/* line 83, ../sass/partials/_neatline.scss */
+/* line 92, ../sass/partials/_neatline.scss */
 #embed-code {
   position: fixed;
   bottom: 0;
@@ -1673,70 +1680,82 @@ body.neatline.show div#neatline-narrative {
   padding: .3em;
 }
 
-/* line 91, ../sass/partials/_neatline.scss */
+/* line 100, ../sass/partials/_neatline.scss */
 #embed-code input {
   display: inline-block;
   background-color: transparent;
 }
 
-/* line 97, ../sass/partials/_neatline.scss */
+/* line 106, ../sass/partials/_neatline.scss */
 #neatline.Simile ~ #embed-code {
   bottom: 20%;
 }
-/* line 100, ../sass/partials/_neatline.scss */
+/* line 109, ../sass/partials/_neatline.scss */
 #neatline.Simile #simile {
   border-style: solid;
   border-width: 2px 0 0 0;
 }
-/* line 103, ../sass/partials/_neatline.scss */
+/* line 112, ../sass/partials/_neatline.scss */
 #neatline.Simile #simile .timeline-ether-bg {
   background-color: transparent;
 }
-/* line 106, ../sass/partials/_neatline.scss */
+/* line 115, ../sass/partials/_neatline.scss */
 #neatline.Simile #simile .timeline-band {
   background-color: transparent;
 }
 
-/* line 113, ../sass/partials/_neatline.scss */
+/* line 122, ../sass/partials/_neatline.scss */
 #neatline.Waypoints #waypoints {
-  border-style: solid;
-  border-width: 0 0 0 2px;
+  border-left: solid 2px;
+  border-bottom: solid 2px;
+  overflow-y: scroll;
 }
 
-/* line 120, ../sass/partials/_neatline.scss */
+/* line 130, ../sass/partials/_neatline.scss */
+#neatline.Text .olControlLayerSwitcher {
+  right: 25%;
+}
+
+/* line 136, ../sass/partials/_neatline.scss */
 #neatline.Waypoints.Text #waypoints {
   left: 0;
   width: 20%;
-  border-style: solid;
-  border-width: 0 2px 0 0;
+  border-left: none;
+  border-right: solid 2px;
+  direction: rtl;
 }
-/* line 126, ../sass/partials/_neatline.scss */
+/* line 143, ../sass/partials/_neatline.scss */
 #neatline.Waypoints.Text #static-bubble {
   left: 23%;
 }
+/* line 146, ../sass/partials/_neatline.scss */
+#neatline.Waypoints.Text .olControlPanZoom {
+  left: 20%;
+}
 
-/* line 132, ../sass/partials/_neatline.scss */
+/* line 152, ../sass/partials/_neatline.scss */
 #neatline.Waypoints.Simile #waypoints {
   height: 80%;
+  border-bottom: none;
 }
-/* line 135, ../sass/partials/_neatline.scss */
+/* line 156, ../sass/partials/_neatline.scss */
 #neatline.Waypoints.Simile #simile {
   width: 100%;
 }
 
-/* line 141, ../sass/partials/_neatline.scss */
+/* line 162, ../sass/partials/_neatline.scss */
 body.neatline.fullscreen #neatline.Simile.Text ~ #neatline-narrative {
   height: 80%;
 }
 
-/* line 146, ../sass/partials/_neatline.scss */
+/* line 167, ../sass/partials/_neatline.scss */
 #neatline .widget {
   position: absolute;
   z-index: 999;
   background-color: rgba(255, 255, 255, 0.3);
   transition: all 0.5s;
 }
-/* line 151, ../sass/partials/_neatline.scss */
+/* line 172, ../sass/partials/_neatline.scss */
 #neatline .widget:hover {
   background-color: rgba(255, 255, 255, 0.9);
 }

@@ -1,10 +1,13 @@
+$inactive-bg: rgba(255,255,255,0.3);
+$active-bg: rgba(255,255,255,0.9);
+
 #neatline-narrative {
   width: 300px;
   padding: 0.5em;
   position: absolute;
   z-index: 1;
   overflow-y: scroll;
-  background-color: rgba(255,255,255,0.3);
+  background-color: $inactive-bg;
   border-style: solid;
   border-width: 0 0 0 2px;
   border-color: black;
@@ -19,7 +22,16 @@
     left: -400px;
   }
   &:hover {
-    background-color: rgba(255,255,255,0.9);
+    background-color: $active-bg;
+  }
+}
+
+#static-bubble.selected {
+  background-color: $inactive-bg;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  &:hover {
+    background-color: $active-bg;
   }
 }
 
@@ -60,11 +72,8 @@ body.neatline.show {
     width: 235px;
     height: 640px;
     right: 10px;
+    padding: 0 1em;
   }
-}
-
-.olControlPanZoom {
-  display: none;
 }
 
 #neatline #simile {
@@ -111,8 +120,15 @@ body.neatline.show {
 
 #neatline.Waypoints {
   #waypoints {
-    border-style: solid;
-    border-width: 0 0 0 2px;
+    border-left: solid 2px;
+    border-bottom: solid 2px;
+    overflow-y: scroll;
+  }
+}
+
+#neatline.Text {
+  .olControlLayerSwitcher {
+    right: 25%;
   }
 }
 
@@ -120,17 +136,22 @@ body.neatline.show {
   #waypoints {
     left: 0;
     width: 20%;
-    border-style: solid;
-    border-width: 0 2px 0 0;
+    border-left: none;
+    border-right: solid 2px;
+    direction: rtl;
   }
   #static-bubble {
     left: 23%;
+  }
+  .olControlPanZoom {
+    left: 20%;
   }
 }
 
 #neatline.Waypoints.Simile {
   #waypoints {
     height: 80%;
+    border-bottom: none;
   }
   #simile {
     width: 100%;
@@ -146,9 +167,9 @@ body.neatline.fullscreen #neatline.Simile.Text {
 #neatline .widget {
     position: absolute;
     z-index: 999;
-    background-color: rgba(255,255,255,0.3);
+    background-color: $inactive-bg;
     transition: all 0.5s;
     &:hover {
-      background-color: rgba(255,255,255,0.9);
+      background-color: $active-bg;
     }
 }

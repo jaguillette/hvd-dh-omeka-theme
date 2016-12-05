@@ -26,12 +26,16 @@
 <?php echo nl_getExhibitMarkup(); ?>
 <?php if (nl_getExhibitField('narrative')): ?>
 <!-- Narrative -->
-<div id="minimize-button">&lt;</div>
 <div id="neatline-narrative" class="narrative">
   <!-- Content. -->
   <h1><?php echo nl_getExhibitField('title'); ?></h1>
   <?php echo nl_getExhibitField('narrative'); ?>
 </div>
 <?php endif; ?>
-
+<script type="text/javascript">
+jQuery(document).ready(function() {
+  panZoom = jQuery(".olControlPanZoom")[0];
+  panZoom.style.left=null;
+});
+</script>
 <?php echo foot(); ?>

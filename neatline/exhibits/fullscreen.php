@@ -57,6 +57,11 @@ jQuery("#minimize-button").on("click",function() {
   jQuery("#neatline-narrative").toggleClass('minimized');
   jQuery("#minimize-button").toggleClass('minimized');
 });
+
+jQuery(document).ready(function() {
+  panZoom = jQuery(".olControlPanZoom")[0];
+  panZoom.style.left=null;
+});
 </script>
 
 </body>
