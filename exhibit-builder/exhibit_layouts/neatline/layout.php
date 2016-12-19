@@ -14,4 +14,4 @@ set_current_record('neatline_exhibit', $neatline);
 <iframe src="<?php echo nl_getExhibitUrl($neatline, "fullscreen"); ?>" height="500" style="height:500px;">
 </iframe>
 
-<a href="<?php echo url('neatline/fullscreen/'.$neatline['slug']); ?>">View fullscreen</a>
+<a href="<?php echo url('neatline/fullscreen/'.$neatline['slug']); ?>" target="_blank">View fullscreen</a>
