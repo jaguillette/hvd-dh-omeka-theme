@@ -1,0 +1,154 @@
+{
+  "Historical Maps": [
+    {
+      "id": "MapCollection.7500_1919_East",
+      "properties": {
+        "urls": [
+          "https://s3.amazonaws.com/digital-history-tms/7500_1919_East/${z}/${x}/${y}.png"
+        ]
+      },
+      "title": "7500_1919_East",
+      "type": "XYZ"
+    },
+    {
+      "id": "MapCollection.7500_1919_West",
+      "properties": {
+        "urls": [
+          "https://s3.amazonaws.com/digital-history-tms/7500_1919_West/${z}/${x}/${y}.png"
+        ]
+      },
+      "title": "7500_1919_West",
+      "type": "XYZ"
+    },
+    {
+      "id": "MapCollection.G3200_1797_B6",
+      "properties": {
+        "urls": [
+          "https://s3.amazonaws.com/digital-history-tms/G3200_1797_B6/${z}/${x}/${y}.png"
+        ]
+      },
+      "title": "G3200_1797_B6",
+      "type": "XYZ"
+    },
+    {
+      "id": "MapCollection.G3301_S12_1750_B8",
+      "properties": {
+        "urls": [
+          "https://s3.amazonaws.com/digital-history-tms/G3301_S12_1750_B8/${z}/${x}/${y}.png"
+        ]
+      },
+      "title": "G3301_S12_1750_B8",
+      "type": "XYZ"
+    },
+    {
+      "id": "MapCollection.G3720_1677_F6_1846",
+      "properties": {
+        "urls": [
+          "https://s3.amazonaws.com/digital-history-tms/G3720_1677_F6_1846/${z}/${x}/${y}.png"
+        ]
+      },
+      "title": "G3720_1677_F6_1846",
+      "type": "XYZ"
+    },
+    {
+      "id": "MapCollection.G3720_1684_V5",
+      "properties": {
+        "urls": [
+          "https://s3.amazonaws.com/digital-history-tms/G3720_1684_V5/${z}/${x}/${y}.png"
+        ]
+      },
+      "title": "G3720_1684_V5",
+      "type": "XYZ"
+    },
+    {
+      "id": "MapCollection.G4042_M5_1785_S6",
+      "properties": {
+        "urls": [
+          "https://s3.amazonaws.com/digital-history-tms/G4042_M5_1785_S6/${z}/${x}/${y}.png"
+        ]
+      },
+      "title": "G4042_M5_1785_S6",
+      "type": "XYZ"
+    },
+    {
+      "id": "MapCollection.G4084_C5_1925_F6",
+      "properties": {
+        "urls": [
+          "https://s3.amazonaws.com/digital-history-tms/G4084_C5_1925_F6/${z}/${x}/${y}.png"
+        ]
+      },
+      "title": "G4084_C5_1925_F6",
+      "type": "XYZ"
+    },
+    {
+      "id": "MapCollection.G5754_L7_1814_M6",
+      "properties": {
+        "urls": [
+          "https://s3.amazonaws.com/digital-history-tms/G5754_L7_1814_M6/${z}/${x}/${y}.png"
+        ]
+      },
+      "title": "G5754_L7_1814_M6",
+      "type": "XYZ"
+    },
+    {
+      "id": "MapCollection.G5834_P3_1855_H4",
+      "properties": {
+        "urls": [
+          "https://s3.amazonaws.com/digital-history-tms/G5834_P3_1855_H4/${z}/${x}/${y}.png"
+        ]
+      },
+      "title": "G5834_P3_1855_H4",
+      "type": "XYZ"
+    },
+    {
+      "id": "MapCollection.G6299_H3_1730_B3",
+      "properties": {
+        "urls": [
+          "https://s3.amazonaws.com/digital-history-tms/G6299_H3_1730_B3/${z}/${x}/${y}.png"
+        ]
+      },
+      "title": "G6299_H3_1730_B3",
+      "type": "XYZ"
+    },
+    {
+      "id": "MapCollection.G7270_1930_M3",
+      "properties": {
+        "urls": [
+          "https://s3.amazonaws.com/digital-history-tms/G7270_1930_M3/${z}/${x}/${y}.png"
+        ]
+      },
+      "title": "G7270_1930_M3",
+      "type": "XYZ"
+    },
+    {
+      "id": "MapCollection.pictorialMapMosaic1",
+      "properties": {
+        "urls": [
+          "https://s3.amazonaws.com/digital-history-tms/pictorialMapMosaic1/${z}/${x}/${y}.png"
+        ]
+      },
+      "title": "pictorialMapMosaic1",
+      "type": "XYZ"
+    },
+    {
+      "id": "MapCollection.Vespucci1524",
+      "properties": {
+        "urls": [
+          "https://s3.amazonaws.com/digital-history-tms/Vespucci1524/${z}/${x}/${y}.png"
+        ]
+      },
+      "title": "Vespucci1524",
+      "type": "XYZ"
+    },
+    {
+      "id": "MapCollection.western-palestine-composite",
+      "properties": {
+        "urls": [
+          "https://s3.amazonaws.com/digital-history-tms/western-palestine-composite/${z}/${x}/${y}.png"
+        ]
+      },
+      "title": "western-palestine-composite",
+      "type": "XYZ"
+    }
+  ]
+}
