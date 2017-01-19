@@ -2488,58 +2488,65 @@ nav + .exhibit {
   margin-bottom: 0em;
 }
 
+/* line 333, ../sass/breakpoints/_base.scss */
+#recent-items .item-description,
+#featured-item .item-description {
+  display: inline-block;
+  margin: 0;
+}
+
 /* @end */
 /* @group ----- Other plugin styles ----- */
-/* line 335, ../sass/breakpoints/_base.scss */
+/* line 341, ../sass/breakpoints/_base.scss */
 #exhibit-pages {
   float: left;
 }
-/* line 337, ../sass/breakpoints/_base.scss */
+/* line 343, ../sass/breakpoints/_base.scss */
 #exhibit-pages h4, #exhibit-pages li {
   padding: 0 10px;
 }
 
-/* line 341, ../sass/breakpoints/_base.scss */
+/* line 347, ../sass/breakpoints/_base.scss */
 #exhibit-blocks, .exhibits #content #primary {
   float: right;
 }
 
-/* line 344, ../sass/breakpoints/_base.scss */
+/* line 350, ../sass/breakpoints/_base.scss */
 .exhibits #content > h1:first-of-type {
   text-align: left;
 }
 
-/* line 347, ../sass/breakpoints/_base.scss */
+/* line 353, ../sass/breakpoints/_base.scss */
 .exhibits.browse #content > h1:first-of-type {
   width: 100%;
 }
 
-/* line 348, ../sass/breakpoints/_base.scss */
+/* line 354, ../sass/breakpoints/_base.scss */
 #collection-tree {
   margin-left: auto;
   margin-right: auto;
 }
 
-/* line 353, ../sass/breakpoints/_base.scss */
+/* line 359, ../sass/breakpoints/_base.scss */
 #recaptcha_area input {
   display: inline;
 }
 
 /* @end */
 /* @group ----- Browse-all ----- */
-/* line 359, ../sass/breakpoints/_base.scss */
+/* line 365, ../sass/breakpoints/_base.scss */
 .browse-attribution {
   font-style: italic;
   margin-bottom: .75em;
 }
 
-/* line 364, ../sass/breakpoints/_base.scss */
+/* line 370, ../sass/breakpoints/_base.scss */
 .page-meta {
   float: left;
   font-style: italic;
 }
 
-/* line 369, ../sass/breakpoints/_base.scss */
+/* line 375, ../sass/breakpoints/_base.scss */
 .page-meta p {
   margin-top: 0;
 }

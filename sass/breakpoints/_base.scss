@@ -330,6 +330,12 @@ nav + .exhibit {
   margin-bottom: 0em;
 }
 
+#recent-items .item-description,
+#featured-item .item-description {
+  display: inline-block;
+  margin: 0;
+}
+
 /* @end */
 /* @group ----- Other plugin styles ----- */
 #exhibit-pages {
