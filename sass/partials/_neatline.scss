@@ -61,6 +61,7 @@ body.neatline.fullscreen,
 body.neatline.show {
   div#neatline-map {
     width: 100%;
+    float: left;
   }
   div#neatline-narrative {
     width: 25%;
@@ -70,9 +71,12 @@ body.neatline.show {
 body.neatline.show {
   div#neatline-narrative {
     width: 235px;
-    height: 640px;
+    height: 800px;
     right: 10px;
     padding: 0 1em;
+  }
+  div#neatline.Simile ~ #neatline-narrative {
+    height: 640px;
   }
 }
 
