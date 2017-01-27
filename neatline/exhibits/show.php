@@ -32,6 +32,14 @@
   <?php echo nl_getExhibitField('narrative'); ?>
 </div>
 <?php endif; ?>
+<?php if ($exhibitAttribution = get_theme_option('Neatline Attribution')): ?>
+  <div id="neatline-attribution">
+    <?php $neatline_exhibit = nl_getExhibit(); ?>
+    <?php $owner_name = dh_get_user_by_id($neatline_exhibit->owner_id)['name']; ?>
+    <?php $attribution_label = get_theme_option('Neatline Attribution Label'); ?>
+    <?php echo "$attribution_label $owner_name"; ?>
+  </div>
+<?php endif; ?>
 <script type="text/javascript">
 jQuery(document).ready(function() {
   panZoom = jQuery(".olControlPanZoom")[0];
