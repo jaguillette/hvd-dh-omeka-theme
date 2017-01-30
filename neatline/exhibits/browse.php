@@ -9,7 +9,7 @@
 
 ?>
 
-<?php 
+<?php
 if ($pageTitle = get_theme_option("Browse Neatline Title")) {
  #$pageTitle is set
 } else {
@@ -36,10 +36,18 @@ echo head(array(
             array('class' => 'neatline'), true
           );?>
         </h2>
-        <?php 
+        <?php
         if ($browseNeatlineNarrative = get_theme_option("Browse Neatline Narrative")) {
            echo(nl_getExhibitField('narrative'));
          } ?>
+         <?php if ($neatlineExhibitAttribution = get_theme_option('Neatline Attribution')): ?>
+           <div id="neatline-attribution">
+             <?php $neatline_exhibit = nl_getExhibit(); ?>
+             <?php $owner_name = dh_get_user_by_id($neatline_exhibit->owner_id)['name']; ?>
+             <?php $attribution_label = get_theme_option('Neatline Attribution Label'); ?>
+             <?php echo "$attribution_label $owner_name"; ?>
+           </div>
+         <?php endif; ?>
       <?php endforeach; ?>
 
     <div class="pagination"><?php echo pagination_links(); ?></div>

@@ -32,7 +32,7 @@
   <?php echo nl_getExhibitField('narrative'); ?>
 </div>
 <?php endif; ?>
-<?php if ($exhibitAttribution = get_theme_option('Neatline Attribution')): ?>
+<?php if ($neatlineExhibitAttribution = get_theme_option('Neatline Attribution')): ?>
   <div id="neatline-attribution">
     <?php $neatline_exhibit = nl_getExhibit(); ?>
     <?php $owner_name = dh_get_user_by_id($neatline_exhibit->owner_id)['name']; ?>
