@@ -1,13 +1,13 @@
 <?php
-if ($pageTitle = get_theme_option("Browse Exhibit Title")) {
+if ($pageTitle = __(get_theme_option("Browse Exhibit Title"))) {
  #$browseNeatlineTitle is set
 } else {
- $pageTitle = "Browse Exhibits";
+ $pageTitle = __("Browse Exhibits");
 }
 echo head(array('title' => $pageTitle, 'bodyclass' => 'exhibits browse'));
 ?>
 <h1>
-<?php 
+<?php
 if (array_key_exists('tags', $_GET)) {
     $space_replace = array('-', '_');
     $tag_title = ucwords(str_replace($space_replace, ' ', $_GET['tags']));
@@ -63,7 +63,7 @@ if (array_key_exists('tags', $_GET)) {
         <?php if ($exhibitDescription = metadata('exhibit', 'description', array('no_escape' => true, 'snippet' => 1000))): ?>
         <div class="description"><?php echo $exhibitDescription; ?></div>
         <?php endif; ?>
-        <?php 
+        <?php
         // Turned off exhibit tag display
         if ($exhibitTags = tag_string('exhibit', 'exhibits') and !array_key_exists('tags', $_GET)): ?>
         <p class="tags"><?php echo $exhibitTags; ?></p>
