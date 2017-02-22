@@ -122,27 +122,21 @@ body.neatline.show {
   }
 }
 
-#neatline.Waypoints {
-  #waypoints {
-    border-left: solid 2px;
-    border-bottom: solid 2px;
-    overflow-y: scroll;
-  }
-}
-
 #neatline.Text {
   .olControlLayerSwitcher {
     right: 25%;
   }
 }
 
-#neatline.Waypoints.Text {
+#neatline.Waypoints {
   #waypoints {
     left: 0;
     width: 20%;
     border-left: none;
     border-right: solid 2px;
+    border-bottom: solid 2px;
     direction: rtl;
+    overflow-y: scroll;
   }
   #static-bubble {
     left: 23%;

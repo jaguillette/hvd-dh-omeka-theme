@@ -1710,57 +1710,52 @@ body.neatline.show div#neatline.Simile ~ #neatline-narrative {
 }
 
 /* line 126, ../sass/partials/_neatline.scss */
-#neatline.Waypoints #waypoints {
-  border-left: solid 2px;
-  border-bottom: solid 2px;
-  overflow-y: scroll;
-}
-
-/* line 134, ../sass/partials/_neatline.scss */
 #neatline.Text .olControlLayerSwitcher {
   right: 25%;
 }
 
-/* line 140, ../sass/partials/_neatline.scss */
-#neatline.Waypoints.Text #waypoints {
+/* line 132, ../sass/partials/_neatline.scss */
+#neatline.Waypoints #waypoints {
   left: 0;
   width: 20%;
   border-left: none;
   border-right: solid 2px;
+  border-bottom: solid 2px;
   direction: rtl;
+  overflow-y: scroll;
 }
-/* line 147, ../sass/partials/_neatline.scss */
-#neatline.Waypoints.Text #static-bubble {
+/* line 141, ../sass/partials/_neatline.scss */
+#neatline.Waypoints #static-bubble {
   left: 23%;
 }
-/* line 150, ../sass/partials/_neatline.scss */
-#neatline.Waypoints.Text .olControlPanZoom {
+/* line 144, ../sass/partials/_neatline.scss */
+#neatline.Waypoints .olControlPanZoom {
   left: 20%;
 }
 
-/* line 156, ../sass/partials/_neatline.scss */
+/* line 150, ../sass/partials/_neatline.scss */
 #neatline.Waypoints.Simile #waypoints {
   height: 80%;
   border-bottom: none;
 }
-/* line 160, ../sass/partials/_neatline.scss */
+/* line 154, ../sass/partials/_neatline.scss */
 #neatline.Waypoints.Simile #simile {
   width: 100%;
 }
 
-/* line 166, ../sass/partials/_neatline.scss */
+/* line 160, ../sass/partials/_neatline.scss */
 body.neatline.fullscreen #neatline.Simile.Text ~ #neatline-narrative {
   height: 80%;
 }
 
-/* line 171, ../sass/partials/_neatline.scss */
+/* line 165, ../sass/partials/_neatline.scss */
 #neatline .widget {
   position: absolute;
   z-index: 999;
   background-color: rgba(255, 255, 255, 0.3);
   transition: all 0.5s;
 }
-/* line 176, ../sass/partials/_neatline.scss */
+/* line 170, ../sass/partials/_neatline.scss */
 #neatline .widget:hover {
   background-color: rgba(255, 255, 255, 0.9);
 }
