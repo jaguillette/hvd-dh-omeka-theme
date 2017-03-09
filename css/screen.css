@@ -2560,21 +2560,27 @@ div.pagination {
   margin-bottom: 12px;
 }
 
+/* line 387, ../sass/breakpoints/_base.scss */
+.comments {
+  display: inline-block;
+  width: 100%;
+}
+
 /* @end */
 /* @group ----- Browse-all ----- */
-/* line 389, ../sass/breakpoints/_base.scss */
+/* line 394, ../sass/breakpoints/_base.scss */
 .browse-attribution {
   font-style: italic;
   margin-bottom: .75em;
 }
 
-/* line 394, ../sass/breakpoints/_base.scss */
+/* line 399, ../sass/breakpoints/_base.scss */
 .page-meta {
   float: left;
   font-style: italic;
 }
 
-/* line 399, ../sass/breakpoints/_base.scss */
+/* line 404, ../sass/breakpoints/_base.scss */
 .page-meta p {
   margin-top: 0;
 }
