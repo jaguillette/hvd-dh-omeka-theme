@@ -32,7 +32,7 @@ echo head(array(
     </div>
 </div>-->
 
-<?php if ($exhibitAttribution = get_theme_option('Exhibit Attribution')) { ?>
+<?php if ($exhibitAttribution = get_theme_option('Exhibit Attribution')): ?>
 <div id="exhibit-attribution">
 <?php
   $exhibitOwnerName = dh_get_user_by_id($exhibit['owner_id'])['name'];
@@ -40,6 +40,8 @@ echo head(array(
   echo("$exhibitAttrLabel $exhibitOwnerName");
 ?>
 </div>
-<?php } ?>
+<?php endif; ?>
+
+<?php CommentingPlugin::showComments(); ?>
 
 <?php echo foot(); ?>

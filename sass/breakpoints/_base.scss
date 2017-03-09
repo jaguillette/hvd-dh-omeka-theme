@@ -364,6 +364,26 @@ div.pagination {
   display: inline;
 }
 
+#comment-form {
+  max-width: none;
+}
+
+.comment>p {
+  background-color: rgba(255,255,255,0.7);
+  border-radius: 4px;
+  padding: 0 6px;
+  float: left;
+  margin: 0 5px;
+  border: 2px solid #ddd;
+  margin-bottom: 12px;
+}
+
+#comments-container .comment-body {
+  background-color: rgba(255,255,255,0.5);
+  width: 100%;
+  margin-bottom: 12px;
+}
+
 /* @end */
 /* @group ----- Browse-all ----- */
 .browse-attribution {

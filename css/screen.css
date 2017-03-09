@@ -2537,21 +2537,44 @@ div.pagination {
   display: inline;
 }
 
+/* line 367, ../sass/breakpoints/_base.scss */
+#comment-form {
+  max-width: none;
+}
+
+/* line 371, ../sass/breakpoints/_base.scss */
+.comment > p {
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 4px;
+  padding: 0 6px;
+  float: left;
+  margin: 0 5px;
+  border: 2px solid #ddd;
+  margin-bottom: 12px;
+}
+
+/* line 381, ../sass/breakpoints/_base.scss */
+#comments-container .comment-body {
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 100%;
+  margin-bottom: 12px;
+}
+
 /* @end */
 /* @group ----- Browse-all ----- */
-/* line 369, ../sass/breakpoints/_base.scss */
+/* line 389, ../sass/breakpoints/_base.scss */
 .browse-attribution {
   font-style: italic;
   margin-bottom: .75em;
 }
 
-/* line 374, ../sass/breakpoints/_base.scss */
+/* line 394, ../sass/breakpoints/_base.scss */
 .page-meta {
   float: left;
   font-style: italic;
 }
 
-/* line 379, ../sass/breakpoints/_base.scss */
+/* line 399, ../sass/breakpoints/_base.scss */
 .page-meta p {
   margin-top: 0;
 }
