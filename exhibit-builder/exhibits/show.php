@@ -42,6 +42,8 @@ echo head(array(
 </div>
 <?php endif; ?>
 
-<?php CommentingPlugin::showComments(); ?>
+<?php if (class_exists('CommentingPlugin')) {
+  CommentingPlugin::showComments();
+} ?>
 
 <?php echo foot(); ?>
