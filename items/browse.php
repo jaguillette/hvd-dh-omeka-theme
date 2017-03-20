@@ -9,9 +9,11 @@ echo head(array('title'=>$pageTitle,'bodyclass' => 'items browse'));
 
 <h1><?php echo $pageTitle;?> <?php echo __('(%s total)', $total_results); ?></h1>
 
+<?php if(!isset($_GET['collection'])): ?>
 <nav class="items-nav navigation secondary-nav">
     <?php echo public_nav_items(); ?>
 </nav>
+<?php endif; ?>
 
 <?php echo item_search_filters(); ?>
 
