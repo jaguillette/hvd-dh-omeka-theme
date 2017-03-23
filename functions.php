@@ -247,8 +247,9 @@ function custom_next_previous()
     }
     elseif (isset($queryarray['advanced'])) {
       if (!array_key_exists('sort_field', $queryarray)) {
-        $queryarray['sort_field'] = 'added';
-        $queryarray['sort_dir'] = 'd';
+        // Not setting sort parameters, preserving initial sort
+        // $queryarray['sort_field'] = 'added';
+        // $queryarray['sort_dir'] = 'd';
       }
       //Get an array of the items from the query.
       $list = get_db()->getTable('Item')->findBy($queryarray);
@@ -260,8 +261,9 @@ function custom_next_previous()
     //Browsing all items in general
     else {
       if (!array_key_exists('sort_field', $queryarray)) {
-        $queryarray['sort_field'] = 'added';
-        $queryarray['sort_dir'] = 'd';
+        // Not setting sort parameters, preserving initial sort
+        // $queryarray['sort_field'] = 'added';
+        // $queryarray['sort_dir'] = 'd';
       }
       $list = get_db()->getTable('Item')->findBy($queryarray);
         foreach ($list as $value) {
