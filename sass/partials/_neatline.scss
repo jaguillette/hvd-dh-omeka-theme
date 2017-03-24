@@ -171,3 +171,11 @@ body.neatline.fullscreen #neatline.Simile.Text {
       background-color: $active-bg;
     }
 }
+
+div#OpenLayers_Control_PanZoom_2_zoomworld {
+  display: none;
+}
+
+div#OpenLayers_Control_PanZoom_2_zoomout {
+  top: 81px !important;
+}

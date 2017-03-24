@@ -1760,6 +1760,16 @@ body.neatline.fullscreen #neatline.Simile.Text ~ #neatline-narrative {
   background-color: rgba(255, 255, 255, 0.9);
 }
 
+/* line 175, ../sass/partials/_neatline.scss */
+div#OpenLayers_Control_PanZoom_2_zoomworld {
+  display: none;
+}
+
+/* line 179, ../sass/partials/_neatline.scss */
+div#OpenLayers_Control_PanZoom_2_zoomout {
+  top: 81px !important;
+}
+
 /* @group ----- Navigation ----- */
 /* line 2, ../sass/partials/_nav.scss */
 #nav-container {
