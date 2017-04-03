@@ -813,7 +813,7 @@ th {
 
 /* line 121, ../sass/partials/_exhibits.scss */
 .layout-file-text .captions-center .exhibit-item-caption {
-  overflow: hidden;
+  word-wrap: break-word;
 }
 
 /* @end */
