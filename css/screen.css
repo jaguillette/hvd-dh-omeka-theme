@@ -811,6 +811,11 @@ th {
   margin-bottom: 1.5em;
 }
 
+/* line 121, ../sass/partials/_exhibits.scss */
+.layout-file-text .captions-center .exhibit-item-caption {
+  overflow: hidden;
+}
+
 /* @end */
 /* @group ----- Footer ----- */
 /* line 2, ../sass/partials/_footer.scss */
