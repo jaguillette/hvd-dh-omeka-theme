@@ -1338,14 +1338,19 @@ table.item-metadata th {
   margin-top: 0;
 }
 
+/* line 169, ../sass/partials/_items.scss */
+#item-relations-display-item-relations .item-type {
+  font-style: italic;
+}
+
 /* Tags Classes */
-/* line 170, ../sass/partials/_items.scss */
+/* line 174, ../sass/partials/_items.scss */
 .tags li {
   display: inline;
 }
 
 /* Tag Clouds */
-/* line 175, ../sass/partials/_items.scss */
+/* line 179, ../sass/partials/_items.scss */
 .hTagcloud ul {
   list-style: none;
   margin-left: 0;
@@ -1353,19 +1358,19 @@ table.item-metadata th {
   text-align: center;
 }
 
-/* line 182, ../sass/partials/_items.scss */
+/* line 186, ../sass/partials/_items.scss */
 .hTagcloud li {
   display: inline-block;
   margin-right: .75em;
   line-height: normal;
 }
 
-/* line 188, ../sass/partials/_items.scss */
+/* line 192, ../sass/partials/_items.scss */
 .hTagcloud input[type=checkbox] {
   display: none;
 }
 
-/* line 192, ../sass/partials/_items.scss */
+/* line 196, ../sass/partials/_items.scss */
 .hTagcloud input[type=checkbox] + label::before {
   content: "\f096";
   font-family: "FontAwesome";
@@ -1375,18 +1380,18 @@ table.item-metadata th {
   display: inline-block;
 }
 
-/* line 200, ../sass/partials/_items.scss */
+/* line 204, ../sass/partials/_items.scss */
 .hTagcloud input[type=checkbox]:checked + label::before {
   content: "\f046";
 }
 
-/* line 204, ../sass/partials/_items.scss */
+/* line 208, ../sass/partials/_items.scss */
 #multi-tag-submit {
   text-align: center;
   margin-top: 3em;
 }
 
-/* line 209, ../sass/partials/_items.scss */
+/* line 213, ../sass/partials/_items.scss */
 #multi-tag-submit a {
   border: 2px solid #666;
   border-radius: 5px;
@@ -1398,81 +1403,81 @@ table.item-metadata th {
   font-family: "Droid Sans", sans-serif;
 }
 
-/* line 220, ../sass/partials/_items.scss */
+/* line 224, ../sass/partials/_items.scss */
 .popular a, .popular label {
   font-size: 120%;
 }
 
-/* line 224, ../sass/partials/_items.scss */
+/* line 228, ../sass/partials/_items.scss */
 .v-popular a, .v-popular label {
   font-size: 140%;
 }
 
-/* line 228, ../sass/partials/_items.scss */
+/* line 232, ../sass/partials/_items.scss */
 .vv-popular a, .vv-popular label {
   font-size: 180%;
 }
 
-/* line 232, ../sass/partials/_items.scss */
+/* line 236, ../sass/partials/_items.scss */
 .vvv-popular a, .vvv-popular label {
   font-size: 220%;
 }
 
-/* line 236, ../sass/partials/_items.scss */
+/* line 240, ../sass/partials/_items.scss */
 .vvvv-popular a, .vvvv-popular label {
   font-size: 260%;
 }
 
-/* line 240, ../sass/partials/_items.scss */
+/* line 244, ../sass/partials/_items.scss */
 .vvvvv-popular a, .vvvvv-popular label {
   font-size: 300%;
 }
 
-/* line 244, ../sass/partials/_items.scss */
+/* line 248, ../sass/partials/_items.scss */
 .vvvvvv-popular a, .vvvvvv-popular label {
   font-size: 320%;
 }
 
-/* line 248, ../sass/partials/_items.scss */
+/* line 252, ../sass/partials/_items.scss */
 .vvvvvvv-popular a, .vvvvvvv-popular label {
   font-size: 340%;
 }
 
-/* line 252, ../sass/partials/_items.scss */
+/* line 256, ../sass/partials/_items.scss */
 .vvvvvvvv-popular a, .vvvvvvvv-popular label {
   font-size: 360%;
 }
 
 /* @end */
 /* @group ----- Items/Browse ----- */
-/* line 258, ../sass/partials/_items.scss */
+/* line 262, ../sass/partials/_items.scss */
 .browse .item .item-meta-title,
 .browse .item-meta .item-img {
   display: inline;
 }
 
-/* line 262, ../sass/partials/_items.scss */
+/* line 266, ../sass/partials/_items.scss */
 .browse .item .item-meta-title p {
   margin: 0.5em 0;
 }
 
-/* line 265, ../sass/partials/_items.scss */
+/* line 269, ../sass/partials/_items.scss */
 .browse .item h2 {
   margin: 0;
   padding-right: 1em;
 }
 
-/* line 269, ../sass/partials/_items.scss */
+/* line 273, ../sass/partials/_items.scss */
 .browse .item-meta .item-img {
   margin: 0;
 }
 
-/* line 272, ../sass/partials/_items.scss */
+/* line 276, ../sass/partials/_items.scss */
 .browse .item-img img {
   width: 94%;
 }
 
-/* line 275, ../sass/partials/_items.scss */
+/* line 279, ../sass/partials/_items.scss */
 .browse .item-meta {
   float: left;
   display: inline;
@@ -1482,12 +1487,12 @@ table.item-metadata th {
   max-width: 100%;
 }
 
-/* line 283, ../sass/partials/_items.scss */
+/* line 287, ../sass/partials/_items.scss */
 .browse .item-meta p:first-of-type {
   margin-top: 0;
 }
 
-/* line 286, ../sass/partials/_items.scss */
+/* line 290, ../sass/partials/_items.scss */
 .browse .item-meta > div {
   float: left;
   display: inline;
@@ -1497,18 +1502,18 @@ table.item-metadata th {
   width: 100%;
 }
 
-/* line 294, ../sass/partials/_items.scss */
+/* line 298, ../sass/partials/_items.scss */
 .browse .item-meta .item-description {
   margin-bottom: 1.5em;
   float: none;
 }
 
-/* line 298, ../sass/partials/_items.scss */
+/* line 302, ../sass/partials/_items.scss */
 .browse .item-meta .item-description:only-of-type {
   margin-bottom: 0;
 }
 
-/* line 302, ../sass/partials/_items.scss */
+/* line 306, ../sass/partials/_items.scss */
 #sort-links {
   float: right;
   list-style-type: none;
@@ -1516,45 +1521,45 @@ table.item-metadata th {
   display: block;
 }
 
-/* line 308, ../sass/partials/_items.scss */
+/* line 312, ../sass/partials/_items.scss */
 #sort-links ul {
   padding-left: 0;
 }
 
-/* line 311, ../sass/partials/_items.scss */
+/* line 315, ../sass/partials/_items.scss */
 #sort-links ul li {
   padding-left: 10px;
   display: inline-block;
 }
 
-/* line 316, ../sass/partials/_items.scss */
+/* line 320, ../sass/partials/_items.scss */
 #outputs {
   clear: both;
 }
 
-/* line 320, ../sass/partials/_items.scss */
+/* line 324, ../sass/partials/_items.scss */
 .item-img a {
   display: block;
 }
 
 /* @end */
 /* @group ----- Items/Search ----- */
-/* line 326, ../sass/partials/_items.scss */
+/* line 330, ../sass/partials/_items.scss */
 .field {
   margin-bottom: 1.5em;
 }
 
-/* line 330, ../sass/partials/_items.scss */
+/* line 334, ../sass/partials/_items.scss */
 .search-entry select {
   margin-bottom: 0.75em;
 }
 
-/* line 334, ../sass/partials/_items.scss */
+/* line 338, ../sass/partials/_items.scss */
 .search-entry input[type=text] {
   display: inline-block;
 }
 
-/* line 338, ../sass/partials/_items.scss */
+/* line 342, ../sass/partials/_items.scss */
 .remove_search {
   text-indent: -9999px;
   width: 18px;
@@ -1563,7 +1568,7 @@ table.item-metadata th {
   color: #666;
 }
 
-/* line 345, ../sass/partials/_items.scss */
+/* line 349, ../sass/partials/_items.scss */
 .remove_search:after {
   content: "\f00d";
   font-family: "FontAwesome";
