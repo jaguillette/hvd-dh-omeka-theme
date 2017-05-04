@@ -37,10 +37,10 @@
     <?php
     # Have to reference the absolute path of the piwik file to include it
     # Found through var_dump(this->getAssetPaths())
-    # $this->getAssetPaths()[0] has versions of the base path of the theme
-    # $this->getAssetPaths()[0][1] is the base path of the theme in http, not local file system
-    if (file_exists($this->getAssetPaths()[0][0] . "/common/piwik.php")) {
-      include $this->getAssetPaths()[0][0] . "/common/piwik.php";
+    # $this->getAssetPaths()[3] has versions of the base path of the theme
+    # $this->getAssetPaths()[3][1] is the base path of the theme in http, not local file system
+    if (file_exists($this->getAssetPaths()[3][0] . "/common/piwik.php")) {
+      include $this->getAssetPaths()[3][0] . "/common/piwik.php";
     }
     ?>
 </head>
