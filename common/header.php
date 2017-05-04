@@ -34,22 +34,15 @@
     <?php queue_js_file('globals'); ?>
     <?php queue_js_file('masonry.pkgd'); ?>
     <?php echo head_js(); ?>
-<!-- Piwik -->
-<script type="text/javascript">
-  var _paq = _paq || [];
-  _paq.push(["setDomains", ["*.dighist.fas.harvard.edu/projects/crimeaproject"]]);
-  _paq.push(['trackPageView']);
-  _paq.push(['enableLinkTracking']);
-  (function() {
-    var u="//dighist.fas.harvard.edu/piwik/";
-    _paq.push(['setTrackerUrl', u+'piwik.php']);
-    _paq.push(['setSiteId', 5]);
-    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
-  })();
-</script>
-<noscript><p><img src="//dighist.fas.harvard.edu/piwik/piwik.php?idsite=5" style="border:0;" alt="" /></p></noscript>
-<!-- End Piwik Code -->
+    <?php
+    # Have to reference the absolute path of the piwik file to include it
+    # Found through var_dump(this->getAssetPaths())
+    # $this->getAssetPaths()[0] has versions of the base path of the theme
+    # $this->getAssetPaths()[0][1] is the base path of the theme in http, not local file system
+    if (file_exists($this->getAssetPaths()[0][0] . "/common/piwik.php")) {
+      include $this->getAssetPaths()[0][0] . "/common/piwik.php";
+    }
+    ?>
 </head>
  <?php echo body_tag(array('id' => @$bodyid, 'class' => @$bodyclass)); ?>
     <a href="#content" id="skipnav"><?php echo __('Skip to main content'); ?></a>
