@@ -33,15 +33,13 @@
     <?php queue_js_file('berlin'); ?>
     <?php queue_js_file('globals'); ?>
     <?php queue_js_file('masonry.pkgd'); ?>
+    <?php try { queue_js_file('piwik'); } catch (Exception $e) {  } ?>
     <?php echo head_js(); ?>
     <?php
     # Have to reference the absolute path of the piwik file to include it
     # Found through var_dump(this->getAssetPaths())
     # $this->getAssetPaths()[3] has versions of the base path of the theme
     # $this->getAssetPaths()[3][1] is the base path of the theme in http, not local file system
-    if (file_exists($this->getAssetPaths()[3][0] . "/common/piwik.php")) {
-      include $this->getAssetPaths()[3][0] . "/common/piwik.php";
-    }
     ?>
 </head>
  <?php echo body_tag(array('id' => @$bodyid, 'class' => @$bodyclass)); ?>
