@@ -72,6 +72,12 @@ ul.title-list {
   font-style: italic;
 }
 
+#item-images-container {
+  float: right;
+  width: 100%;
+  margin: 0 1%;
+}
+
 #item-images {
   overflow: hidden;
   margin-bottom: 18px;
@@ -117,9 +123,19 @@ table.item-metadata th {
 }
 /* Items Classes*/
 .element {
-  overflow: hidden;
-  clear: both;
-  margin-bottom: 1.5em;
+  margin-bottom: 0.5em;
+  h2 {
+    font-size: 15pt;
+    text-decoration: underline;
+    font-weight: bold;
+    display: inline;
+  }
+  .element-text {
+    display: inline;
+    p {
+      display: inline;
+    }
+  }
 }
 
 .browse .item {

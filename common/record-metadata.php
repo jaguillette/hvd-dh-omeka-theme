@@ -3,17 +3,17 @@
     <?php if ($showElementSetHeadings): ?>
     <h2><?php echo html_escape(__($setName)); ?></h2>
     <?php endif; ?>
-    <table class="item-metadata">
+    <div class="item-metadata">
     <?php foreach ($setElements as $elementName => $elementInfo): ?>
-    <tr id="<?php echo text_to_id(html_escape("$setName $elementName")); ?>" class="element">
-        <th><?php echo html_escape(__($elementName)); ?>:</th>
-        <td class="element-text">
+    <div id="<?php echo text_to_id(html_escape("$setName $elementName")); ?>" class="element">
+        <h2><?php echo html_escape(__($elementName)); ?>:</h2>
+        <div class="element-text">
             <?php foreach ($elementInfo['texts'] as $text): ?>
                 <p><?php echo $text; ?></p>
             <?php endforeach; ?>
-        </td>
-    </tr><!-- end element -->
+        </div>
+    </div><!-- end element -->
     <?php endforeach; ?>
-    </table>
+  </div>
 </div><!-- end element-set -->
 <?php endforeach;

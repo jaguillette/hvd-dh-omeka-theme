@@ -19,59 +19,51 @@ queue_css_file('jquery.fancybox');
     </div>
     <?php } ?>
 
-    <div class="mfull t2of5">
+    <div class="mfull">
+        <div id="item-images-container">
+          <?php if (metadata('item','has files')): ?>
+            <div id="item-images">
+              <h3><?php echo __('Files'); ?></h3>
+              <?php if (get_theme_option('Show Item File Gallery') == 0): ?>
+                <?php echo dh_files_for_item(array('imageSize' => 'fullsize', 'linkAttributes'=>array('data-lightbox'=>'file-gallery'))); ?>
+              <?php else: ?>
+                <?php echo dh_files_for_item(
+                  array(
+                    'imageSize' => 'square_thumbnail',
+                    'linkAttributes'=>array('data-lightbox'=>'file-gallery')
+                  ),
+                  array(
+                    'class'=>'gallery-item item-file'
+                  )
+                ); ?>
+              <?php endif; ?>
+            </div>
+          <?php endif; ?>
+        </div>
+
         <!-- Items metadata -->
         <div id="item-metadata">
             <?php echo all_element_texts('item'); ?>
 
             <?php if(metadata('item','Collection Name')): ?>
-              <table id="collection" class="element">
-              <tr>
-                <th><?php echo __('Collection:'); ?></th>
-                <td class="element-text"><?php echo link_to_collection_for_item(); ?></td>
-              </tr>
-              </table>
+              <div id="collection" class="element">
+                <h2><?php echo __('Collection:'); ?></h2>
+                <div class="element-text"><?php echo link_to_collection_for_item(); ?></div>
+              </div>
             <?php endif; ?>
 
             <!-- The following prints a list of all tags associated with the item -->
             <?php if (metadata('item','has tags')): ?>
-            <table id="item-tags" class="element">
-            <tr>
-                <th><?php echo __('Tags:'); ?></th>
-                <td class="element-text"><?php echo tag_string('item'); ?></td>
-            </tr>
-            </table>
+              <div id="item-tags" class="element">
+                <h2><?php echo __('Tags:'); ?></h2>
+                <div class="element-text"><?php echo tag_string('item'); ?></div>
+              </div>
             <?php endif;?>
         </div>
     </div>
 
-    <div class="mfull t3of5">
-        <?php if (metadata('item','has files')): ?>
-            <div id="item-images">
-                <h3><?php echo __('Files'); ?></h3>
-                <?php if (get_theme_option('Show Item File Gallery') == 0): ?>
-                  <?php echo dh_files_for_item(array('imageSize' => 'fullsize', 'linkAttributes'=>array('data-lightbox'=>'file-gallery'))); ?>
-                <?php else: ?>
-                  <?php echo dh_files_for_item(
-                    array(
-                      'imageSize' => 'square_thumbnail',
-                      'linkAttributes'=>array('data-lightbox'=>'file-gallery')
-                    ),
-                    array(
-                      'class'=>'gallery-item item-file'
-                    )
-                  ); ?>
-                <?php endif; ?>
-            </div>
-        <?php else: ?>
-            <?php fire_plugin_hook('public_items_show', array('view' => $this, 'item' => $item)); ?>
-        <?php endif; ?>
-    </div>
-
     <div class="mfull">
-        <?php if (metadata('item','has files')): ?>
             <?php fire_plugin_hook('public_items_show', array('view' => $this, 'item' => $item)); ?>
-        <?php endif; ?>
     </div>
 
     <script type="text/javascript">
