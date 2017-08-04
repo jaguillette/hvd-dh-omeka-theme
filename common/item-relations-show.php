@@ -17,12 +17,20 @@
           <tr>
               <td><?php echo __('This Item'); ?></td>
               <td><span title="<?php echo html_escape($subjectRelation['relation_description']); ?>"><?php echo $subjectRelation['relation_text']; ?></span></td>
-              <td>Item: <a href="<?php echo url('items/show/' . $subjectRelation['object_item_id']); ?>"><?php echo $subjectRelation['object_item_title']; ?></a></td>
+              <?php if (array_key_exists("object_item_type",$subjectRelation)): ?>
+                <td>Item: <a href="<?php echo url('items/show/' . $subjectRelation['object_item_id']); ?>"><?php echo $subjectRelation['object_item_title'].$subjectRelation['object_item_type']; ?></a></td>
+              <?php else: ?>
+                <td>Item: <a href="<?php echo url('items/show/' . $subjectRelation['object_item_id']); ?>"><?php echo $subjectRelation['object_item_title']; ?></a></td>
+              <?php endif; ?>
           </tr>
           <?php endforeach; ?>
           <?php foreach ($objectRelations as $objectRelation): ?>
           <tr>
+            <?php if (array_key_exists('subject_item_type',$objectRelation)): ?>
+              <td>Item: <a href="<?php echo url('items/show/' . $objectRelation['subject_item_id']); ?>"><?php echo $objectRelation['subject_item_title'].$objectRelation['subject_item_type']; ?></a></td>
+            <?php else: ?>
               <td>Item: <a href="<?php echo url('items/show/' . $objectRelation['subject_item_id']); ?>"><?php echo $objectRelation['subject_item_title']; ?></a></td>
+            <?php endif; ?>
               <td><span title="<?php echo html_escape($objectRelation['relation_description']); ?>"><?php echo $objectRelation['relation_text']; ?></span></td>
               <td><?php echo __('This Item'); ?></td>
           </tr>
