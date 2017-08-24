@@ -1,6 +1,5 @@
 /* @group ----- Header ----- */
 #header-container {
-  background-color: $crimson;
 }
 header {
   position: relative;
@@ -44,7 +43,6 @@ header:after {
   width: 100%;
   font-weight: bold;
   font-family: $droid_sans;
-  color: #850d2a;
   font-size: 28px;
   line-height: 36px;
   text-transform: none;
@@ -57,7 +55,6 @@ header:after {
 
 #site-title a {
   text-decoration: none;
-  color: white;
 }
 
 #search-container {
@@ -72,7 +69,7 @@ header:after {
   display: none;
 }
 #search-container input[type=text], #search-container button {
-  border: 1px solid #ccc;
+  border: 1px solid $borderColor;
   background: #fafafa;
   -moz-appearance: none;
   -webkit-appearance: none;
@@ -88,8 +85,6 @@ header:after {
   box-sizing: border-box;
 }
 #search-container button {
-  background: #850d2a;
-  color: white;
   position: absolute;
   border: 0;
   right: 0;
@@ -111,8 +106,8 @@ header:after {
 }
 
 #search-container button:hover, .show-advanced.button:hover:after {
-  background-color: #902d31;
 }
+
 .show-advanced.button {
   width: 30px;
   right: 0;
@@ -135,7 +130,6 @@ header:after {
   position: absolute;
   width: 100%;
   color: #fff;
-  background: #850d2a;
   top: 0;
   bottom: 0;
   font-size: 14px;

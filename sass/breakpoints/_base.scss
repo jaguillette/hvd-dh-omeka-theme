@@ -8,8 +8,6 @@
 body {
   font: 12px $pt_serif;
   line-height: 18px;
-  color: #333;
-  background: #F5EFEB;
 }
 
 form, fieldset {
@@ -19,7 +17,9 @@ form, fieldset {
 }
 
 input[type=text], input[type=password], textarea {
-  border: 1px solid #ccc;
+  border-width: 1px;
+  border-style: solid;
+  border-color: $borderColor;
   display: block;
 }
 
@@ -31,7 +31,6 @@ h1, h2, h3, h4, h5, h6 {
 h1, h2, h3 {
   font-weight: normal;
   font-family: $droid_sans;
-  color: #850d2a;
 }
 
 h1 {
@@ -49,7 +48,6 @@ h2 {
 h3 {
   font-size: 16px;
   line-height: 16px;
-  color: #000;
   font-weight: bold;
 }
 
@@ -64,10 +62,6 @@ h4 {
 
 h5 {
   font-style: italic;
-}
-
-h6 {
-  color: #666;
 }
 
 h1 a, h2 a, h3 a {
@@ -132,7 +126,7 @@ table {
 }
 
 th, td {
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid $borderColor;
   margin: 0;
   padding: 0.5em;
 }
@@ -174,14 +168,12 @@ th {
 
 /* -- Links -- */
 a:link, a:visited {
-  color: #850d2a;
 }
 .fancybox-title a {
   color: white;
 }
 
 a:hover, a:active {
-  color: #0ea4de;
 }
 
 img a {
@@ -192,8 +184,7 @@ img a {
 /* @group ----- Global selectors ----- */
 #content {
   overflow: hidden;
-  /* border: 1px solid #ccc; */
-  background: #F5EFEB;
+  /* border: 1px solid $borderColor; */
   position: relative;
   margin: 0 auto;
   padding: 0;
@@ -222,7 +213,7 @@ img a {
 }
 
 .image img {
-  border: 1px solid #ccc;
+  border: 1px solid $borderColor;
   float: left;
   padding: 2px;
   width: auto;
@@ -258,7 +249,7 @@ img a {
 
 #sort-links + .record,
 nav + .exhibit {
-  border-top: 1px solid #eee;
+  border-top: 1px solid $borderColor;
 }
 
 .record + .pagination-nav ul{
@@ -296,7 +287,7 @@ div.pagination {
 #featured-item,
 #featured-collection {
   overflow: hidden;
-  background: #ede6e0;
+  background: rgba(0,0,0,0.05);
   padding: 1.5em 20px;
   margin-bottom: 1.5em;
 }
@@ -311,16 +302,15 @@ div.pagination {
 .featured img,
 #featured-exhibit img {
   float: left;
-  border: 1px solid #ccc;
+  border: 1px solid $borderColor;
   padding: 2px;
   height: 10.5em;
   width: auto;
-  background-color: #fff;
 }
 
 #recent-items .item {
   overflow: hidden;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid $borderColor;
   margin-bottom: 1.5em;
 }
 #recent-items .item .image {

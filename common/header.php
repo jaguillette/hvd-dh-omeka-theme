@@ -36,11 +36,74 @@
     <?php try { queue_js_file('piwik'); } catch (Exception $e) {  } ?>
     <?php echo head_js(); ?>
     <?php
-    # Have to reference the absolute path of the piwik file to include it
-    # Found through var_dump(this->getAssetPaths())
-    # $this->getAssetPaths()[3] has versions of the base path of the theme
-    # $this->getAssetPaths()[3][1] is the base path of the theme in http, not local file system
+    ($brandColor = get_theme_option('brand_color')) || ($brandColor = "#A41034");
+    ($secondaryBrandColor = get_theme_option('secondary_brand_color')) || ($secondaryBrandColor = "#850D2A");
+    ($headerTextColor = get_theme_option('header_text_color')) || ($headerTextColor = "#F5EFEB");
+    ($backgroundColor = get_theme_option('background_color')) || ($backgroundColor = "#F5EFEB");
+    ($headingColor = get_theme_option('heading_color')) || ($headingColor = "#850D2A");
+    ($textColor = get_theme_option('text_color')) || ($textColor = "#333333");
+    ($linkColor = get_theme_option('link_color')) || ($linkColor = "#850D2A");
     ?>
+    <style>
+    body {
+      color: <?php echo($textColor); ?>;
+      background-color: <?php echo($backgroundColor); ?>;
+    }
+    h1, h2 {
+      color: <?php echo($headingColor); ?>;
+    }
+    a, a.link, a.visited {
+      color: <?php echo($linkColor); ?>;
+    }
+    a:hover, a:active {
+      color: <?php echo($brandColor); ?>;
+    }
+    content {
+      background-color: <?php echo($backgroundColor); ?>;
+    }
+    #header-container {
+      background-color: <?php echo($brandColor); ?>;
+    }
+    #header-container h1,
+    #header-container h2,
+    #header-container a,
+    #header-container a:visited {
+      color: <?php echo($headerTextColor); ?>;
+    }
+    #nav-container {
+      background-color: <?php echo($secondaryBrandColor); ?>;
+    }
+    #primary-nav .nav-item > a.open {
+      color: <?php echo($headerTextColor); ?>;
+    }
+    #primary-nav a:hover,
+    #primary-nav a:focus,
+    #primary-nav li.active a {
+      background-color: <?php echo($brandColor); ?>;
+      color: <?php echo($headerTextColor); ?>;
+    }
+    #primary-nav .sub-nav {
+      background-color: <?php echo($secondaryBrandColor); ?>;
+    }
+    #search-container button:hover, .show-advanced.button:hover:after {
+      background-color: <?php echo($secondaryBrandColor); ?>;
+    }
+    #search-container button {
+      background-color: <?php echo($secondaryBrandColor); ?>;
+      color: <?php echo($headerTextColor); ?>;
+    }
+    .show-advanced.button:after {
+      background-color: <?php echo($secondaryBrandColor); ?>;
+    }
+    .hTagcloud input[type=checkbox] + label::before {
+      color: <?php echo($linkColor); ?>;
+    }
+    #multi-tag-submit a {
+      border-color: <?php echo($secondaryBrandColor); ?>;
+      background-color: <?php echo($brandColor); ?>;
+      color: <?php echo($headerTextColor); ?>;
+    }
+    </style>
 </head>
  <?php echo body_tag(array('id' => @$bodyid, 'class' => @$bodyclass)); ?>
     <a href="#content" id="skipnav"><?php echo __('Skip to main content'); ?></a>

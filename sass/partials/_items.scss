@@ -140,7 +140,7 @@ table.item-metadata th {
 
 .browse .item {
   clear: both;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid $borderColor;
   padding: 0.5em 0;
   float: left;
   width: 100%;
@@ -149,7 +149,7 @@ table.item-metadata th {
 .item-pagination {
   clear: both;
   overflow: hidden;
-  border-top: 1px solid #eee;
+  border-top: 1px solid $borderColor;
   padding-top: 18px;
 }
 
@@ -212,7 +212,6 @@ table.item-metadata th {
 .hTagcloud input[type=checkbox] + label::before {
   content: "\f096";
   font-family: "FontAwesome";
-  color: $dark_crimson;
   width: 1em;
   text-align: left;
   display: inline-block;
@@ -227,10 +226,9 @@ table.item-metadata th {
 }
 
 #multi-tag-submit a {
-  border: 2px solid #666;
+  border-width: 2px;
+  border-style: solid;
   border-radius: 5px;
-  background-color: #ccc;
-  color: #333;
   padding: .25em;
   font-size: 125%;
   text-decoration: none;
