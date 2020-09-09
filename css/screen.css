@@ -2064,6 +2064,10 @@ nav + .exhibit {
   margin-top: 1.5em;
 }
 
+nav a:hover {
+  text-decoration: underline;
+}
+
 div.pagination {
   width: 100%;
 }
