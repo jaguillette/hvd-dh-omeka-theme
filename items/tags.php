@@ -23,7 +23,7 @@ echo head(array('title'=>$pageTitle, 'bodyclass'=>'items tags'));
 		var items = jQuery(element_selector);
 		items.each( function() {
 			var tag = jQuery(this).text().replace(" ", "+")
-			jQuery(this).before('<input type="checkbox" class="multi-tag" value="'+tag+'" id="'+tag+'"><label for="'+tag+'"></label>');
+			jQuery(this).before('<input type="checkbox" class="multi-tag visually-hidden" value="'+tag+'" id="'+tag+'"><label for="'+tag+'"></label>');
 		})
 	}
 

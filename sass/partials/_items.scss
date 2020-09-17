@@ -205,10 +205,6 @@ table.item-metadata th {
   line-height: normal;
 }
 
-.hTagcloud input[type=checkbox] {
-  display: none;
-}
-
 .hTagcloud input[type=checkbox] + label::before {
   content: "\f096";
   font-family: "FontAwesome";
