@@ -95,7 +95,7 @@
     .show-advanced.button:after {
       background-color: <?php echo($secondaryBrandColor); ?>;
     }
-    .hTagcloud input[type=checkbox] + label::before {
+    .hTagcloud li  {
       color: <?php echo($linkColor); ?>;
     }
     #multi-tag-submit a {

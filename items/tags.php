@@ -14,36 +14,38 @@ echo head(array('title'=>$pageTitle, 'bodyclass'=>'items tags'));
 </div>
 
 <?php uasort($tags, function($a, $b) { return strcasecmp($a['name'],$b['name']); }); ?>
-<?php echo tag_cloud($tags, 'items/browse'); ?>
 
-<div id="multi-tag"></div>
+<div id="multi-tag">
+  <form class="" action="browse" method="get">
+    <?php echo dh_tag_cloud($tags, null); ?>
+    <div id="multi-tag-submit">
+      <button type="button" name="find-selected-tags">Find selected tags</button>
+    </div>
+  </form>
+</div>
 
 <script type="text/javascript">
+  // TODO: Okay, so the selector is wrong if I turn the links off, and the sizing
+  // also doesn't work, probably on the a not the li
 	function insert_checkboxes(element_selector, form_selector) {
 		var items = jQuery(element_selector);
 		items.each( function() {
-			var tag = jQuery(this).text().replace(" ", "+")
-			jQuery(this).before('<input type="checkbox" class="multi-tag visually-hidden" value="'+tag+'" id="'+tag+'"><label for="'+tag+'"></label>');
+      var name = jQuery(this).text();
+			var tag = name.replace(" ", "+");
+			jQuery(this).before('<input type="checkbox" class="multi-tag" name="tags" value="'+tag+'" id="'+tag+'"><label for="'+tag+'"></label>');
 		})
 	}
 
-	insert_checkboxes(".hTagcloud li a");
+  jQuery('#multi-tag-submit').click(function() {
+    var tags = [];
+    jQuery(".multi-tag:checked").each(function() {
+      tags.push(jQuery(this).attr('value'));
+    });
+    window.location.href = "browse?tags=" + tags.join(",");
+  });
 
-	var selected_tags = [];
+	// insert_checkboxes(".hTagcloud li");
 
-	jQuery('#multi-tag').append('<div id="multi-tag-submit"><a href="#" >Find selected tags</a></div>')
-
-	jQuery(".multi-tag").on('click', function() {
-		if (jQuery(this).is(":checked")) {
-			selected_tags.push(jQuery(this).attr("value"));
-		} else {
-			var index = selected_tags.indexOf(jQuery(this).attr("value"));
-			if (index > -1) {
-				selected_tags.splice(index, 1);
-			}
-		}
-		jQuery("#multi-tag-submit a").attr("href", "browse?tags="+selected_tags.join(","));
-	})
 </script>
 
 <?php echo foot(); ?>
