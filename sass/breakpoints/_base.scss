@@ -81,6 +81,10 @@ ul ul, ul ol, ol ol, ol ul {
   margin-bottom: 0;
 }
 
+button#submit_search {
+  font-family: $droid_sans;
+}
+
 /* -- Misc Inline elements -- */
 em, i {
   font-style: italic;

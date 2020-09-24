@@ -870,21 +870,7 @@ header:after {
   border: 0;
   right: 0;
   top: 0;
-  width: 30px;
-  text-indent: -9999px;
-}
-
-#search-container button:after {
-  font-family: "FontAwesome";
-  content: "";
-  text-indent: 0;
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 30px;
-  line-height: 30px;
-  text-align: center;
-  width: 30px;
+  width: 5em;
 }
 
 .show-advanced.button {
@@ -1879,6 +1865,10 @@ p, ul, ol, dl {
 
 ul ul, ul ol, ol ol, ol ul {
   margin-bottom: 0;
+}
+
+button#submit_search {
+  font-family: "Droid Sans", sans-serif;
 }
 
 /* -- Misc Inline elements -- */

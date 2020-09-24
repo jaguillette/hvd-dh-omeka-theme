@@ -89,21 +89,21 @@ header:after {
   border: 0;
   right: 0;
   top: 0;
-  width: 30px;
-  text-indent: -9999px;
+  width: 5em;
+  // text-indent: -9999px;
 }
-#search-container button:after {
-  font-family: "FontAwesome";
-  content: "\f002";
-  text-indent: 0;
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 30px;
-  line-height: 30px;
-  text-align: center;
-  width: 30px;
-}
+// #search-container button:after {
+//   font-family: "FontAwesome";
+//   content: "\f002";
+//   text-indent: 0;
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   height: 30px;
+//   line-height: 30px;
+//   text-align: center;
+//   width: 30px;
+// }
 
 #search-container button:hover, .show-advanced.button:hover:after {
 }
