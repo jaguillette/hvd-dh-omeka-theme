@@ -212,8 +212,13 @@ table.item-metadata th {
   text-align: left;
   display: inline-block;
 }
+
 .hTagcloud input[type=checkbox]:checked + label::before {
   content: "\f046";
+}
+
+.hTagcloud input:focus + label {
+  text-decoration: underline;
 }
 
 #multi-tag-submit {

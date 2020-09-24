@@ -1203,6 +1203,10 @@ table.item-metadata th {
   content: "";
 }
 
+.hTagcloud input:focus + label {
+  text-decoration: underline;
+}
+
 #multi-tag-submit {
   text-align: center;
   margin-top: 3em;
