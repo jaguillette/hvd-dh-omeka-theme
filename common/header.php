@@ -98,7 +98,7 @@
     .hTagcloud li  {
       color: <?php echo($linkColor); ?>;
     }
-    #multi-tag-submit a {
+    #multi-tag-submit button {
       border-color: <?php echo($secondaryBrandColor); ?>;
       background-color: <?php echo($brandColor); ?>;
       color: <?php echo($headerTextColor); ?>;

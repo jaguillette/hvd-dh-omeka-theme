@@ -19,22 +19,12 @@ echo head(array('title'=>$pageTitle, 'bodyclass'=>'items tags'));
   <form class="" action="browse" method="get">
     <?php echo dh_tag_cloud($tags, null); ?>
     <div id="multi-tag-submit">
-      <button type="button" name="find-selected-tags">Find selected tags</button>
+      <button type="button" name="find-selected-tags">Find items with selected tags</button>
     </div>
   </form>
 </div>
 
 <script type="text/javascript">
-  // TODO: Okay, so the selector is wrong if I turn the links off, and the sizing
-  // also doesn't work, probably on the a not the li
-	function insert_checkboxes(element_selector, form_selector) {
-		var items = jQuery(element_selector);
-		items.each( function() {
-      var name = jQuery(this).text();
-			var tag = name.replace(" ", "+");
-			jQuery(this).before('<input type="checkbox" class="multi-tag" name="tags" value="'+tag+'" id="'+tag+'"><label for="'+tag+'"></label>');
-		})
-	}
 
   jQuery('#multi-tag-submit').click(function() {
     var tags = [];

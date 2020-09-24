@@ -465,7 +465,7 @@ function dh_tag_cloud($recordOrTags = null, $link = null, $maxClasses = 9, $tagN
         if ($link) {
             $html .= '<a href="' . html_escape(url($link, array('tags' => $tag['name']))) . '">';
         } else {
-            $html .= '<input type="checkbox" class="multi-tag" name="tags[]" value="' . html_escape($tag['name']) . '" id="' . html_escape($tag['name']) . '">';
+            $html .= '<input type="checkbox" class="multi-tag visually-hidden" name="tags[]" value="' . html_escape($tag['name']) . '" id="' . html_escape($tag['name']) . '">';
             $html .= '<label for="' . html_escape($tag['name']) . '">';
         }
         if ($tagNumber && $tagNumberOrder == 'before') {
