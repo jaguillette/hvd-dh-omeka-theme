@@ -205,10 +205,6 @@ table.item-metadata th {
   line-height: normal;
 }
 
-.hTagcloud input[type=checkbox] {
-  display: none;
-}
-
 .hTagcloud input[type=checkbox] + label::before {
   content: "\f096";
   font-family: "FontAwesome";
@@ -216,8 +212,13 @@ table.item-metadata th {
   text-align: left;
   display: inline-block;
 }
+
 .hTagcloud input[type=checkbox]:checked + label::before {
   content: "\f046";
+}
+
+.hTagcloud input:focus + label {
+  text-decoration: underline;
 }
 
 #multi-tag-submit {
@@ -225,7 +226,7 @@ table.item-metadata th {
   margin-top: 3em;
 }
 
-#multi-tag-submit a {
+#multi-tag-submit button {
   border-width: 2px;
   border-style: solid;
   border-radius: 5px;

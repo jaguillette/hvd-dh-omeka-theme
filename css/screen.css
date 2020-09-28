@@ -1191,10 +1191,6 @@ table.item-metadata th {
   line-height: normal;
 }
 
-.hTagcloud input[type=checkbox] {
-  display: none;
-}
-
 .hTagcloud input[type=checkbox] + label::before {
   content: "";
   font-family: "FontAwesome";
@@ -1207,12 +1203,16 @@ table.item-metadata th {
   content: "";
 }
 
+.hTagcloud input:focus + label {
+  text-decoration: underline;
+}
+
 #multi-tag-submit {
   text-align: center;
   margin-top: 3em;
 }
 
-#multi-tag-submit a {
+#multi-tag-submit button {
   border-width: 2px;
   border-style: solid;
   border-radius: 5px;
@@ -2070,6 +2070,20 @@ nav a:hover {
 
 div.pagination {
   width: 100%;
+}
+
+.visually-hidden {
+  border: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  -webkit-clip-path: inset(50%) !important;
+  clip-path: inset(50%) !important;
+  height: 1px !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  width: 1px !important;
+  white-space: nowrap !important;
 }
 
 /* @end */
