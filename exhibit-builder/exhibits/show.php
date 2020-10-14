@@ -6,7 +6,7 @@ echo head(array(
 ?>
 
 <nav id="exhibit-pages">
-    <h4><?php echo exhibit_builder_link_to_exhibit($exhibit); ?></h4>
+    <p><?php echo exhibit_builder_link_to_exhibit($exhibit); ?></p>
     <?php echo exhibit_builder_page_tree($exhibit, $exhibit_page); ?>
 </nav>
 
