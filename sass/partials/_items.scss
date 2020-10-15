@@ -150,7 +150,11 @@ table.item-metadata th {
   clear: both;
   overflow: hidden;
   border-top: 1px solid $borderColor;
-  padding: 18px 2px 2px 2px;
+  padding: 18px;
+}
+
+.item-pagination li {
+  padding: 2px;
 }
 
 .item-pagination a {
