@@ -153,12 +153,12 @@
             </div>
         </header>
         <div id="nav-container">
-             <div id="primary-nav" role="navigation">
+             <div id="primary-nav" role="navigation" aria-label="<?php echo __('Header Navigation'); ?>">
                  <?php
                       echo public_nav_main();
                  ?>
              </div>
-            <div id="mobile-nav" role="navigation" aria-label="<?php echo __('Mobile Navigation'); ?>">
+            <div id="mobile-nav" role="navigation" aria-label="<?php echo __('Mobile Header Navigation'); ?>">
                  <?php
                       echo public_nav_main();
                  ?>

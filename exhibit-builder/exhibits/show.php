@@ -5,7 +5,7 @@ echo head(array(
     'bodyclass' => 'exhibits show'));
 ?>
 
-<nav id="exhibit-pages">
+<nav id="exhibit-pages" aria-label="<?php echo __('Exhibit Navigation'); ?>">
     <p><?php echo exhibit_builder_link_to_exhibit($exhibit); ?></p>
     <?php echo exhibit_builder_page_tree($exhibit, $exhibit_page); ?>
 </nav>
