@@ -11,7 +11,7 @@
         <?php if ((get_theme_option('Display Footer Copyright') == 1) && $copyright = option('copyright')): ?>
         <p><?php echo $copyright; ?></p>
         <?php endif; ?>
-        <nav><?php echo public_nav_main()->setMaxDepth(0); ?></nav>
+        <nav aria-label="Footer navigation"><?php echo public_nav_main()->setMaxDepth(0); ?></nav>
         <p><?php echo __('Proudly powered by <a href="http://omeka.org">Omeka</a>.'); ?></p>
 
     </div><!-- end footer-content -->
