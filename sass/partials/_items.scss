@@ -150,7 +150,7 @@ table.item-metadata th {
   clear: both;
   overflow: hidden;
   border-top: 1px solid $borderColor;
-  padding-top: 18px;
+  padding: 18px 2px 2px 2px;
 }
 
 .item-pagination a {
@@ -176,6 +176,9 @@ table.item-metadata th {
 .item .item-file a img {
   height: auto;
   width: auto;
+}
+.download-file {
+  padding-left: 2px;
 }
 
 .item h2 {
