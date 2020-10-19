@@ -772,6 +772,10 @@ footer nav + p {
   width: 48%;
 }
 
+#footer-content {
+  padding-left: 2px;
+}
+
 /* @end */
 /* @group ----- Header ----- */
 header {
@@ -1121,7 +1125,11 @@ table.item-metadata th {
   clear: both;
   overflow: hidden;
   border-top: 1px solid rgba(0, 0, 0, 0.15);
-  padding-top: 18px;
+  padding: 18px;
+}
+
+.item-pagination li {
+  padding: 2px;
 }
 
 .item-pagination a {
@@ -1148,6 +1156,10 @@ table.item-metadata th {
 .item .item-file a img {
   height: auto;
   width: auto;
+}
+
+.item-file {
+  padding: 2px;
 }
 
 .item h2 {
@@ -2056,6 +2068,10 @@ nav + .exhibit {
 
 nav a:hover {
   text-decoration: underline;
+}
+
+:focus {
+  z-index: 9999 !important;
 }
 
 div.pagination {
