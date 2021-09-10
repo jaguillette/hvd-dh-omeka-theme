@@ -72,6 +72,12 @@ ul.title-list {
   font-style: italic;
 }
 
+#item-images-container {
+  float: right;
+  width: 100%;
+  margin: 0 1%;
+}
+
 #item-images {
   overflow: hidden;
   margin-bottom: 18px;
@@ -117,14 +123,24 @@ table.item-metadata th {
 }
 /* Items Classes*/
 .element {
-  overflow: hidden;
-  clear: both;
-  margin-bottom: 1.5em;
+  margin-bottom: 0.5em;
+  h2 {
+    font-size: 15pt;
+    text-decoration: underline;
+    font-weight: bold;
+    display: inline;
+  }
+  .element-text {
+    display: inline;
+    p {
+      display: inline;
+    }
+  }
 }
 
 .browse .item {
   clear: both;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid $borderColor;
   padding: 0.5em 0;
   float: left;
   width: 100%;
@@ -133,8 +149,12 @@ table.item-metadata th {
 .item-pagination {
   clear: both;
   overflow: hidden;
-  border-top: 1px solid #eee;
-  padding-top: 18px;
+  border-top: 1px solid $borderColor;
+  padding: 18px;
+}
+
+.item-pagination li {
+  padding: 2px;
 }
 
 .item-pagination a {
@@ -161,9 +181,16 @@ table.item-metadata th {
   height: auto;
   width: auto;
 }
+.item-file {
+  padding: 2px;
+}
 
 .item h2 {
   margin-top: 0;
+}
+
+#item-relations-display-item-relations .item-type {
+  font-style: italic;
 }
 
 /* Tags Classes */
@@ -185,20 +212,20 @@ table.item-metadata th {
   line-height: normal;
 }
 
-.hTagcloud input[type=checkbox] {
-  display: none;
-}
-
 .hTagcloud input[type=checkbox] + label::before {
   content: "\f096";
   font-family: "FontAwesome";
-  color: $dark_crimson;
   width: 1em;
   text-align: left;
   display: inline-block;
 }
+
 .hTagcloud input[type=checkbox]:checked + label::before {
   content: "\f046";
+}
+
+.hTagcloud input:focus + label {
+  text-decoration: underline;
 }
 
 #multi-tag-submit {
@@ -206,11 +233,10 @@ table.item-metadata th {
   margin-top: 3em;
 }
 
-#multi-tag-submit a {
-  border: 2px solid #666;
+#multi-tag-submit button {
+  border-width: 2px;
+  border-style: solid;
   border-radius: 5px;
-  background-color: #ccc;
-  color: #333;
   padding: .25em;
   font-size: 125%;
   text-decoration: none;

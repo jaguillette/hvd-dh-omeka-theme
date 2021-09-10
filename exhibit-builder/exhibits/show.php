@@ -5,8 +5,8 @@ echo head(array(
     'bodyclass' => 'exhibits show'));
 ?>
 
-<nav id="exhibit-pages">
-    <h4><?php echo exhibit_builder_link_to_exhibit($exhibit); ?></h4>
+<nav id="exhibit-pages" aria-label="<?php echo __('Exhibit Navigation'); ?>">
+    <p><?php echo exhibit_builder_link_to_exhibit($exhibit); ?></p>
     <?php echo exhibit_builder_page_tree($exhibit, $exhibit_page); ?>
 </nav>
 
@@ -32,7 +32,7 @@ echo head(array(
     </div>
 </div>-->
 
-<?php if ($exhibitAttribution = get_theme_option('Exhibit Attribution')) { ?>
+<?php if ($exhibitAttribution = get_theme_option('Exhibit Attribution')): ?>
 <div id="exhibit-attribution">
 <?php
   $exhibitOwnerName = dh_get_user_by_id($exhibit['owner_id'])['name'];
@@ -40,6 +40,10 @@ echo head(array(
   echo("$exhibitAttrLabel $exhibitOwnerName");
 ?>
 </div>
-<?php } ?>
+<?php endif; ?>
+
+<?php if (class_exists('CommentingPlugin')) {
+  CommentingPlugin::showComments();
+} ?>
 
 <?php echo foot(); ?>

@@ -2,7 +2,7 @@
 .browse .collection,
 .browse .exhibit {
   clear: both;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid $borderColor;
   float: left;
   width: 100%;
   padding-top: 1.5em;
@@ -29,9 +29,6 @@
 .exhibit .image,
 .item .image {
   display: block;
-  -moz-box-shadow: -5px -5px 0 -1px #f2f2f2, -5px -5px 0 #ccc, -8px -8px 0 -1px #ddd, -8px -8px 0 #CCC;
-  -webkit-box-shadow: -5px -5px 0 -1px #f2f2f2, -5px -5px 0 #ccc, -8px -8px 0 -1px #ddd, -8px -8px 0 #CCC;
-  box-shadow: -5px -5px 0 -1px #f2f2f2, -5px -5px 0 #ccc, -8px -8px 0 -1px #ddd, -8px -8px 0 #CCC;
   margin: 0 1.5em 1.5em 9px;
 }
 
@@ -90,7 +87,7 @@
   display: block;
   height: 10em;
   margin-bottom: 1.5em;
-  border: 1px solid #ccc;
+  border: 1px solid $borderColor;
   padding: 2px;
 }
 .collections .item-img img {
@@ -100,7 +97,7 @@
 
 .collections .item {
   overflow: hidden;
-  border-color: #ccc;
+  border-color: $borderColor;
   border-bottom-width: 0.08333em;
   border-bottom-style: solid;
   padding-top: -0.08333em;

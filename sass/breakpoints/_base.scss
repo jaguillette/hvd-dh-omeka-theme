@@ -8,8 +8,6 @@
 body {
   font: 12px $pt_serif;
   line-height: 18px;
-  color: #333;
-  background: #F5EFEB;
 }
 
 form, fieldset {
@@ -19,8 +17,14 @@ form, fieldset {
 }
 
 input[type=text], input[type=password], textarea {
-  border: 1px solid #ccc;
+  border-width: 1px;
+  border-style: solid;
+  border-color: $borderColor;
   display: block;
+}
+
+#skipnav:focus {
+  background-color: #000000;
 }
 
 /* -- Headings -- */
@@ -31,7 +35,6 @@ h1, h2, h3, h4, h5, h6 {
 h1, h2, h3 {
   font-weight: normal;
   font-family: $droid_sans;
-  color: #850d2a;
 }
 
 h1 {
@@ -49,7 +52,6 @@ h2 {
 h3 {
   font-size: 16px;
   line-height: 16px;
-  color: #000;
   font-weight: bold;
 }
 
@@ -66,10 +68,6 @@ h5 {
   font-style: italic;
 }
 
-h6 {
-  color: #666;
-}
-
 h1 a, h2 a, h3 a {
   text-decoration: none;
 }
@@ -81,6 +79,10 @@ p, ul, ol, dl {
 
 ul ul, ul ol, ol ol, ol ul {
   margin-bottom: 0;
+}
+
+button#submit_search {
+  font-family: $droid_sans;
 }
 
 /* -- Misc Inline elements -- */
@@ -132,7 +134,7 @@ table {
 }
 
 th, td {
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid $borderColor;
   margin: 0;
   padding: 0.5em;
 }
@@ -174,14 +176,12 @@ th {
 
 /* -- Links -- */
 a:link, a:visited {
-  color: #850d2a;
 }
 .fancybox-title a {
   color: white;
 }
 
 a:hover, a:active {
-  color: #0ea4de;
 }
 
 img a {
@@ -192,8 +192,7 @@ img a {
 /* @group ----- Global selectors ----- */
 #content {
   overflow: hidden;
-  /* border: 1px solid #ccc; */
-  background: #F5EFEB;
+  /* border: 1px solid $borderColor; */
   position: relative;
   margin: 0 auto;
   padding: 0;
@@ -222,7 +221,7 @@ img a {
 }
 
 .image img {
-  border: 1px solid #ccc;
+  border: 1px solid $borderColor;
   float: left;
   padding: 2px;
   width: auto;
@@ -258,11 +257,37 @@ img a {
 
 #sort-links + .record,
 nav + .exhibit {
-  border-top: 1px solid #eee;
+  border-top: 1px solid $borderColor;
 }
 
 .record + .pagination-nav ul{
   margin-top: 1.5em;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+:focus {
+  z-index: 9999 !important;
+}
+
+div.pagination {
+  width: 100%;
+}
+
+.visually-hidden {
+	border: 0 !important;
+	clip: rect(1px, 1px, 1px, 1px) !important;
+	-webkit-clip-path: inset(50%) !important;
+		clip-path: inset(50%) !important;
+	height: 1px !important;
+	margin: -1px !important;
+	overflow: hidden !important;
+	padding: 0 !important;
+	position: absolute !important;
+	width: 1px !important;
+	white-space: nowrap !important;
 }
 
 /* @end */
@@ -292,7 +317,7 @@ nav + .exhibit {
 #featured-item,
 #featured-collection {
   overflow: hidden;
-  background: #ede6e0;
+  background: rgba(0,0,0,0.05);
   padding: 1.5em 20px;
   margin-bottom: 1.5em;
 }
@@ -307,16 +332,15 @@ nav + .exhibit {
 .featured img,
 #featured-exhibit img {
   float: left;
-  border: 1px solid #ccc;
+  border: 1px solid $borderColor;
   padding: 2px;
   height: 10.5em;
   width: auto;
-  background-color: #fff;
 }
 
 #recent-items .item {
   overflow: hidden;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid $borderColor;
   margin-bottom: 1.5em;
 }
 #recent-items .item .image {
@@ -328,6 +352,12 @@ nav + .exhibit {
 
 .view-items-link {
   margin-bottom: 0em;
+}
+
+#recent-items .item-description,
+#featured-item .item-description {
+  display: inline-block;
+  margin: 0;
 }
 
 /* @end */
@@ -352,6 +382,31 @@ nav + .exhibit {
 
 #recaptcha_area input {
   display: inline;
+}
+
+#comment-form {
+  max-width: none;
+}
+
+.comment>p {
+  background-color: rgba(255,255,255,0.7);
+  border-radius: 4px;
+  padding: 0 6px;
+  float: left;
+  margin: 0 5px;
+  border: 2px solid #ddd;
+  margin-bottom: 12px;
+}
+
+#comments-container .comment-body {
+  background-color: rgba(255,255,255,0.5);
+  width: 100%;
+  margin-bottom: 12px;
+}
+
+.comments {
+  display: inline-block;
+  width: 100%;
 }
 
 /* @end */

@@ -20,7 +20,7 @@
   border-top-width: 0.08333em;
   border-top-style: solid;
   padding-top: 1.41667em;
-  border-color: #9c928b;
+  border-color: $borderColor;
   padding-left: 0;
   list-style-type: none;
 }
@@ -28,7 +28,7 @@
   border-bottom-width: 0.08333em;
   border-bottom-style: solid;
   padding-bottom: 1.41667em;
-  border-color: #9c928b;
+  border-color: $borderColor;
   margin-bottom: 1.5em;
 }
 #exhibit-pages ul li > ul {
@@ -116,6 +116,10 @@
 
 .exhibit-items .download-file:last-child {
   margin-bottom: 1.5em;
+}
+
+.layout-file-text .captions-center .exhibit-item-caption {
+  word-wrap: break-word;
 }
 
 /* @end */

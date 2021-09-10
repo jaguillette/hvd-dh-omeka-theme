@@ -2,7 +2,7 @@
 <html class="<?php echo get_theme_option('Style Sheet'); ?>" lang="<?php echo get_html_lang(); ?>">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=yes" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
     <?php if ($description = option('description')): ?>
     <meta name="description" content="<?php echo $description; ?>" />
     <?php endif; ?>
@@ -33,23 +33,77 @@
     <?php queue_js_file('berlin'); ?>
     <?php queue_js_file('globals'); ?>
     <?php queue_js_file('masonry.pkgd'); ?>
+    <?php try { queue_js_file('piwik'); } catch (Exception $e) {  } ?>
     <?php echo head_js(); ?>
-<!-- Piwik -->
-<script type="text/javascript">
-  var _paq = _paq || [];
-  _paq.push(["setDomains", ["*.dighist.fas.harvard.edu/projects/crimeaproject"]]);
-  _paq.push(['trackPageView']);
-  _paq.push(['enableLinkTracking']);
-  (function() {
-    var u="//dighist.fas.harvard.edu/piwik/";
-    _paq.push(['setTrackerUrl', u+'piwik.php']);
-    _paq.push(['setSiteId', 5]);
-    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
-  })();
-</script>
-<noscript><p><img src="//dighist.fas.harvard.edu/piwik/piwik.php?idsite=5" style="border:0;" alt="" /></p></noscript>
-<!-- End Piwik Code -->
+    <?php
+    ($brandColor = get_theme_option('brand_color')) || ($brandColor = "#A41034");
+    ($secondaryBrandColor = get_theme_option('secondary_brand_color')) || ($secondaryBrandColor = "#850D2A");
+    ($headerTextColor = get_theme_option('header_text_color')) || ($headerTextColor = "#F5EFEB");
+    ($backgroundColor = get_theme_option('background_color')) || ($backgroundColor = "#F5EFEB");
+    ($headingColor = get_theme_option('heading_color')) || ($headingColor = "#850D2A");
+    ($textColor = get_theme_option('text_color')) || ($textColor = "#333333");
+    ($linkColor = get_theme_option('link_color')) || ($linkColor = "#850D2A");
+    ?>
+    <style>
+    body {
+      color: <?php echo($textColor); ?>;
+      background-color: <?php echo($backgroundColor); ?>;
+    }
+    h1, h2 {
+      color: <?php echo($headingColor); ?>;
+    }
+    a, a.link, a.visited {
+      color: <?php echo($linkColor); ?>;
+    }
+    a:hover, a:active {
+      color: <?php echo($brandColor); ?>;
+    }
+    content {
+      background-color: <?php echo($backgroundColor); ?>;
+    }
+    #header-container {
+      background-color: <?php echo($brandColor); ?>;
+    }
+    #header-container h1,
+    #header-container h2,
+    #header-container a,
+    #header-container a:visited {
+      color: <?php echo($headerTextColor); ?>;
+    }
+    #nav-container {
+      background-color: <?php echo($secondaryBrandColor); ?>;
+    }
+    #primary-nav .nav-item > a.open {
+      color: <?php echo($headerTextColor); ?>;
+    }
+    #primary-nav a:hover,
+    #primary-nav a:focus,
+    #primary-nav li.active a {
+      background-color: <?php echo($brandColor); ?>;
+      color: <?php echo($headerTextColor); ?>;
+    }
+    #primary-nav .sub-nav {
+      background-color: <?php echo($secondaryBrandColor); ?>;
+    }
+    #search-container button:hover, .show-advanced.button:hover:after {
+      background-color: <?php echo($secondaryBrandColor); ?>;
+    }
+    #search-container button {
+      background-color: <?php echo($secondaryBrandColor); ?>;
+      color: <?php echo($headerTextColor); ?>;
+    }
+    .show-advanced.button:after {
+      background-color: <?php echo($secondaryBrandColor); ?>;
+    }
+    .hTagcloud li  {
+      color: <?php echo($linkColor); ?>;
+    }
+    #multi-tag-submit button {
+      border-color: <?php echo($secondaryBrandColor); ?>;
+      background-color: <?php echo($brandColor); ?>;
+      color: <?php echo($headerTextColor); ?>;
+    }
+    </style>
 </head>
  <?php echo body_tag(array('id' => @$bodyid, 'class' => @$bodyclass)); ?>
     <a href="#content" id="skipnav"><?php echo __('Skip to main content'); ?></a>
@@ -99,12 +153,12 @@
             </div>
         </header>
         <div id="nav-container">
-             <div id="primary-nav" role="navigation">
+             <div id="primary-nav" role="navigation" aria-label="<?php echo __('Header Navigation'); ?>">
                  <?php
                       echo public_nav_main();
                  ?>
              </div>
-            <div id="mobile-nav" role="navigation" aria-label="<?php echo __('Mobile Navigation'); ?>">
+            <div id="mobile-nav" role="navigation" aria-label="<?php echo __('Mobile Header Navigation'); ?>">
                  <?php
                       echo public_nav_main();
                  ?>

@@ -1,8 +1,8 @@
 <?php
-if ($pageTitle = get_theme_option("Browse Collection Title")) {
+if ($pageTitle = __(get_theme_option("Browse Collection Title"))) {
  #$browseNeatlineTitle is set
 } else {
- $pageTitle = "Browse Collections";
+ $pageTitle = __("Browse Collections");
 }
 echo head(array('title'=>$pageTitle,'bodyclass' => 'collections browse'));
 ?>

@@ -1,6 +1,5 @@
 /* @group ----- Navigation ----- */
 #nav-container {
-  background-color: $dark_crimson;
 }
 .navigation {
   list-style: none;
@@ -79,7 +78,6 @@
   display: inline-block;
   /* margin: 0 0 -1px 0; */
   /* border: 1px solid #ccc; */
-  color: white;
 }
 #primary-nav .nav-item:not(:first-child) > a {
   margin-left: -1px;
@@ -89,21 +87,23 @@
   /* border: 1px solid #dedede; */
 }
 #primary-nav .nav-item > a.open {
-  background-color: $crimson;
   z-index: 1;
 }
 #primary-nav .sub-nav {
   position: absolute;
   display: none;
   top: 3em;
-  margin-top: 1px;
+  margin-top: -3px;
   padding: 0;
-  border: 1px solid #dedede;
-  background-color: #fff;
+  margin-left: -1px;
 }
 #primary-nav .sub-nav.open {
   display: block;
   width: 160px;
+  z-index: 2;
+  -moz-box-shadow: #333 0 3px 5px;
+  -webkit-box-shadow: #333 0 3px 5px;
+  box-shadow: #333 0 3px 5px;
 }
 #primary-nav .sub-nav.open li {
   width: 100%;
@@ -135,9 +135,6 @@
   padding: 0;
 }
 #primary-nav .sub-nav > li {
-  border-color: #ccc;
-  border-bottom-width: 0.08333em;
-  border-bottom-style: solid;
   padding-bottom: -0.08333em;
 }
 #primary-nav .sub-nav a {
@@ -151,13 +148,10 @@
   text-decoration: none;
   display: block;
   padding: 0.75em 18px;
-  /* background: #fafafa; */
 }
 #primary-nav a:hover,
 #primary-nav a:focus,
 #primary-nav li.active a {
-  background-color: $crimson;
-  color: white;
   position: relative;
   z-index: 1;
 }
@@ -166,6 +160,7 @@
   content: "\f0da";
   margin: -1px 0 0 .5em;
   display: inline-block;
+  width: 8px;
 }
 #primary-nav [aria-haspopup="true"].open:after {
   content: "\f0d7";
@@ -181,11 +176,10 @@
   margin-right: 20px;
 }
 #secondary-nav a, .secondary-nav a {
-  color: #666;
 }
 #secondary-nav .active a, .secondary-nav .active a {
-  color: #333;
   font-weight: bold;
+  text-decoration: underline;
 }
 #secondary-nav .tags .nav-browse-all a, .secondary-nav .tags .nav-browse-all a {
   font-weight: normal;
@@ -215,13 +209,13 @@ nav, #nav-container {
 }
 .pagination li {
   height: 3em;
-  border: solid #e7e7e7;
+  border: solid $borderColor;
   border-width: 1px 0 1px 1px;
   float: left;
   list-style-type: none;
 }
 .pagination li:last-of-type {
-  border-right: 1px solid #e7e7e7;
+  border-right: 1px solid $borderColor;
 }
 .pagination a, .pagination form {
   text-decoration: none;
@@ -231,7 +225,7 @@ nav, #nav-container {
 }
 
 .page-input input[type=text] {
-  border: 1px solid #ccc;
+  border: 1px solid $borderColor;
   text-align: right;
   width: 50px;
   margin-right: 5px;

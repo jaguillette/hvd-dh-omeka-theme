@@ -4,3 +4,6 @@ $crimson: #A41034;
 /* -- Modified colors -- */
 /* Lightened or darkened base colors */
 $dark_crimson: darken($crimson, 7%);
+
+$borderColor: rgba(0,0,0,0.15);
+$darkTransparent: rgba(0,0,0,0.3);

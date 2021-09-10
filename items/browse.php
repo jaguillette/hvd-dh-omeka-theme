@@ -1,17 +1,19 @@
 <?php
-if ($pageTitle = get_theme_option("Browse Item Title")) {
+if ($pageTitle = __(get_theme_option("Browse Item Title"))) {
  #$browseNeatlineTitle is set
 } else {
- $pageTitle = "Browse Items";
+ $pageTitle = __("Browse Items");
 }
 echo head(array('title'=>$pageTitle,'bodyclass' => 'items browse'));
 ?>
 
 <h1><?php echo $pageTitle;?> <?php echo __('(%s total)', $total_results); ?></h1>
 
+<?php if(!isset($_GET['collection'])): ?>
 <nav class="items-nav navigation secondary-nav">
     <?php echo public_nav_items(); ?>
 </nav>
+<?php endif; ?>
 
 <?php echo item_search_filters(); ?>
 
@@ -36,7 +38,7 @@ $sortLinks[__('Date Added')] = 'added';
 <div class="item record">
     <div class="item-meta-title mfull t1of3">
         <h2><?php echo dh_link_to_item(dh_theme_get_display_title(), array('class'=>'permalink'),'show',null,$_GET); ?></h2>
-        <?php 
+        <?php
         $queryParams = $_GET;
         $queryParams['type'] = $item->item_type_id;
         ?>
