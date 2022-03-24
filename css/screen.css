@@ -401,6 +401,10 @@ th {
 /* -- Base colors -- */
 /* -- Modified colors -- */
 /* Lightened or darkened base colors */
+@font-face {
+  font-family: FontAwesome;
+  src: url("Font Awesome 5 Pro-Regular-400.otf") format("opentype");
+}
 /* @group ----- Collections/Browse ----- */
 .browse .collection,
 .browse .exhibit {
@@ -1190,7 +1194,7 @@ table.item-metadata th {
 }
 
 .hTagcloud input[type=checkbox] + label::before {
-  content: "";
+  content: "";
   font-family: "FontAwesome";
   width: 1em;
   text-align: left;
@@ -1198,7 +1202,7 @@ table.item-metadata th {
 }
 
 .hTagcloud input[type=checkbox]:checked + label::before {
-  content: "";
+  content: "";
 }
 
 .hTagcloud input:focus + label {

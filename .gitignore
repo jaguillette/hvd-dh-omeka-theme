@@ -1,3 +1,4 @@
 .sass-cache
 javascripts/piwik.js
 *.map
+.DS_Store

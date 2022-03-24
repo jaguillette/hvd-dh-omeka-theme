@@ -2,3 +2,8 @@
 
 $droid_sans: "Droid Sans", sans-serif;
 $pt_serif: "PT Serif", serif;
+
+@font-face {
+    font-family: FontAwesome;
+    src: url("Font Awesome 5 Pro-Regular-400.otf") format("opentype");
+}

@@ -213,7 +213,7 @@ table.item-metadata th {
 }
 
 .hTagcloud input[type=checkbox] + label::before {
-  content: "\f096";
+  content: "\f0c8";
   font-family: "FontAwesome";
   width: 1em;
   text-align: left;
@@ -221,7 +221,7 @@ table.item-metadata th {
 }
 
 .hTagcloud input[type=checkbox]:checked + label::before {
-  content: "\f046";
+  content: "\f14a";
 }
 
 .hTagcloud input:focus + label {
