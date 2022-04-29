@@ -1,5 +1,9 @@
 <?php
-$pageTitle = __('Browse Items');
+if ($pageTitle = __(get_theme_option("Browse Item Title"))) {
+  #$browseNeatlineTitle is set
+ } else {
+  $pageTitle = __("Browse Items");
+ }
 echo head(array('title'=>$pageTitle, 'bodyclass'=>'items tags'));
 ?>
 
